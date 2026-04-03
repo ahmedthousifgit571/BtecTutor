@@ -1,0 +1,143 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Course {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  scheme      String?
+  branch      String?
+  department  String?
+  description String?   @db.Text
+  seoTitle    String?
+  seoDesc     String?   @db.Text
+  seoKeywords String[]
+  ogImage     String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  subjects    Subject[]
+
+  @@index([scheme])
+  @@index([branch])
+}
+
+model Subject {
+  id           String     @id @default(cuid())
+  courseId      String
+  course       Course     @relation(fields: [courseId], references: [id], onDelete: Cascade)
+  title        String
+  slug         String
+  semester     Int?
+  content      Json?
+  syllabus     Json?
+  pyqs         Json?
+  videoLinks   Json?
+  faqs         Json?
+  seoTitle     String?
+  seoDesc      String?    @db.Text
+  seoKeywords  String[]
+  ogImage      String?
+  canonicalUrl String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  mockTests    MockTest[]
+
+  @@unique([courseId, slug])
+  @@index([slug])
+}
+
+model BlogPost {
+  id          String    @id @default(cuid())
+  title       String
+  slug        String    @unique
+  content     Json
+  excerpt     String?   @db.Text
+  tags        String[]
+  author      String?
+  coverImage  String?
+  seoTitle    String?
+  seoDesc     String?   @db.Text
+  seoKeywords String[]
+  ogImage     String?
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@index([publishedAt])
+}
+
+model LocationPage {
+  id          String   @id @default(cuid())
+  city        String   @unique
+  slug        String   @unique
+  content     Json?
+  seoTitle    String?
+  seoDesc     String?  @db.Text
+  seoKeywords String[]
+  ogImage     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Review {
+  id          String   @id @default(cuid())
+  studentName String
+  rating      Int
+  content     String   @db.Text
+  course      String?
+  approved    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  @@index([approved])
+}
+
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  course    String?
+  message   String?  @db.Text
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+model Faculty {
+  id             String   @id @default(cuid())
+  name           String
+  bio            String?  @db.Text
+  photo          String?
+  specialization String?
+  sortOrder      Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@index([sortOrder])
+}
+
+model MockTest {
+  id        String   @id @default(cuid())
+  subjectId String
+  subject   Subject  @relation(fields: [subjectId], references: [id], onDelete: Cascade)
+  title     String
+  questions Json
+  duration  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Admin {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  role         String   @default("editor")
+  createdAt    DateTime @default(now())
+}
