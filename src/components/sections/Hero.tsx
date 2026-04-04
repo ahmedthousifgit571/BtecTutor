@@ -44,7 +44,7 @@ export function Hero() {
         word.style.background = "linear-gradient(135deg, #FF6B2B, #FFAB40)";
         word.style.webkitBackgroundClip = "text";
         word.style.backgroundClip = "text";
-        (word.style as any).webkitTextFillColor = "transparent";
+        (word.style as unknown as Record<string, string>).webkitTextFillColor = "transparent";
         const text = word.textContent?.trim();
         if (text === "GATE") {
           word.style.filter = "drop-shadow(0 0 80px rgba(255,107,43,0.3))";

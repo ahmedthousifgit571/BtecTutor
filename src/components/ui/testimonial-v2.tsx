@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 // --- Types ---
@@ -122,7 +123,7 @@ const TestimonialsColumn = (props: {
                       {text}
                     </p>
                     <footer className="flex items-center gap-3 mt-6">
-                      <img
+                      <Image
                         width={40}
                         height={40}
                         src={image}
