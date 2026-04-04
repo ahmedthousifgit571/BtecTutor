@@ -8,6 +8,8 @@ import { useGSAP } from "@gsap/react";
 import { ArrowRight, Cpu, Zap, Gauge, Code, Wrench, Building2 } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
+import BorderGlow from "@/components/ui/BorderGlow";
+import TextPressure from "@/components/ui/TextPressure";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -100,9 +102,21 @@ export function CourseGrid() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <Badge variant="violet" className="mb-4">Our Courses</Badge>
-          <h2 className="text-fluid-3xl font-bold text-white">
-            Choose Your <span className="gradient-text">Path to Success</span>
-          </h2>
+          <div style={{ position: 'relative', height: '120px' }} className="max-w-4xl mx-auto">
+            <TextPressure
+              text="Choose Your Path to Success"
+              flex
+              alpha={false}
+              stroke={false}
+              width
+              weight
+              italic
+              textColor="#ffffff"
+              strokeColor="#FFAB40"
+              minFontSize={36}
+              getCharColor={(index) => index < 12 ? '#ffffff' : '#FF6B2B'}
+            />
+          </div>
           <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
             Comprehensive coaching programs designed by experts with proven track records
           </p>
@@ -111,31 +125,44 @@ export function CourseGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
             <Link key={course.slug} href={course.slug} className="course-card group">
-              <GlassCard className="h-full flex flex-col">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="rounded-xl bg-brand-orange/10 p-3 text-brand-orange">
-                    {iconMap[course.icon]}
+              <BorderGlow
+                className="h-full"
+                edgeSensitivity={30}
+                glowColor="30 90 65"
+                backgroundColor="#0A1628"
+                borderRadius={16}
+                glowRadius={35}
+                glowIntensity={1}
+                coneSpread={25}
+                animated={false}
+                colors={['#FF6B2B', '#FFAB40', '#38bdf8']}
+              >
+                <GlassCard className="h-full flex flex-col !border-0 !bg-transparent !shadow-none !backdrop-filter-none" hover={false}>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="rounded-xl bg-brand-orange/10 p-3 text-brand-orange">
+                      {iconMap[course.icon]}
+                    </div>
+                    {course.badge && <Badge variant="sky">{course.badge}</Badge>}
                   </div>
-                  {course.badge && <Badge variant="sky">{course.badge}</Badge>}
-                </div>
 
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-brand-orange transition-colors">
-                  {course.title}
-                </h3>
-                <p className="text-sm text-white/40 flex-1 mb-4">
-                  {course.description}
-                </p>
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-brand-orange transition-colors">
+                    {course.title}
+                  </h3>
+                  <p className="text-sm text-white/40 flex-1 mb-4">
+                    {course.description}
+                  </p>
 
-                <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                  <span className="text-xs text-white/30">
-                    {course.subjects} subjects
-                  </span>
-                  <span className="flex items-center gap-1 text-sm font-medium text-brand-orange group-hover:gap-2 transition-all">
-                    Explore
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
-                </div>
-              </GlassCard>
+                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                    <span className="text-xs text-white/30">
+                      {course.subjects} subjects
+                    </span>
+                    <span className="flex items-center gap-1 text-sm font-medium text-brand-orange group-hover:gap-2 transition-all">
+                      Explore
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                </GlassCard>
+              </BorderGlow>
             </Link>
           ))}
         </div>

@@ -34,7 +34,7 @@ export function Hero() {
         { scale: 1, opacity: 1, duration: 0.6, delay: 0.3 }
       );
 
-      // Headline: SplitText word animation
+      // Headline: SplitText words animation (drop with random rotation)
       const split1 = new SplitText(line1Ref.current, { type: "words" });
       const split2 = new SplitText(line2Ref.current, { type: "words" });
 
@@ -57,10 +57,32 @@ export function Hero() {
         word.style.display = "inline-block";
       });
 
+      // Line 1: words drop from above with random rotation
       tl.from(
-        [...split1.words, ...split2.words],
-        { y: 40, opacity: 0, duration: 0.6, stagger: 0.08, ease: "power2.out" },
+        split1.words,
+        {
+          y: -100,
+          opacity: 0,
+          rotation: "random(-80, 80)",
+          duration: 0.7,
+          ease: "back",
+          stagger: 0.15,
+        },
         0.5
+      );
+
+      // Line 2: words drop from above with random rotation (slight delay)
+      tl.from(
+        split2.words,
+        {
+          y: -100,
+          opacity: 0,
+          rotation: "random(-80, 80)",
+          duration: 0.7,
+          ease: "back",
+          stagger: 0.15,
+        },
+        "-=0.3"
       );
 
       // Subtext
@@ -177,7 +199,7 @@ export function Hero() {
 
         <h1
           className="font-bold tracking-tight text-balance"
-          style={{ fontSize: "clamp(2.8rem, 7vw, 6rem)", lineHeight: 1.1 }}
+          style={{ fontSize: "clamp(2.8rem, 7vw, 6rem)", lineHeight: 1.1, perspective: 500 }}
         >
           <span ref={line1Ref}>
             Master GATE &amp; KTU
