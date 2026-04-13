@@ -30,8 +30,6 @@ const iconMap: Record<string, React.ReactNode> = {
   Trophy: <Trophy className="h-6 w-6" />,
 };
 
-const GOOEY_TEXTS = whyUsContent.gooeyTexts;
-
 interface WhyUsProps {
   content?: WhyUsContent;
 }
