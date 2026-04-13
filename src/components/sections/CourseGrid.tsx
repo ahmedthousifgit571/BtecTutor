@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/Badge";
 import BorderGlow from "@/components/ui/BorderGlow";
 import TextPressure from "@/components/ui/TextPressure";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
+import { courseGridContent, type CourseGridContent } from "@/lib/content/courses";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -23,58 +24,11 @@ const iconMap: Record<string, React.ReactNode> = {
   Building2: <Building2 className="h-6 w-6" />,
 };
 
-const courses = [
-  {
-    title: "GATE ECE",
-    slug: "/gate-coaching/ece",
-    description: "Electronics & Communication Engineering — Network Theory, Signals & Systems, Digital Electronics",
-    icon: "Cpu",
-    badge: "Popular",
-    subjects: 15,
-  },
-  {
-    title: "GATE EEE",
-    slug: "/gate-coaching/eee",
-    description: "Electrical & Electronics Engineering — Power Systems, Control Systems, Electric Circuits",
-    icon: "Zap",
-    badge: null,
-    subjects: 12,
-  },
-  {
-    title: "GATE Instrumentation",
-    slug: "/gate-coaching/instrumentation",
-    description: "Instrumentation Engineering — Transducers, Process Control, Analog Electronics",
-    icon: "Gauge",
-    badge: null,
-    subjects: 10,
-  },
-  {
-    title: "KTU CSE",
-    slug: "/ktu/2024/computer-science",
-    description: "Computer Science & Engineering — Data Structures, OS, DBMS for KTU 2024 scheme",
-    icon: "Code",
-    badge: "New Scheme",
-    subjects: 20,
-  },
-  {
-    title: "KTU Mechanical",
-    slug: "/ktu/2024/mechanical",
-    description: "Mechanical Engineering — Thermodynamics, Fluid Mechanics, Machine Design",
-    icon: "Wrench",
-    badge: null,
-    subjects: 18,
-  },
-  {
-    title: "KTU Civil",
-    slug: "/ktu/2024/civil",
-    description: "Civil Engineering — Structural Analysis, Geotechnical Engineering, Surveying",
-    icon: "Building2",
-    badge: null,
-    subjects: 16,
-  },
-];
+interface CourseGridProps {
+  content?: CourseGridContent;
+}
 
-export function CourseGrid() {
+export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -101,10 +55,10 @@ export function CourseGrid() {
     <section ref={sectionRef} className="bg-charcoal py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <Badge variant="violet" className="mb-4">Our Courses</Badge>
+          <Badge variant="violet" className="mb-4">{content.badgeLabel}</Badge>
           <div style={{ position: 'relative', height: '120px' }} className="max-w-4xl mx-auto">
             <TextPressure
-              text="Choose Your Path to Success"
+              text={content.headline}
               flex
               alpha={false}
               stroke={false}
@@ -118,12 +72,12 @@ export function CourseGrid() {
             />
           </div>
           <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
-            Comprehensive coaching programs designed by experts with proven track records
+            {content.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {courses.map((course) => (
+          {content.courses.map((course) => (
             <Link key={course.slug} href={course.slug} className="course-card group">
               <BorderGlow
                 className="h-full"

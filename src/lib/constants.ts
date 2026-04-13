@@ -63,11 +63,9 @@ export const KTU_DEPARTMENTS = [
 
 export const STATS = [
   { label: "Students Coached", value: "5,000+" },
-  { label: "GATE Selections", value: "800+" },
+  { label: "Pass Rate", value: "95%" },
   { label: "Years Experience", value: "15+" },
-  { label: "Expert Faculty", value: "25+" },
-  { label: "Success Rate", value: "92%" },
-  { label: "Study Materials", value: "1,200+" },
+  { label: "Expert Faculty", value: "100+" },
 ] as const;
 
 export const WHY_US_FEATURES = [

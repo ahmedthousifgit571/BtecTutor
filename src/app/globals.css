@@ -13,11 +13,13 @@
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
   body {
     color: var(--foreground);
     background: var(--background);
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {

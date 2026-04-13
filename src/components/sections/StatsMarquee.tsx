@@ -4,14 +4,17 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { STATS } from "@/lib/constants";
+import { statsContent, type StatItem } from "@/lib/content/stats";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-export function StatsMarquee() {
+interface StatsMarqueeProps {
+  stats?: StatItem[];
+}
+
+export function StatsMarquee({ stats = statsContent }: StatsMarqueeProps) {
   const sectionRef = useRef<HTMLElement>(null);
-  const duplicatedStats = [...STATS, ...STATS];
 
   useGSAP(
     () => {
@@ -33,9 +36,11 @@ export function StatsMarquee() {
     { scope: sectionRef }
   );
 
+  const duplicatedStats = [...stats, ...stats];
+
   return (
     <section ref={sectionRef} className="bg-charcoal py-6 border-y border-white/5 overflow-hidden">
-      <div className="flex animate-marquee">
+      <div className="flex animate-marquee [animation-duration:16s] md:[animation-duration:30s]">
         {duplicatedStats.map((stat, i) => (
           <div
             key={`${stat.label}-${i}`}

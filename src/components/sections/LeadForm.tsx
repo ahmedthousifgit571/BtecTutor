@@ -4,12 +4,14 @@ import { useState, type FormEvent } from "react";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
+import { leadFormContent, type LeadFormContent } from "@/lib/content/lead-form";
 
 interface LeadFormProps {
   className?: string;
   variant?: "card" | "inline";
   theme?: "light" | "dark";
   defaultCourse?: string;
+  content?: LeadFormContent;
 }
 
 export function LeadForm({
@@ -17,6 +19,7 @@ export function LeadForm({
   variant = "card",
   theme = "light",
   defaultCourse,
+  content = leadFormContent,
 }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
@@ -69,10 +72,10 @@ export function LeadForm({
       >
         <CheckCircle className="h-12 w-12 text-green-500 mb-4" />
         <h3 className={cn("text-lg font-semibold", isDark ? "text-white" : "text-gray-900")}>
-          Thank You!
+          {content.successTitle}
         </h3>
         <p className={cn("mt-2 text-sm", isDark ? "text-white/50" : "text-gray-500")}>
-          We&apos;ve received your enquiry and will get back to you shortly.
+          {content.successMessage}
         </p>
       </div>
     );
@@ -99,10 +102,10 @@ export function LeadForm({
       {variant === "card" && (
         <div className="mb-6">
           <h3 className={cn("text-lg font-semibold", isDark ? "text-white" : "text-gray-900")}>
-            Get in Touch
+            {content.title}
           </h3>
           <p className={cn("text-sm mt-1", isDark ? "text-white/50" : "text-gray-500")}>
-            Fill in your details and we&apos;ll reach out
+            {content.subtitle}
           </p>
         </div>
       )}
@@ -124,12 +127,9 @@ export function LeadForm({
           <label htmlFor="lead-course" className={labelClass}>Course Interest</label>
           <select id="lead-course" name="course" defaultValue={defaultCourse || ""} className={inputClass}>
             <option value="">Select a course</option>
-            <option value="GATE ECE">GATE ECE</option>
-            <option value="GATE EEE">GATE EEE</option>
-            <option value="GATE Instrumentation">GATE Instrumentation</option>
-            <option value="KTU CSE">KTU CSE</option>
-            <option value="KTU Mechanical">KTU Mechanical</option>
-            <option value="KTU Civil">KTU Civil</option>
+            {content.courseOptions.map((course) => (
+              <option key={course} value={course}>{course}</option>
+            ))}
           </select>
         </div>
         <div className="space-y-1.5">
@@ -161,7 +161,7 @@ export function LeadForm({
           ) : (
             <>
               <Send className="h-4 w-4" />
-              Submit Enquiry
+              {content.submitLabel}
             </>
           )}
         </Button>

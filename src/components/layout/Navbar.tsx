@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import logoImage from "@/assets/logoImage2.png";
@@ -16,6 +16,20 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [mobileOpen]);
 
   useGSAP(
     () => {
@@ -111,8 +125,8 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden glass border-b border-white/10">
-          <div className="mx-auto max-w-7xl px-4 py-4 space-y-2">
+        <div className="lg:hidden fixed left-0 right-0 top-20 z-40 border-b border-white/10 bg-brand-navy shadow-2xl shadow-black/50">
+          <div className="mx-auto max-w-7xl max-h-[calc(100dvh-5rem)] overflow-y-auto px-4 py-4 pb-6 space-y-2">
             {NAV_LINKS.map((link) => (
               <div key={link.label}>
                 {"children" in link ? (
@@ -142,11 +156,11 @@ export function Navbar() {
                 )}
               </div>
             ))}
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex flex-col gap-2">
               <Link
                 href="/free-demo"
                 onClick={() => setMobileOpen(false)}
-                className="glass text-center rounded-lg px-4 py-2.5 text-sm font-medium text-white"
+                className="border border-white/15 bg-white/5 text-center rounded-lg px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10"
               >
                 Free Demo
               </Link>

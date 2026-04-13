@@ -14,10 +14,10 @@ import {
   Trophy,
 } from "lucide-react";
 import dynamicGif from "@/assets/dynamicGif.gif";
-import { WHY_US_FEATURES } from "@/lib/constants";
 import { Badge } from "@/components/ui/Badge";
 import { GooeyText } from "@/components/ui/gooey-text-morphing";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
+import { whyUsContent, type WhyUsContent } from "@/lib/content/why-us";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -30,14 +30,13 @@ const iconMap: Record<string, React.ReactNode> = {
   Trophy: <Trophy className="h-6 w-6" />,
 };
 
-const GOOEY_TEXTS = [
-  "Your Learning Path",
-  "In Kerala",
-  "Your Success Story",
-  "Starts Here",
-];
+const GOOEY_TEXTS = whyUsContent.gooeyTexts;
 
-export function WhyUs() {
+interface WhyUsProps {
+  content?: WhyUsContent;
+}
+
+export function WhyUs({ content = whyUsContent }: WhyUsProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const gifRef = useRef<HTMLDivElement>(null);
@@ -126,14 +125,14 @@ export function WhyUs() {
         {/* Header */}
         <div className="text-center mb-12">
           <Badge variant="violet" className="mb-4 !bg-brand-orange/10">
-            Who Are We?
+            {content.badgeLabel}
           </Badge>
           <h2 className="text-fluid-3xl font-bold text-gray-900">
-            Welcome To Btech Tutor -
+            {content.headline}
           </h2>
           <div className="h-[60px] md:h-[80px] flex items-center justify-center mt-6">
             <GooeyText
-              texts={GOOEY_TEXTS}
+              texts={content.gooeyTexts}
               morphTime={1}
               cooldownTime={0.25}
               className="w-full h-full"
@@ -146,31 +145,13 @@ export function WhyUs() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-12">
           {/* Left: Paragraphs */}
           <div className="space-y-6 text-left">
-            <p className="text-lg leading-relaxed text-gray-600">
-              <a href="#" className="font-semibold text-brand-orange hover:underline transition-colors">BTech Tutor</a>{" "}
-              is your trusted destination for the best BTech tuition in Kerala, helping students master engineering subjects
-              through structured online classes and personal mentorship. With experienced faculty, focused{" "}
-              <a href="#" className="font-semibold text-brand-orange hover:underline transition-colors">GATE coaching</a>,
-              and result-oriented learning methods, we make engineering studies easier, smarter, and more successful.
-            </p>
-
-            <p className="text-lg leading-relaxed text-gray-600">
-              We proudly stand as one of the top{" "}
-              <a href="#" className="font-semibold text-brand-orange hover:underline transition-colors">GATE</a>{" "}
-              coaching centres in Kerala, offering flexible online programs that fit every student&apos;s pace and goal.
-              Whether you&apos;re preparing for semester exams or national-level tests like{" "}
-              <a href="#" className="font-semibold text-brand-orange hover:underline transition-colors">GATE</a>,
-              we provide complete support to ensure you achieve your academic dreams.
-            </p>
-
-            <p className="text-lg leading-relaxed text-gray-600">
-              At{" "}
-              <a href="#" className="font-semibold text-brand-orange hover:underline transition-colors">BTech Tutor</a>,
-              our mission is clear —{" "}
-              <em className="text-gray-700">
-                empowering students to achieve excellence, nurturing innovation, and guiding future engineers toward impactful careers.
-              </em>
-            </p>
+            {content.paragraphs.map((html, i) => (
+              <p
+                key={i}
+                className="text-lg leading-relaxed text-gray-600"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
+            ))}
           </div>
 
           {/* Right: Animated GIF */}
@@ -191,7 +172,7 @@ export function WhyUs() {
         </div>
 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {WHY_US_FEATURES.map((feature) => (
+          {content.features.map((feature) => (
             <div
               key={feature.title}
               className="why-card group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"

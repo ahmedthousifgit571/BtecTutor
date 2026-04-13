@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { Hero } from "@/components/sections/Hero";
 import { StatsMarquee } from "@/components/sections/StatsMarquee";
+import { OneToOneTuition } from "@/components/sections/OneToOneTuition";
 import { CourseGrid } from "@/components/sections/CourseGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { LeadForm } from "@/components/sections/LeadForm";
+import { ctaSectionContent } from "@/lib/content/cta-section";
 
 export const metadata: Metadata = {
   title: "BTEC Tutor — Kerala's Best GATE & KTU Coaching Institute",
@@ -60,6 +62,7 @@ export default async function HomePage() {
     <>
       <Hero />
       <StatsMarquee />
+      <OneToOneTuition />
       <CourseGrid />
       <WhyUs />
 
@@ -73,21 +76,14 @@ export default async function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-fluid-3xl font-bold text-white mb-4">
-                Ready to Start Your{" "}
-                <span className="gradient-text">Journey?</span>
+                {ctaSectionContent.headline}{" "}
+                <span className="gradient-text">{ctaSectionContent.highlightedWord}</span>
               </h2>
               <p className="text-lg text-white/40 mb-6">
-                Take the first step towards cracking GATE or acing your KTU
-                exams. Our expert faculty is ready to guide you every step of
-                the way.
+                {ctaSectionContent.subtitle}
               </p>
               <ul className="space-y-3">
-                {[
-                  "Personalized study plans",
-                  "Access to 1,200+ study materials",
-                  "Regular mock tests & performance tracking",
-                  "One-on-one doubt clearing sessions",
-                ].map((item) => (
+                {ctaSectionContent.features.map((item) => (
                   <li
                     key={item}
                     className="flex items-center gap-3 text-sm text-white/50"

@@ -22,9 +22,9 @@ export function StickyCTA() {
   return (
     <div
       className={cn(
-        "fixed bottom-0 left-0 right-0 z-40 lg:hidden",
+        "fixed bottom-0 left-0 right-0 z-40 w-full max-w-full lg:hidden",
         "bg-charcoal/95 backdrop-blur-md border-t border-white/10",
-        "p-3 flex items-center gap-3",
+        "p-3 flex items-center gap-2 sm:gap-3",
         "animate-in slide-in-from-bottom duration-300"
       )}
     >
