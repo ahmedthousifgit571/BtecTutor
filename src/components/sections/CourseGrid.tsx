@@ -5,7 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import { ArrowRight, Cpu, Zap, Gauge, Code, Wrench, Building2 } from "lucide-react";
+import { ArrowRight, UserCheck, GraduationCap, Target, RefreshCw, Rocket } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/Badge";
 import BorderGlow from "@/components/ui/BorderGlow";
@@ -16,12 +16,11 @@ import { courseGridContent, type CourseGridContent } from "@/lib/content/courses
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const iconMap: Record<string, React.ReactNode> = {
-  Cpu: <Cpu className="h-6 w-6" />,
-  Zap: <Zap className="h-6 w-6" />,
-  Gauge: <Gauge className="h-6 w-6" />,
-  Code: <Code className="h-6 w-6" />,
-  Wrench: <Wrench className="h-6 w-6" />,
-  Building2: <Building2 className="h-6 w-6" />,
+  UserCheck: <UserCheck className="h-6 w-6" />,
+  GraduationCap: <GraduationCap className="h-6 w-6" />,
+  Target: <Target className="h-6 w-6" />,
+  RefreshCw: <RefreshCw className="h-6 w-6" />,
+  Rocket: <Rocket className="h-6 w-6" />,
 };
 
 interface CourseGridProps {
@@ -68,7 +67,7 @@ export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
               textColor="#ffffff"
               strokeColor="#FFAB40"
               minFontSize={36}
-              getCharColor={(index) => index < 12 ? '#ffffff' : '#FF6B2B'}
+              getCharColor={(index) => index < 16 ? '#ffffff' : '#FF6B2B'}
             />
           </div>
           <p className="mt-4 text-lg text-white/40 max-w-2xl mx-auto">
@@ -78,7 +77,7 @@ export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {content.courses.map((course) => (
-            <Link key={course.slug} href={course.slug} className="course-card group">
+            <Link key={course.title} href={course.slug} className="course-card group">
               <BorderGlow
                 className="h-full"
                 edgeSensitivity={30}
@@ -102,16 +101,27 @@ export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-brand-orange transition-colors">
                     {course.title}
                   </h3>
-                  <p className="text-sm text-white/40 flex-1 mb-4">
-                    {course.description}
+                  <p className="text-sm font-medium text-white/60 mb-3">
+                    {course.tagline}
                   </p>
+                  <p className="text-xs text-white/30 mb-3">
+                    <span className="text-white/50">Who it&apos;s for:</span>{" "}
+                    {course.audience}
+                  </p>
+                  <div className="flex flex-wrap gap-2 flex-1 mb-4">
+                    {course.features.map((feature) => (
+                      <span
+                        key={feature}
+                        className="text-xs text-white/40 bg-white/5 rounded-full px-2.5 py-1"
+                      >
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                    <span className="text-xs text-white/30">
-                      {course.subjects} subjects
-                    </span>
+                  <div className="flex items-center justify-end pt-4 border-t border-white/5">
                     <span className="flex items-center gap-1 text-sm font-medium text-brand-orange group-hover:gap-2 transition-all">
-                      Explore
+                      {course.ctaText}
                       <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </div>

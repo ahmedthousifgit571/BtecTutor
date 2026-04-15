@@ -7,11 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import {
   GraduationCap,
-  BookOpen,
-  ClipboardCheck,
-  BarChart3,
-  MessageCircle,
-  Trophy,
+  Target,
+  UserCheck,
 } from "lucide-react";
 import dynamicGif from "@/assets/dynamicGif.gif";
 import { Badge } from "@/components/ui/Badge";
@@ -23,11 +20,8 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const iconMap: Record<string, React.ReactNode> = {
   GraduationCap: <GraduationCap className="h-6 w-6" />,
-  BookOpen: <BookOpen className="h-6 w-6" />,
-  ClipboardCheck: <ClipboardCheck className="h-6 w-6" />,
-  BarChart3: <BarChart3 className="h-6 w-6" />,
-  MessageCircle: <MessageCircle className="h-6 w-6" />,
-  Trophy: <Trophy className="h-6 w-6" />,
+  Target: <Target className="h-6 w-6" />,
+  UserCheck: <UserCheck className="h-6 w-6" />,
 };
 
 interface WhyUsProps {
@@ -143,12 +137,13 @@ export function WhyUs({ content = whyUsContent }: WhyUsProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch mb-12">
           {/* Left: Paragraphs */}
           <div className="space-y-6 text-left">
-            {content.paragraphs.map((html, i) => (
+            {content.paragraphs.map((text, i) => (
               <p
                 key={i}
                 className="text-lg leading-relaxed text-gray-600"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
+              >
+                {text}
+              </p>
             ))}
           </div>
 
@@ -169,20 +164,20 @@ export function WhyUs({ content = whyUsContent }: WhyUsProps) {
           </div>
         </div>
 
-        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {content.features.map((feature) => (
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {content.pillars.map((pillar) => (
             <div
-              key={feature.title}
+              key={pillar.title}
               className="why-card group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="rounded-xl bg-brand-orange/5 p-3 text-brand-orange w-fit mb-4 group-hover:bg-brand-orange/10 transition-colors">
-                {iconMap[feature.icon]}
+                {iconMap[pillar.icon]}
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {feature.title}
+                {pillar.title}
               </h3>
               <p className="text-sm text-gray-500 leading-relaxed">
-                {feature.description}
+                {pillar.description}
               </p>
             </div>
           ))}

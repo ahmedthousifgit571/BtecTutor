@@ -1,10 +1,12 @@
 export interface CourseItem {
   title: string;
   slug: string;
-  description: string;
+  tagline: string;
+  audience: string;
+  features: string[];
+  ctaText: string;
   icon: string;
   badge: string | null;
-  subjects: number;
 }
 
 export interface CourseGridContent {
@@ -16,63 +18,81 @@ export interface CourseGridContent {
 
 export const courseGridContent: CourseGridContent = {
   badgeLabel: "Our Courses",
-  headline: "Choose Your Path to Success",
+  headline: "What We Teach — Choose Your Path",
   subtitle:
-    "Comprehensive coaching programs designed by experts with proven track records",
+    "Whether you're clearing a backlog, preparing for GATE, or aiming for the top percentile — we have a course that fits where you are right now.",
   courses: [
     {
-      title: "GATE ECE",
-      slug: "/gate-coaching/ece",
-      description:
-        "Electronics & Communication Engineering — Network Theory, Signals & Systems, Digital Electronics",
-      icon: "Cpu",
+      title: "One-to-One BTech Tuition",
+      slug: "/free-demo",
+      tagline: "One student. One teacher. Full attention.",
+      audience:
+        "Students with backlogs, CGPA issues, or anyone who learns better with personal attention",
+      features: [
+        "Dedicated personal faculty",
+        "Flexible timing",
+        "Any subject",
+        "Free demo session",
+      ],
+      ctaText: "Book a One-to-One Session",
+      icon: "UserCheck",
       badge: "Popular",
-      subjects: 15,
     },
     {
-      title: "GATE EEE",
-      slug: "/gate-coaching/eee",
-      description:
-        "Electrical & Electronics Engineering — Power Systems, Control Systems, Electric Circuits",
-      icon: "Zap",
+      title: "KTU BTech Tuition",
+      slug: "/ktu/2024",
+      tagline: "All subjects. All semesters. Both schemes.",
+      audience:
+        "KTU students in Semesters 1 to 8 under 2019 or 2024 scheme",
+      features: ["Notes", "PYQ", "Video classes", "Demo + Marathon sessions"],
+      ctaText: "Explore KTU Courses",
+      icon: "GraduationCap",
       badge: null,
-      subjects: 12,
     },
     {
-      title: "GATE Instrumentation",
-      slug: "/gate-coaching/instrumentation",
-      description:
-        "Instrumentation Engineering — Transducers, Process Control, Analog Electronics",
-      icon: "Gauge",
+      title: "GATE Coaching",
+      slug: "/gate-coaching",
+      tagline: "Structured preparation for ECE, EEE, and Instrumentation.",
+      audience:
+        "BTech graduates and final year students targeting GATE 2027 / 2028",
+      features: [
+        "Subject-wise classes",
+        "PYQ analysis",
+        "Mock tests",
+        "Cutoff guidance",
+      ],
+      ctaText: "Explore GATE Courses",
+      icon: "Target",
       badge: null,
-      subjects: 10,
     },
     {
-      title: "KTU CSE",
-      slug: "/ktu/2024/computer-science",
-      description:
-        "Computer Science & Engineering — Data Structures, OS, DBMS for KTU 2024 scheme",
-      icon: "Code",
-      badge: "New Scheme",
-      subjects: 20,
-    },
-    {
-      title: "KTU Mechanical",
-      slug: "/ktu/2024/mechanical",
-      description:
-        "Mechanical Engineering — Thermodynamics, Fluid Mechanics, Machine Design",
-      icon: "Wrench",
+      title: "Supply Exam Coaching",
+      slug: "/contact",
+      tagline: "Clear your arrears fast.",
+      audience: "KTU students with supply exams coming up",
+      features: [
+        "Targeted preparation",
+        "Revision sessions",
+        "Previous year analysis",
+      ],
+      ctaText: "Start Supply Exam Prep",
+      icon: "RefreshCw",
       badge: null,
-      subjects: 18,
     },
     {
-      title: "KTU Civil",
-      slug: "/ktu/2024/civil",
-      description:
-        "Civil Engineering — Structural Analysis, Geotechnical Engineering, Surveying",
-      icon: "Building2",
-      badge: null,
-      subjects: 16,
+      title: "ISRO Coaching",
+      slug: "/contact",
+      tagline: "From campus to ISRO.",
+      audience: "Graduates targeting ISRO Scientist Engineer exam",
+      features: [
+        "ISRO-specific coaching",
+        "Syllabus coverage",
+        "PYQ analysis",
+        "Mock tests",
+      ],
+      ctaText: "Explore ISRO Preparation",
+      icon: "Rocket",
+      badge: "New",
     },
   ],
 };

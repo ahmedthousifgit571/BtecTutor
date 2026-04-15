@@ -1,4 +1,4 @@
-export interface WhyUsFeature {
+export interface WhyUsPillar {
   title: string;
   description: string;
   icon: string;
@@ -9,59 +9,42 @@ export interface WhyUsContent {
   headline: string;
   gooeyTexts: string[];
   paragraphs: string[];
-  features: WhyUsFeature[];
+  pillars: WhyUsPillar[];
 }
 
 export const whyUsContent: WhyUsContent = {
   badgeLabel: "Who Are We?",
-  headline: "Welcome To Btech Tutor -",
+  headline: "Welcome to BTechTutor",
   gooeyTexts: [
-    "Your Learning Path",
-    "In Kerala",
-    "Your Success Story",
-    "Starts Here",
+    "Where Students Actually Learn",
+    "Built for Kerala Engineers",
+    "From Backlogs to Top CGPAs",
+    "15 Years of Real Results",
   ],
   paragraphs: [
-    '<a href="#" class="font-semibold text-brand-orange hover:underline transition-colors">BTech Tutor</a> is your trusted destination for the best BTech tuition in Kerala, helping students master engineering subjects through structured online classes and personal mentorship. With experienced faculty, focused <a href="#" class="font-semibold text-brand-orange hover:underline transition-colors">GATE coaching</a>, and result-oriented learning methods, we make engineering studies easier, smarter, and more successful.',
-    'We proudly stand as one of the top <a href="#" class="font-semibold text-brand-orange hover:underline transition-colors">GATE</a> coaching centres in Kerala, offering flexible online programs that fit every student\'s pace and goal. Whether you\'re preparing for semester exams or national-level tests like <a href="#" class="font-semibold text-brand-orange hover:underline transition-colors">GATE</a>, we provide complete support to ensure you achieve your academic dreams.',
-    'At <a href="#" class="font-semibold text-brand-orange hover:underline transition-colors">BTech Tutor</a>, our mission is clear — <em class="text-gray-700">empowering students to achieve excellence, nurturing innovation, and guiding future engineers toward impactful careers.</em>',
+    "Most engineering students in Kerala have sat through classes where the teacher finished the syllabus and moved on, but the student was still trying to understand the third slide from twenty minutes ago. That is not learning. That is coverage.",
+    "BTechTutor was built on a different philosophy. We believe every student can understand every subject — if it is explained clearly, patiently, and with genuine attention to how that individual student thinks.",
+    "We started as a small coaching team in Kerala. Over fifteen years, we have helped more than five thousand engineering students — students with backlogs, students aiming for top CGPAs, students preparing for GATE, students from across Kerala, and Indian students studying abroad — all find their footing in engineering subjects that once felt impossible.",
+    "Our faculty are not just qualified teachers. They are people who have sat in the same seats you are sitting in, faced the same exams you are facing, and figured out exactly what it takes to clear them.",
   ],
-  features: [
+  pillars: [
     {
-      title: "Expert Faculty",
+      title: "KTU BTech Coaching",
       description:
-        "Learn from GATE-qualified professors with 10+ years of teaching experience.",
+        "Complete coverage of KTU 2019 and 2024 scheme across all departments — EEE, ECE, CS, IT, Civil, and Mechanical. Notes, question papers, video classes, and demo sessions for every subject in every semester.",
       icon: "GraduationCap",
     },
     {
-      title: "Comprehensive Notes",
+      title: "GATE Preparation",
       description:
-        "Meticulously prepared study materials covering every topic in the syllabus.",
-      icon: "BookOpen",
+        "Dedicated coaching for GATE ECE, EEE, and Instrumentation Engineering. Subject-wise classes, previous year paper analysis, mock tests, and cutoff guidance. One of the few Kerala-based coaching programmes that takes GATE seriously as a career path.",
+      icon: "Target",
     },
     {
-      title: "Mock Tests",
+      title: "One-to-One Personal Tuition",
       description:
-        "Regular practice tests designed to simulate actual GATE/KTU exam patterns.",
-      icon: "ClipboardCheck",
-    },
-    {
-      title: "PYQ Analysis",
-      description:
-        "Detailed solutions and analysis of previous year questions for focused preparation.",
-      icon: "BarChart3",
-    },
-    {
-      title: "Doubt Clearing",
-      description:
-        "Dedicated doubt-clearing sessions to ensure complete understanding of concepts.",
-      icon: "MessageCircle",
-    },
-    {
-      title: "Proven Results",
-      description:
-        "Consistent track record of producing top GATE ranks and KTU university toppers.",
-      icon: "Trophy",
+        "A dedicated faculty member who teaches only you, at your pace, on your schedule. The fastest way to clear a backlog, fix a falling CGPA, or master a subject that has been giving you trouble for months.",
+      icon: "UserCheck",
     },
   ],
 };
