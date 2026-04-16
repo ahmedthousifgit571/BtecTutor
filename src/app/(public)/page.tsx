@@ -7,6 +7,8 @@ import { CourseGrid } from "@/components/sections/CourseGrid";
 import { WhyUs } from "@/components/sections/WhyUs";
 import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { BlogPreview } from "@/components/sections/BlogPreview";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { WhyStudentsTrust } from "@/components/sections/WhyStudentsTrust";
 import { LeadForm } from "@/components/sections/LeadForm";
 import { ctaSectionContent } from "@/lib/content/cta-section";
 
@@ -63,8 +65,10 @@ export default async function HomePage() {
       <Hero />
       <StatsMarquee />
       <OneToOneTuition />
-      <CourseGrid />
       <WhyUs />
+      <CourseGrid />
+      <HowItWorks />
+      <WhyStudentsTrust />
 
       {reviews.length > 0 && <TestimonialCarousel reviews={reviews} />}
 
