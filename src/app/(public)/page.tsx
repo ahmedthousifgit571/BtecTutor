@@ -10,6 +10,10 @@ import { BlogPreview } from "@/components/sections/BlogPreview";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyStudentsTrust } from "@/components/sections/WhyStudentsTrust";
 import { LeadForm } from "@/components/sections/LeadForm";
+import { WhereWeServe } from "@/components/sections/WhereWeServe";
+import { FAQHome } from "@/components/sections/FAQHome";
+import { SubjectPageExplainer } from "@/components/sections/SubjectPageExplainer";
+import { StudentResults } from "@/components/sections/StudentResults";
 import { ctaSectionContent } from "@/lib/content/cta-section";
 
 export const metadata: Metadata = {
@@ -69,10 +73,16 @@ export default async function HomePage() {
       <CourseGrid />
       <HowItWorks />
       <WhyStudentsTrust />
+      <SubjectPageExplainer />
+      <StudentResults />
 
-      {reviews.length > 0 && <TestimonialCarousel reviews={reviews} />}
+      <TestimonialCarousel reviews={reviews} />
 
-      {blogPosts.length > 0 && <BlogPreview posts={blogPosts} />}
+      <WhereWeServe />
+
+      <FAQHome />
+
+      <BlogPreview posts={blogPosts} />
 
       {/* CTA Section */}
       <section className="bg-charcoal py-24">

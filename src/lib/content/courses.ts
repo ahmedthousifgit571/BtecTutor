@@ -9,10 +9,18 @@ export interface CourseItem {
   badge: string | null;
 }
 
+export interface CourseStat {
+  label: string;
+  value: string;
+  icon: string;
+}
+
 export interface CourseGridContent {
   badgeLabel: string;
   headline: string;
   subtitle: string;
+  exploreCta: string;
+  stats: CourseStat[];
   courses: CourseItem[];
 }
 
@@ -21,6 +29,13 @@ export const courseGridContent: CourseGridContent = {
   headline: "What We Teach — Choose Your Path",
   subtitle:
     "Whether you're clearing a backlog, preparing for GATE, or aiming for the top percentile — we have a course that fits where you are right now.",
+  exploreCta: "Explore Courses",
+  stats: [
+    { label: "Students Coached", value: "5,000+", icon: "TrendingUp" },
+    { label: "Free Videos", value: "200+", icon: "Play" },
+    { label: "Expert Faculty", value: "100+", icon: "Users" },
+    { label: "Pass Rate", value: "95%", icon: "Award" },
+  ],
   courses: [
     {
       title: "One-to-One BTech Tuition",

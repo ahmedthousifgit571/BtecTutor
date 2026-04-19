@@ -46,7 +46,7 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50" style={{ opacity: 0 }}>
-      <div className="glass border-b border-white/10">
+      <div className="bg-charcoal border-b border-white/10">
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
             <Image src={logoImage} alt="BTEC Tutor" height={150} className="w-auto" priority />
@@ -98,12 +98,6 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/free-demo"
-              className="glass glass-hover inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-white transition-all"
-            >
-              Free Demo
-            </Link>
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange px-4 py-2 text-sm font-medium text-white hover:bg-brand-orange-dark shadow-lg shadow-brand-orange/25 transition-all"
@@ -157,13 +151,6 @@ export function Navbar() {
               </div>
             ))}
             <div className="pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex flex-col gap-2">
-              <Link
-                href="/free-demo"
-                onClick={() => setMobileOpen(false)}
-                className="border border-white/15 bg-white/5 text-center rounded-lg px-4 py-2.5 text-sm font-medium text-white hover:bg-white/10"
-              >
-                Free Demo
-              </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}

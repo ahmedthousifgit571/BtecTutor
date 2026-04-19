@@ -1,104 +1,226 @@
 import type { Metadata } from "next";
-import { GraduationCap, Target, Users, Award } from "lucide-react";
+import {
+  Lightbulb,
+  UserCheck,
+  Globe,
+  ShieldCheck,
+  GraduationCap,
+  Clock,
+  Users,
+  Layers,
+  BookOpen,
+  Award,
+  Quote,
+} from "lucide-react";
 import { generateMeta } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
+import { FAQSection } from "@/components/sections/FAQ";
+import { aboutPageContent } from "@/lib/content/about";
+
+const content = aboutPageContent;
 
 export const metadata: Metadata = generateMeta({
-  title: "About BTEC Tutor — Kerala's Leading Engineering Coaching",
-  description:
-    "Learn about BTEC Tutor, Kerala's premier GATE and KTU coaching institute. 15+ years of excellence, 5,000+ successful students, and a passion for engineering education.",
+  title: content.meta.title,
+  description: content.meta.description,
+  keywords: content.meta.keywords,
   canonicalUrl: "/about",
 });
 
-const milestones = [
-  { year: "2010", event: "Founded in Kochi with 3 faculty members and a vision to democratize GATE coaching in Kerala." },
-  { year: "2013", event: "Expanded to Trivandrum with growing demand. First batch of 50+ GATE qualifiers." },
-  { year: "2016", event: "Launched KTU coaching programs. Student count crossed 1,000." },
-  { year: "2019", event: "Introduced online learning platform. Partnered with leading publishers for study materials." },
-  { year: "2022", event: "Expanded to 3 centers across Kerala. Launched mobile app for students." },
-  { year: "2024", event: "5,000+ students coached. 92% success rate. KTU 2024 scheme materials launched." },
-];
+const beliefIconMap: Record<string, React.ReactNode> = {
+  Lightbulb: <Lightbulb className="h-6 w-6" />,
+  UserCheck: <UserCheck className="h-6 w-6" />,
+  Globe: <Globe className="h-6 w-6" />,
+  ShieldCheck: <ShieldCheck className="h-6 w-6" />,
+};
+
+const statIconMap: Record<string, React.ReactNode> = {
+  GraduationCap: <GraduationCap className="h-7 w-7" />,
+  Clock: <Clock className="h-7 w-7" />,
+  Users: <Users className="h-7 w-7" />,
+  Layers: <Layers className="h-7 w-7" />,
+  BookOpen: <BookOpen className="h-7 w-7" />,
+  Award: <Award className="h-7 w-7" />,
+};
 
 export default function AboutPage() {
   return (
-    <div className="pt-24 pb-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Breadcrumb items={[{ name: "About", url: "/about" }]} className="mb-8" />
-
-        {/* Hero */}
-        <div className="max-w-3xl mb-20">
-          <h1 className="text-fluid-3xl font-bold text-gray-900 mb-6">
-            About <span className="gradient-text-dark">BTEC Tutor</span>
-          </h1>
-          <p className="text-lg text-gray-500 leading-relaxed">
-            Since 2010, BTEC Tutor has been shaping the careers of engineering
-            students across Kerala. We combine decades of teaching expertise
-            with modern pedagogy to help students excel in GATE examinations and
-            KTU university exams.
-          </p>
+    <>
+      {/* ─── Hero ─── */}
+      <section className="bg-white pt-28 pb-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Breadcrumb
+            items={[{ name: "About", url: "/about" }]}
+            className="mb-8"
+          />
+          <div className="max-w-3xl">
+            <h1
+              className="text-fluid-3xl font-bold text-gray-900 mb-6"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              {content.hero.headlinePrefix}{" "}
+              <span className="gradient-text-dark">
+                {content.hero.highlightedName}
+              </span>{" "}
+              {content.hero.headlineSuffix}
+            </h1>
+          </div>
         </div>
+      </section>
 
-        {/* Values Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {[
-            {
-              icon: <GraduationCap className="h-6 w-6" />,
-              title: "Expert Faculty",
-              desc: "Our faculty comprises GATE-qualified professionals with decades of teaching experience.",
-            },
-            {
-              icon: <Target className="h-6 w-6" />,
-              title: "Result Oriented",
-              desc: "Structured approach focused on maximizing scores with strategic preparation.",
-            },
-            {
-              icon: <Users className="h-6 w-6" />,
-              title: "5,000+ Students",
-              desc: "A growing community of successful engineers who started their journey here.",
-            },
-            {
-              icon: <Award className="h-6 w-6" />,
-              title: "92% Success Rate",
-              desc: "Consistently high pass rates across GATE and KTU examinations.",
-            },
-          ].map((item) => (
-            <div key={item.title} className="rounded-2xl border border-gray-100 bg-white p-6">
-              <div className="rounded-xl bg-brand-orange/5 p-3 w-fit text-brand-orange mb-4">
-                {item.icon}
-              </div>
-              <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-              <p className="text-sm text-gray-500">{item.desc}</p>
+      {/* ─── Our Story ─── */}
+      <section className="bg-white pb-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            className="text-fluid-2xl font-bold text-gray-900 mb-8"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            {content.story.sectionTitle}
+          </h2>
+          <div className="max-w-3xl space-y-6">
+            {content.story.paragraphs.map((paragraph, i) => (
+              <p
+                key={i}
+                className={`text-lg leading-relaxed ${
+                  i === content.story.paragraphs.length - 1
+                    ? "font-semibold text-gray-900"
+                    : "text-gray-600"
+                }`}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Our Mission ─── */}
+      <section className="bg-charcoal py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2
+              className="text-fluid-2xl font-bold text-white mb-6"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              {content.mission.sectionTitle}
+            </h2>
+            <div className="relative">
+              <Quote className="absolute -top-4 -left-2 h-10 w-10 text-brand-orange/20 rotate-180" />
+              <p className="text-xl leading-relaxed text-white/70 italic pl-8">
+                {content.mission.statement}
+              </p>
             </div>
-          ))}
+          </div>
         </div>
+      </section>
 
-        {/* Mission */}
-        <div className="rounded-2xl bg-charcoal p-10 md:p-16 mb-20">
-          <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
-          <p className="text-lg text-white/50 max-w-2xl leading-relaxed">
-            To make world-class GATE and KTU coaching accessible to every
-            engineering student in Kerala, regardless of location or background.
-            We believe that the right guidance, at the right time, can transform
-            careers and lives.
-          </p>
-        </div>
-
-        {/* Timeline */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-8">Our Journey</h2>
-        <div className="space-y-6 max-w-2xl">
-          {milestones.map((m) => (
-            <div key={m.year} className="flex gap-6">
-              <div className="shrink-0 w-16">
-                <span className="text-sm font-bold text-brand-orange">{m.year}</span>
+      {/* ─── What We Believe ─── */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            className="text-fluid-2xl font-bold text-gray-900 mb-12 text-center"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            {content.beliefs.sectionTitle}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {content.beliefs.beliefs.map((belief) => (
+              <div
+                key={belief.title}
+                className="group rounded-2xl border border-gray-100 bg-white p-7 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="rounded-xl bg-brand-orange/5 p-3 text-brand-orange w-fit mb-4 group-hover:bg-brand-orange/10 transition-colors">
+                  {beliefIconMap[belief.icon]}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {belief.title}
+                </h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  {belief.description}
+                </p>
               </div>
-              <div className="pb-6 border-l-2 border-gray-100 pl-6 relative">
-                <div className="absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-brand-orange" />
-                <p className="text-sm text-gray-600 leading-relaxed">{m.event}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── By the Numbers ─── */}
+      <section className="relative bg-charcoal py-20 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-orange/[0.06] rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/[0.04] rounded-full blur-3xl" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2
+            className="text-fluid-2xl font-bold text-white mb-12 text-center"
+            style={{ fontFamily: "var(--font-poppins)" }}
+          >
+            {content.stats.sectionTitle}
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+            {content.stats.stats.map((stat) => (
+              <div
+                key={stat.label}
+                className="group rounded-2xl border border-white/[0.08] bg-white/[0.04] backdrop-blur-sm p-6 text-center hover:border-brand-orange/30 transition-colors duration-300"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="rounded-xl bg-brand-orange/10 p-3 text-brand-orange group-hover:bg-brand-orange/20 transition-colors">
+                    {statIconMap[stat.icon]}
+                  </div>
+                </div>
+                <p
+                  className="text-3xl md:text-4xl font-bold text-white mb-2"
+                  style={{ fontFamily: "var(--font-poppins)" }}
+                >
+                  {stat.value}
+                </p>
+                <p className="text-sm text-white/50 leading-relaxed">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── Who Runs BTechTutor ─── */}
+      <section className="bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2
+              className="text-fluid-2xl font-bold text-gray-900 mb-8"
+              style={{ fontFamily: "var(--font-poppins)" }}
+            >
+              {content.founder.sectionTitle}
+            </h2>
+            <div className="rounded-2xl border border-gray-100 bg-gradient-to-br from-brand-cream to-white p-8 md:p-10">
+              <p className="text-brand-orange font-semibold text-lg mb-6">
+                {content.founder.name}
+              </p>
+              <div className="space-y-5">
+                {content.founder.paragraphs.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-base leading-relaxed text-gray-700"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* ─── FAQ ─── */}
+      <section className="bg-charcoal py-20">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <FAQSection
+            faqs={content.faq.items}
+            title={content.faq.sectionTitle}
+            variant="dark"
+          />
+        </div>
+      </section>
+    </>
   );
 }

@@ -53,7 +53,7 @@ export const oneToOneTuitionContent: OneToOneTuitionContent = {
     },
   ],
   cta: {
-    label: "Book a One-to-One Session ->",
+    label: "Book a One-to-One Session",
     href: "/one-to-one-coaching/",
   },
 };
