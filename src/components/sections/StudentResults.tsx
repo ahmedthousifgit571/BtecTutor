@@ -271,7 +271,7 @@ export function StudentResults({
 }: StudentResultsProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(headingRef, { once: true, margin: "-60px" });
+  useInView(headingRef, { once: true, margin: "-60px" });
 
   useGSAP(
     () => {

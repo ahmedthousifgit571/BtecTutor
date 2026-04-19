@@ -96,8 +96,8 @@ const TestimonialsColumn = (props: {
   );
 };
 
-export default function TestimonialV2({ testimonials }: TestimonialV2Props) {
-  const items = defaultTestimonials;
+export default function TestimonialV2({ testimonials = defaultTestimonials }: TestimonialV2Props) {
+  const items = testimonials;
 
   const firstColumn = items.slice(0, Math.ceil(items.length / 3));
   const secondColumn = items.slice(Math.ceil(items.length / 3), Math.ceil((items.length * 2) / 3));
