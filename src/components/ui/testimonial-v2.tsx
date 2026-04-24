@@ -69,6 +69,8 @@ const TestimonialsColumn = (props: {
                       {text}
                     </p>
                     <footer className="flex items-center gap-3 mt-6">
+                      {/* Keeping img for lightweight avatar loop in animated list */}
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         width={40}
                         height={40}

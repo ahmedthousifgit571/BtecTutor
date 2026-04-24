@@ -180,7 +180,9 @@ export default function OneToOneCoachingPage() {
                 key={testimonial.student}
                 className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-7"
               >
-                <p className="text-white/75 leading-relaxed">"{testimonial.quote}"</p>
+                <p className="text-white/75 leading-relaxed">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
                 <footer className="mt-4 text-sm text-brand-orange font-semibold">
                   {testimonial.student}
                 </footer>
