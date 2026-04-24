@@ -27,8 +27,17 @@ export const NAV_LINKS = [
       { label: "2024 Scheme", href: "/ktu/2024" },
     ],
   },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
+  {
+    label: "Company",
+    href: "#",
+    children: [
+      { label: "About", href: "/about" },
+      { label: "Why Us", href: "/why-us" },
+      { label: "Reviews", href: "/reviews" },
+      { label: "Blog", href: "/blog" },
+      { label: "Faculty", href: "/faculty" },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ] as const;
 

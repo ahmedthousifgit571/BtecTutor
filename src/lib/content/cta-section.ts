@@ -6,14 +6,9 @@ export interface CtaSectionContent {
 }
 
 export const ctaSectionContent: CtaSectionContent = {
-  headline: "Ready to Start Your",
-  highlightedWord: "Journey?",
+  headline: "Ready to Clear Your Exams? Speak to Our Team Today.",
+  highlightedWord: "",
   subtitle:
-    "Take the first step towards cracking GATE or acing your KTU exams. Our expert faculty is ready to guide you every step of the way.",
-  features: [
-    "Personalized study plans",
-    "Access to 1,200+ study materials",
-    "Regular mock tests & performance tracking",
-    "One-on-one doubt clearing sessions",
-  ],
+    "Don't let one difficult subject drag your entire CGPA down. One focused session with the right teacher can change everything. Fill the form above and let's get you started.",
+  features: [],
 };

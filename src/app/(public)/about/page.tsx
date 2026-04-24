@@ -185,25 +185,72 @@ export default function AboutPage() {
       {/* ─── Who Runs BTechTutor ─── */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
+          <div className="mx-auto max-w-6xl">
             <h2
-              className="text-fluid-2xl font-bold text-gray-900 mb-8"
+              className="text-fluid-2xl font-bold text-gray-900 mb-12 text-center"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
               {content.founder.sectionTitle}
             </h2>
-            <div className="rounded-2xl border border-gray-100 bg-gradient-to-br from-brand-cream to-white p-8 md:p-10">
-              <p className="text-brand-orange font-semibold text-lg mb-6">
-                {content.founder.name}
-              </p>
+
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.05fr_1fr]">
+              <div className="relative overflow-hidden rounded-3xl border border-gray-100 bg-gradient-to-br from-brand-cream via-white to-white p-8 md:p-10">
+                <div className="pointer-events-none absolute -top-24 right-[-72px] h-56 w-56 rounded-full bg-brand-orange/10 blur-3xl" />
+                <div className="pointer-events-none absolute -bottom-20 left-[-70px] h-52 w-52 rounded-full bg-violet-500/10 blur-3xl" />
+                <div className="relative">
+                  <div className="mb-10 inline-flex rounded-full border border-brand-orange/20 bg-brand-orange/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-brand-orange">
+                    Founder Story
+                  </div>
+                  <div className="mb-8 flex items-center gap-4">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-charcoal text-2xl font-bold text-white">
+                      PA
+                    </div>
+                    <div>
+                      <p className="text-xl font-semibold text-gray-900">
+                        {content.founder.name}
+                      </p>
+                      <p className="text-sm text-gray-500">
+                        Mentor, Educator, Exam Strategist
+                      </p>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {content.stats.stats.slice(0, 4).map((stat) => (
+                      <div
+                        key={stat.label}
+                        className="rounded-xl border border-gray-100 bg-white/85 px-4 py-3"
+                      >
+                        <p className="text-lg font-bold text-gray-900">
+                          {stat.value}
+                        </p>
+                        <p className="text-xs leading-relaxed text-gray-500">
+                          {stat.label}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               <div className="space-y-5">
                 {content.founder.paragraphs.map((paragraph, i) => (
-                  <p
+                  <article
                     key={i}
-                    className="text-base leading-relaxed text-gray-700"
+                    className="rounded-3xl border border-gray-100 bg-white p-7 shadow-[0_10px_30px_-18px_rgba(10,22,40,0.25)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_16px_36px_-16px_rgba(10,22,40,0.28)] md:p-8"
                   >
-                    {paragraph}
-                  </p>
+                    <Quote className="mb-4 h-7 w-7 text-brand-orange/60" />
+                    <p className="text-base leading-relaxed text-gray-700">
+                      {paragraph}
+                    </p>
+                    <div className="mt-5 border-t border-gray-100 pt-4">
+                      <p className="text-sm font-semibold text-gray-900">
+                        {content.founder.name}
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        BTechTutor Founder
+                      </p>
+                    </div>
+                  </article>
                 ))}
               </div>
             </div>

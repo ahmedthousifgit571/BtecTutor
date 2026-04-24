@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -19,7 +19,6 @@ interface FAQHomeProps {
 export function FAQHome({ content = faqContent }: FAQHomeProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headingRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(headingRef, { once: true, margin: "-60px" });
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (i: number) =>
@@ -87,12 +86,7 @@ export function FAQHome({ content = faqContent }: FAQHomeProps) {
             </h2>
 
             {/* CTA Card */}
-            <motion.div
-              className="faq-heading-line rounded-2xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] p-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            >
+            <div className="faq-heading-line rounded-2xl bg-white/[0.04] backdrop-blur-sm border border-white/[0.08] p-6">
               <h3 className="text-lg font-semibold text-white mb-2">
                 {content.ctaHeading}
               </h3>
@@ -108,7 +102,7 @@ export function FAQHome({ content = faqContent }: FAQHomeProps) {
                 <MessageCircle className="h-4 w-4" />
                 {content.ctaButtonLabel}
               </a>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right column — FAQ accordion */}

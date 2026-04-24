@@ -15,6 +15,7 @@ import { FAQHome } from "@/components/sections/FAQHome";
 import { SubjectPageExplainer } from "@/components/sections/SubjectPageExplainer";
 import { StudentResults } from "@/components/sections/StudentResults";
 import { ctaSectionContent } from "@/lib/content/cta-section";
+import { leadFormContent } from "@/lib/content/lead-form";
 
 export const metadata: Metadata = {
   title: "BTEC Tutor — Kerala's Best GATE & KTU Coaching Institute",
@@ -63,6 +64,10 @@ async function getHomePageData() {
 
 export default async function HomePage() {
   const { reviews, blogPosts } = await getHomePageData();
+  const ctaOrangeLine = "Ready to Clear Your Exams?";
+  const ctaRemainingHeadline = ctaSectionContent.headline.startsWith(ctaOrangeLine)
+    ? ctaSectionContent.headline.slice(ctaOrangeLine.length).trimStart()
+    : ctaSectionContent.headline;
 
   return (
     <>
@@ -90,25 +95,46 @@ export default async function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-fluid-3xl font-bold text-white mb-4">
-                {ctaSectionContent.headline}{" "}
-                <span className="gradient-text">{ctaSectionContent.highlightedWord}</span>
+                {ctaSectionContent.headline.startsWith(ctaOrangeLine) ? (
+                  <>
+                    <span className="text-brand-orange">{ctaOrangeLine}</span>{" "}
+                    {ctaRemainingHeadline}
+                  </>
+                ) : (
+                  ctaSectionContent.headline
+                )}
+                {ctaSectionContent.highlightedWord ? (
+                  <>
+                    {" "}
+                    <span className="gradient-text">{ctaSectionContent.highlightedWord}</span>
+                  </>
+                ) : null}
               </h2>
               <p className="text-lg text-white/40 mb-6">
                 {ctaSectionContent.subtitle}
               </p>
-              <ul className="space-y-3">
-                {ctaSectionContent.features.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-sm text-white/50"
-                  >
-                    <span className="h-1.5 w-1.5 rounded-full bg-brand-orange shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              {ctaSectionContent.features.length > 0 ? (
+                <ul className="space-y-3">
+                  {ctaSectionContent.features.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-center gap-3 text-sm text-white/50"
+                    >
+                      <span className="h-1.5 w-1.5 rounded-full bg-brand-orange shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
-            <LeadForm variant="card" theme="dark" />
+            <LeadForm
+              variant="card"
+              theme="dark"
+              content={{
+                ...leadFormContent,
+                submitLabel: "Book My Session — Talk to Our Team",
+              }}
+            />
           </div>
         </div>
       </section>
