@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 import { motion } from "framer-motion";
 import { testimonialsContent } from "@/lib/content/testimonials";
@@ -132,9 +133,8 @@ export default function TestimonialV2({ testimonials = defaultTestimonials }: Te
             id="testimonials-heading"
             className="text-fluid-3xl font-extrabold tracking-tight mt-6 text-center text-white"
           >
-            What Students Say About
-            <br />
-            <span className="gradient-text">BTechTutor</span>
+            What Students Say{" "}
+            <span className="text-brand-orange">About BTechTutor</span>
           </h2>
         </div>
 
@@ -154,6 +154,15 @@ export default function TestimonialV2({ testimonials = defaultTestimonials }: Te
             className="hidden lg:block"
             duration={17}
           />
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href={testimonialsContent.exploreMoreHref}
+            className="inline-flex items-center rounded-full border border-brand-orange/40 bg-brand-orange/10 px-5 py-2.5 text-sm font-semibold text-brand-orange transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/70 hover:bg-brand-orange/20 focus:outline-none focus:ring-2 focus:ring-brand-orange/40"
+          >
+            {testimonialsContent.exploreMoreLabel}
+          </Link>
         </div>
       </motion.div>
     </section>

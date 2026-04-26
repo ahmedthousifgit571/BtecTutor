@@ -6,7 +6,7 @@ import { prisma } from "@/lib/prisma";
 import { generateMeta } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { formatDate, readingTime } from "@/lib/utils";
-import { LeadForm } from "@/components/sections/LeadForm";
+import { GetInTouchSection } from "@/components/sections/GetInTouchSection";
 
 export const revalidate = 86400;
 
@@ -186,20 +186,13 @@ export default async function BlogPostPage({ params }: Props) {
         </article>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl bg-charcoal p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-xl font-bold text-white mb-2">
-                Ready to Start Preparing?
-              </h2>
-              <p className="text-sm text-white/50">
-                Join BTEC Tutor and get access to expert coaching, study
-                materials, and mock tests.
-              </p>
-            </div>
-            <LeadForm variant="card" theme="dark" />
-          </div>
-        </div>
+        <GetInTouchSection
+          theme="dark"
+          heading="Ready to Start Preparing?"
+          description="Join BTEC Tutor and get access to expert coaching, study materials, and mock tests."
+          submitLabel="Start Preparing Now"
+          className="mt-16 !rounded-2xl overflow-hidden"
+        />
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (

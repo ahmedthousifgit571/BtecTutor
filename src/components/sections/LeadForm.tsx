@@ -88,6 +88,7 @@ export function LeadForm({
       ? "border-white/20 bg-white/5 text-white placeholder:text-white/30 focus:border-brand-orange"
       : "border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:border-brand-orange"
   );
+  const optionClass = isDark ? "bg-charcoal text-white" : "bg-white text-gray-900";
 
   return (
     <div
@@ -126,9 +127,11 @@ export function LeadForm({
         <div className="space-y-1.5">
           <label htmlFor="lead-course" className={labelClass}>Course Interest</label>
           <select id="lead-course" name="course" defaultValue={defaultCourse || ""} className={inputClass}>
-            <option value="">Select a course</option>
+            <option value="" className={optionClass}>Select a course</option>
             {content.courseOptions.map((course) => (
-              <option key={course} value={course}>{course}</option>
+              <option key={course} value={course} className={optionClass}>
+                {course}
+              </option>
             ))}
           </select>
         </div>

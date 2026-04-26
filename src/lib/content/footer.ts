@@ -66,14 +66,14 @@ export const footerContent: FooterContent = {
         { label: "Faculty", href: "/faculty" },
         { label: "Reviews", href: "/reviews" },
         { label: "Blog", href: "/blog" },
-        { label: "Contact", href: "/contact" },
+        { label: "Why Us", href: "/why-us" },
       ],
     },
     {
       title: "Support",
       links: [
+        { label: "Contact", href: "/contact" },
         { label: "Fee Structure", href: "/fees" },
-        { label: "Why Us", href: "/why-us" },
       ],
     },
   ],

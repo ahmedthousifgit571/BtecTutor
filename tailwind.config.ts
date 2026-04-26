@@ -16,6 +16,7 @@ const config: Config = {
           navy: "#0A1628",
           orange: "#FF6B2B",
           "orange-dark": "#E55A1F",
+          "title-accent": "#FF6B2B",
           slate: "#1E3A5F",
           cream: "#FFF8F0",
           sky: "#38BDF8",

@@ -9,13 +9,12 @@ import { TestimonialCarousel } from "@/components/sections/TestimonialCarousel";
 import { BlogPreview } from "@/components/sections/BlogPreview";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyStudentsTrust } from "@/components/sections/WhyStudentsTrust";
-import { LeadForm } from "@/components/sections/LeadForm";
 import { WhereWeServe } from "@/components/sections/WhereWeServe";
 import { FAQHome } from "@/components/sections/FAQHome";
 import { SubjectPageExplainer } from "@/components/sections/SubjectPageExplainer";
 import { StudentResults } from "@/components/sections/StudentResults";
+import { GetInTouchSection } from "@/components/sections/GetInTouchSection";
 import { ctaSectionContent } from "@/lib/content/cta-section";
-import { leadFormContent } from "@/lib/content/lead-form";
 
 export const metadata: Metadata = {
   title: "BTEC Tutor — Kerala's Best GATE & KTU Coaching Institute",
@@ -89,55 +88,18 @@ export default async function HomePage() {
 
       <BlogPreview posts={blogPosts} />
 
-      {/* CTA Section */}
-      <section className="bg-charcoal py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-fluid-3xl font-bold text-white mb-4">
-                {ctaSectionContent.headline.startsWith(ctaOrangeLine) ? (
-                  <>
-                    <span className="text-brand-orange">{ctaOrangeLine}</span>{" "}
-                    {ctaRemainingHeadline}
-                  </>
-                ) : (
-                  ctaSectionContent.headline
-                )}
-                {ctaSectionContent.highlightedWord ? (
-                  <>
-                    {" "}
-                    <span className="gradient-text">{ctaSectionContent.highlightedWord}</span>
-                  </>
-                ) : null}
-              </h2>
-              <p className="text-lg text-white/40 mb-6">
-                {ctaSectionContent.subtitle}
-              </p>
-              {ctaSectionContent.features.length > 0 ? (
-                <ul className="space-y-3">
-                  {ctaSectionContent.features.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-3 text-sm text-white/50"
-                    >
-                      <span className="h-1.5 w-1.5 rounded-full bg-brand-orange shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-            </div>
-            <LeadForm
-              variant="card"
-              theme="dark"
-              content={{
-                ...leadFormContent,
-                submitLabel: "Book My Session — Talk to Our Team",
-              }}
-            />
-          </div>
-        </div>
-      </section>
+      <GetInTouchSection
+        theme="dark"
+        heading={
+          <>
+            <span className="text-brand-orange">{ctaOrangeLine}</span>{" "}
+            {ctaRemainingHeadline}
+          </>
+        }
+        description={ctaSectionContent.subtitle}
+        features={ctaSectionContent.features.length > 0 ? ctaSectionContent.features : undefined}
+        submitLabel="Book My Session — Talk to Our Team"
+      />
     </>
   );
 }

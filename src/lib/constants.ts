@@ -38,7 +38,14 @@ export const NAV_LINKS = [
       { label: "Faculty", href: "/faculty" },
     ],
   },
-  { label: "Contact", href: "/contact" },
+  {
+    label: "Support",
+    href: "#",
+    children: [
+      { label: "Contact", href: "/contact" },
+      { label: "Fees", href: "/fees" },
+    ],
+  },
 ] as const;
 
 export const GATE_BRANCHES = [

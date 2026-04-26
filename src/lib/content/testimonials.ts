@@ -8,12 +8,16 @@ export interface TestimonialItem {
 export interface TestimonialsContent {
   badgeLabel: string;
   heading: string;
+  exploreMoreLabel: string;
+  exploreMoreHref: string;
   testimonials: TestimonialItem[];
 }
 
 export const testimonialsContent: TestimonialsContent = {
   badgeLabel: "Student Testimonials",
   heading: "What Students Say About BTechTutor",
+  exploreMoreLabel: "Explore More Reviews",
+  exploreMoreHref: "/reviews",
   testimonials: [
     {
       text: "BTech Tutor really helped me strengthen my basics. The classes are well-structured, and I gained the confidence to solve problems on my own.",
