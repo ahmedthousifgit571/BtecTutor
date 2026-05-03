@@ -17,6 +17,6 @@ export const heroContent: HeroContent = {
     "Looking for personal attention? We offer One-to-One BTech Tuition with a dedicated faculty member for just you.",
   supportingLine:
     "KTU 2019 & 2024 Scheme · All Departments · GATE ECE EEE IN · One-to-One Tuition · ISRO Prep",
-  primaryCta: { label: "Book A Demo Class", href: "/free-demo" },
+  primaryCta: { label: "Get Started", href: "/get-started" },
   secondaryCta: { label: "Explore One-to-One Tuition", href: "/one-to-one-coaching" },
 };

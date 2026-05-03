@@ -77,7 +77,7 @@ export const footerContent: FooterContent = {
       ],
     },
   ],
-  copyright: "BTEC Tutor. All rights reserved.",
+  copyright: "BTechTutor. All rights reserved.",
   legalLinks: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Service", href: "/terms" },

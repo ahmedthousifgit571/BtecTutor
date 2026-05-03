@@ -158,3 +158,54 @@ export function buildOrganizationSchema() {
     sameAs: [],
   };
 }
+
+interface BlogFeaturedPostSchema {
+  headline: string;
+  path: string;
+}
+
+export function buildBlogListingSchema(input: {
+  name: string;
+  description: string;
+  posts: BlogFeaturedPostSchema[];
+}) {
+  const blogUrl = absoluteUrl("/blog");
+  const blogId = `${blogUrl}#blog`;
+
+  const postingNodes = input.posts.map((post) => {
+    const path = post.path.replace(/\/$/, "") || post.path;
+    const url = absoluteUrl(path);
+    return {
+      "@type": "BlogPosting",
+      "@id": `${url}#blogposting`,
+      headline: post.headline,
+      url,
+      isPartOf: { "@id": blogId },
+      publisher: {
+        "@type": "Organization",
+        name: "BTechTutor",
+        url: getBaseUrl(),
+      },
+    };
+  });
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": blogId,
+        name: input.name,
+        description: input.description,
+        url: blogUrl,
+        publisher: {
+          "@type": "Organization",
+          name: "BTechTutor",
+          url: getBaseUrl(),
+        },
+        blogPost: postingNodes.map((n) => ({ "@id": n["@id"] })),
+      },
+      ...postingNodes,
+    ],
+  };
+}
