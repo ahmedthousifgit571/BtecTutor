@@ -36,6 +36,11 @@ const branchAccentRotation = [
 ];
 
 export function GateContentPage({ content, path }: GateContentPageProps) {
+  const isEceSeriesPage = content.pageNumber >= 11;
+  const pageSwitchNav = gatePageNav.filter((item) =>
+    isEceSeriesPage ? item.pageNumber >= 11 : item.pageNumber <= 10
+  );
+
   const breadcrumbItems = [
     { name: "GATE", url: "/gate" },
     ...(content.pageNumber === 1
@@ -58,7 +63,7 @@ export function GateContentPage({ content, path }: GateContentPageProps) {
         <Breadcrumb items={breadcrumbItems} className="mb-8" />
 
         <div className="mb-8 flex flex-wrap gap-2 rounded-2xl border border-gray-100 bg-white p-3 shadow-sm">
-          {gatePageNav.map((item) => (
+          {pageSwitchNav.map((item) => (
             <Link
               key={item.pageNumber}
               href={item.href}
@@ -375,50 +380,102 @@ export function GateContentPage({ content, path }: GateContentPageProps) {
 
         {content.additionalSections && (
           <section className="mb-12 space-y-6">
-            {content.additionalSections.map((section, index) => (
-              <article
-                key={section.heading}
-                className="rounded-3xl border border-gray-100 bg-white p-7 md:p-9 shadow-sm"
-              >
-                <div className="mb-5 flex items-center gap-3 border-b border-gray-100 pb-4">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-orange/10 text-sm font-semibold text-brand-orange">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h2 className="text-xl font-semibold text-gray-900">{section.heading}</h2>
-                </div>
+            {content.additionalSections.map((section, index) => {
+              const isReadyToStart = section.heading.trim().toLowerCase() === "ready to start?";
 
-                {section.paragraphs && (
-                  <div className="mb-4 space-y-4">
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph} className="text-base leading-8 text-gray-600">
-                        {paragraph}
-                      </p>
-                    ))}
+              if (isReadyToStart) {
+                return (
+                  <article
+                    key={section.heading}
+                    className="relative overflow-hidden rounded-3xl border border-white/10 bg-charcoal p-7 md:p-9 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.8)]"
+                  >
+                    <div className="pointer-events-none absolute inset-0">
+                      <div className="absolute -right-12 top-0 h-56 w-56 rounded-full bg-brand-orange/20 blur-3xl" />
+                      <div className="absolute -left-8 bottom-0 h-48 w-48 rounded-full bg-indigo-500/15 blur-3xl" />
+                    </div>
+
+                    <div className="relative">
+                      <div className="mb-5 flex items-center gap-3 border-b border-white/15 pb-4">
+                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-orange text-sm font-semibold text-white">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h2 className="text-xl font-semibold text-white">{section.heading}</h2>
+                      </div>
+
+                      {section.paragraphs && (
+                        <div className="mb-4 space-y-4">
+                          {section.paragraphs.map((paragraph) => (
+                            <p key={paragraph} className="text-base leading-8 text-white/80">
+                              {paragraph}
+                            </p>
+                          ))}
+                        </div>
+                      )}
+
+                      {section.bullets && (
+                        <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                          {section.bullets.map((bullet) => (
+                            <li
+                              key={bullet}
+                              className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/[0.05] p-3.5 text-sm leading-relaxed text-white/85"
+                            >
+                              <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
+                              <span>{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </article>
+                );
+              }
+
+              return (
+                <article
+                  key={section.heading}
+                  className="rounded-3xl border border-gray-100 bg-white p-7 md:p-9 shadow-sm"
+                >
+                  <div className="mb-5 flex items-center gap-3 border-b border-gray-100 pb-4">
+                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand-orange/10 text-sm font-semibold text-brand-orange">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h2 className="text-xl font-semibold text-gray-900">{section.heading}</h2>
                   </div>
-                )}
 
-                {section.bullets && (
-                  <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                    {section.bullets.map((bullet) => (
-                      <li
-                        key={bullet}
-                        className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50/60 p-3.5 text-sm leading-relaxed text-gray-700"
-                      >
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </article>
-            ))}
+                  {section.paragraphs && (
+                    <div className="mb-4 space-y-4">
+                      {section.paragraphs.map((paragraph) => (
+                        <p key={paragraph} className="text-base leading-8 text-gray-600">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  )}
+
+                  {section.bullets && (
+                    <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
+                      {section.bullets.map((bullet) => (
+                        <li
+                          key={bullet}
+                          className="flex items-start gap-3 rounded-xl border border-gray-100 bg-gray-50/60 p-3.5 text-sm leading-relaxed text-gray-700"
+                        >
+                          <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-brand-orange" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              );
+            })}
           </section>
         )}
 
         {content.internalLinks && content.internalLinks.length > 0 && (
-          <section className="mb-12 rounded-3xl border border-gray-100 bg-white p-7 md:p-9 shadow-sm">
+          <section className="relative mb-12 overflow-hidden rounded-3xl border border-brand-orange/20 bg-gradient-to-br from-brand-orange/5 via-white to-indigo-50/50 p-7 md:p-9 shadow-sm">
+            <div className="pointer-events-none absolute -right-10 top-0 h-40 w-40 rounded-full bg-brand-orange/15 blur-3xl" />
             <h2 className="mb-1 text-xl font-semibold text-gray-900">Related Pages</h2>
-            <p className="mb-5 text-sm text-gray-500">
+            <p className="mb-5 text-sm text-gray-600">
               Continue exploring branch-specific GATE coaching and resources.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -426,10 +483,10 @@ export function GateContentPage({ content, path }: GateContentPageProps) {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="group inline-flex items-center gap-1.5 rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/40 hover:text-brand-orange"
+                  className="group inline-flex items-center gap-1.5 rounded-xl border border-brand-orange/20 bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-800 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/50 hover:bg-brand-orange hover:text-white hover:shadow-md hover:shadow-brand-orange/20"
                 >
                   {item.label}
-                  <ArrowUpRight className="h-3.5 w-3.5 text-gray-400 transition-colors group-hover:text-brand-orange" />
+                  <ArrowUpRight className="h-3.5 w-3.5 text-gray-500 transition-colors group-hover:text-white" />
                 </Link>
               ))}
             </div>
