@@ -16,7 +16,7 @@ export const NAV_LINKS = [
     children: [
       { label: "Gate", href: "/gate" },
       { label: "ECE", href: "/gate/ece/" },
-      { label: "EEE", href: "/gate-coaching/eee" },
+      { label: "EEE", href: "/gate/eee/" },
       { label: "Instrumentation", href: "/gate-coaching/instrumentation" },
     ],
   },

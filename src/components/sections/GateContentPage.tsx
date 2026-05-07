@@ -20,8 +20,7 @@ import {
   buildFaqSchema,
   buildOrganizationSchema,
 } from "@/lib/seo";
-import type { GatePageContent } from "@/lib/content/gate-pages";
-import { gatePageNav } from "@/lib/content/gate-pages";
+import { gatePagesContent, type GatePageContent } from "@/lib/content/gate-pages";
 
 interface GateContentPageProps {
   content: GatePageContent;
@@ -36,10 +35,24 @@ const branchAccentRotation = [
 ];
 
 export function GateContentPage({ content, path }: GateContentPageProps) {
-  const isEceSeriesPage = content.pageNumber >= 11;
-  const pageSwitchNav = gatePageNav.filter((item) =>
-    isEceSeriesPage ? item.pageNumber >= 11 : item.pageNumber <= 10
+  const getSeries = (slug: string, pageNumber: number) => {
+    if (slug === "ece" || slug.startsWith("ece-")) return "ece";
+    if (slug === "eee" || slug.startsWith("eee-")) return "eee";
+    if (pageNumber <= 10) return "gate";
+    return "other";
+  };
+
+  const currentSeries = getSeries(content.slug, content.pageNumber);
+  const seriesPages = gatePagesContent.filter(
+    (page) => getSeries(page.slug, page.pageNumber) === currentSeries
   );
+  const pageSwitchNav = seriesPages.map((page, index) => ({
+    label: `Page ${index + 1}`,
+    href: page.pageNumber === 1 ? "/gate" : `/gate/${page.slug}`,
+    pageNumber: page.pageNumber,
+  }));
+  const currentSeriesPageNumber =
+    pageSwitchNav.findIndex((item) => item.pageNumber === content.pageNumber) + 1;
 
   const breadcrumbItems = [
     { name: "GATE", url: "/gate" },
@@ -87,7 +100,7 @@ export function GateContentPage({ content, path }: GateContentPageProps) {
           <div className="relative grid grid-cols-1 items-start gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <div>
               <Badge variant="violet" className="mb-4 !bg-brand-orange/15 !text-brand-orange">
-                {content.navLabel}
+                {currentSeriesPageNumber > 0 ? `Page ${currentSeriesPageNumber}` : content.navLabel}
               </Badge>
               <h1 className="mb-4 text-fluid-3xl font-extrabold leading-tight text-white">
                 {hasMainAndSubTitle ? (

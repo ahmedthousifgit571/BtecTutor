@@ -3067,6 +3067,569 @@ export const gatePagesContent: GatePageContent[] = [
       },
     ],
   },
+  {
+    pageNumber: 24,
+    slug: "eee",
+    navLabel: "Page 24",
+    seo: {
+      title: "GATE EEE Coaching Online — Syllabus & Subjects | BTechTutor",
+      description:
+        "Complete GATE EEE preparation guide. Subject-wise syllabus, notes, PYQs, and video classes. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE — Complete Preparation Guide for Electrical Engineering",
+      primaryKeyword: "GATE EEE",
+      secondaryKeywords: ["GATE Electrical Engineering", "GATE EE coaching online"],
+      featuredSnippet:
+        "GATE EE (Electrical Engineering) is one of the most competitive branches in the exam, with over 90,000 candidates appearing every year. This page is your complete starting point for subject-wise syllabus, notes, PYQs, and video classes.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Topic-first, exam-focused GATE EEE preparation with subject pages, PYQs, and guided study strategy.",
+    introduction: [
+      "GATE EE (Electrical Engineering) is one of the most competitive branches in the exam, with over 90,000 candidates appearing every year. The paper covers 11 subjects — and the right preparation strategy makes all the difference between qualifying and missing the cutoff.",
+      "This page is your starting point for GATE EEE preparation at BTechTutor. Every subject has its own dedicated page with syllabus, notes, PYQs, and video classes.",
+    ],
+    inclusionHeading: "GATE EEE — Exam Overview",
+    includes: [
+      "Total marks — 100.",
+      "Total questions — 65 (10 General Aptitude + 55 technical).",
+      "Duration — 3 hours.",
+      "Question types — MCQ, MSQ, and NAT (numerical answer type).",
+      "Negative marking — 1/3 for 1-mark MCQs, 2/3 for 2-mark MCQs. No negative marking for NAT.",
+      "GATE score validity — 3 years from the date of result.",
+    ],
+    audienceHeading: "GATE EEE Subjects and Weightage",
+    audiences: [
+      "Power Systems — 12 to 18 marks (highest weightage).",
+      "Electric Machines — 10 to 15 marks.",
+      "Engineering Mathematics — 13 to 15 marks.",
+      "Control Systems — 8 to 12 marks.",
+      "Power Electronics — 8 to 12 marks.",
+      "Electric Circuits — 8 to 12 marks.",
+      "Signals and Systems — 6 to 10 marks.",
+      "Analog Electronics — 6 to 10 marks.",
+      "Electromagnetic Fields — 6 to 10 marks.",
+      "Digital Electronics — 4 to 8 marks.",
+      "General Aptitude — 15 marks (fixed every year).",
+    ],
+    whyHeading: "How to Start Your GATE EEE Preparation",
+    whyParagraphs: [
+      "A lot of students start with the wrong subjects or waste time on topics that do not appear in GATE. A practical sequence helps you build momentum and score early.",
+      "Start with Engineering Mathematics, then move to Electric Circuits and Power Systems, followed by Electric Machines. Study Control Systems and Power Electronics together, then complete Signals and Systems, Analog, and Digital Electronics. Keep General Aptitude running in parallel for 30 minutes daily.",
+      "Solve PYQs topic-wise from day one — not just at the end. This is one of the most effective preparation habits for GATE EEE.",
+    ],
+    additionalSections: [
+      {
+        heading: "Prepare by Subject",
+        bullets: [
+          "Electric Circuits → btechtutor.com/gate/eee/electric-circuits/.",
+          "Electromagnetic Fields → btechtutor.com/gate/eee/electromagnetic-fields/.",
+          "Power Systems → btechtutor.com/gate/eee/power-systems/.",
+          "Power Electronics → btechtutor.com/gate/eee/power-electronics/.",
+          "Electric Machines → btechtutor.com/gate/eee/electric-machines/.",
+          "Control Systems → btechtutor.com/gate/eee/control-systems/.",
+          "Signals and Systems → btechtutor.com/gate/eee/signals-and-systems/.",
+          "Analog Electronics → btechtutor.com/gate/eee/analog-electronics/.",
+          "Digital Electronics → btechtutor.com/gate/eee/digital-electronics/.",
+          "Engineering Mathematics → btechtutor.com/gate/eee/engineering-mathematics/.",
+          "General Aptitude → btechtutor.com/gate/eee/general-aptitude/.",
+        ],
+      },
+      {
+        heading: "What BTechTutor Offers for GATE EEE",
+        bullets: [
+          "Subject-wise notes — free, module-wise, available for all 11 subjects.",
+          "Previous year questions — free, topic-wise sorted for effective practice.",
+          "Video classes — recorded lectures covering all subjects and topics.",
+          "Demo class — one free module on YouTube for each subject before enrolment.",
+          "One-to-one coaching — personalised study plan and direct doubt solving.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear study plan.",
+        ],
+      },
+      {
+        heading: "Start Your GATE EEE Preparation",
+        paragraphs: [
+          "Free notes, PYQs, and demo classes are available for all subjects. Video classes are available on purchase.",
+          "Explore all EEE subjects: btechtutor.com/gate/eee/.",
+          "Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Signals and Systems", href: "/gate/eee/signals-and-systems/" },
+      { label: "GATE EEE Analog Electronics", href: "/gate/eee/analog-electronics/" },
+      { label: "GATE EEE Digital Electronics", href: "/gate/eee/digital-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "GATE EEE General Aptitude", href: "/gate/eee/general-aptitude/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Start GATE EEE Preparation",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "Is GATE EEE tough to crack?",
+        answer:
+          "GATE EEE is competitive — over 90,000 students appear, and the qualifying rate is around 15 to 18%. With the right preparation strategy and consistent practice, it is absolutely crackable. The key is focusing on GATE-specific content instead of the full academic syllabus.",
+      },
+      {
+        question: "How many months does it take to prepare for GATE EEE?",
+        answer:
+          "Six to eight months is ideal for a first-time attempt. If you have only three to four months, it is still possible with a focused plan that prioritizes high-weightage topics. Self-study combined with structured coaching works best for most students.",
+      },
+      {
+        question: "Which subject has the highest weightage in GATE EEE?",
+        answer:
+          "Power Systems usually carries the highest weightage at around 12 to 18 marks. Electric Machines and Engineering Mathematics are the next most important scoring subjects.",
+      },
+      {
+        question: "What is a good score in GATE EEE?",
+        answer:
+          "The qualifying cutoff for GATE EE 2026 was 27.7 marks for the General category. To get into top IITs or NITs, aspirants generally target 55 to 70+ marks. For top PSUs like NTPC or BHEL, many candidates aim for around 65 to 78+ marks.",
+      },
+      {
+        question: "Can I crack GATE EEE without coaching?",
+        answer:
+          "Yes, many students do. But structured guidance can significantly reduce wasted effort. One-to-one coaching helps build a clear plan, identify weak areas early, and resolve doubts quickly.",
+      },
+      {
+        question: "What is the difference between GATE EEE and GATE ECE?",
+        answer:
+          "GATE EEE (EE) focuses on Electrical Engineering subjects such as Power Systems, Electric Machines, Power Electronics, and Electromagnetic Fields. GATE ECE (EC) focuses on Electronics and Communication topics. Some subjects like Control Systems, Signals and Systems, and Engineering Mathematics are common to both.",
+      },
+      {
+        question: "Is GATE EEE score valid for PSU jobs?",
+        answer:
+          "Yes. A valid GATE EEE score is accepted for PSU recruitment in organizations such as BHEL, NTPC, PGCIL, IOCL, ONGC, and others. The GATE score remains valid for three years from the date of result.",
+      },
+      {
+        question: "Do you offer one-to-one coaching for GATE EEE?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 to discuss your preparation plan and get a personalised study schedule.",
+      },
+    ],
+  },
+  {
+    pageNumber: 25,
+    slug: "eee-previous-year-papers",
+    navLabel: "Page 25",
+    seo: {
+      title: "GATE EEE Previous Year Papers with Solutions | BTechTutor",
+      description:
+        "Download GATE EEE previous year question papers with solutions. Year-wise and topic-wise papers for effective GATE EE preparation at BTechTutor.",
+      h1: "GATE EEE Previous Year Papers — Download, Analyse, and Score Better",
+      primaryKeyword: "GATE EEE previous year papers",
+      secondaryKeywords: [
+        "GATE EE question papers with solutions",
+        "GATE Electrical previous papers",
+      ],
+      featuredSnippet:
+        "Previous year papers are the most useful resource for GATE EEE preparation. They reveal real exam patterns, recurring concepts, and practical difficulty levels.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Year-wise and topic-wise PYQs for GATE EEE with practical analysis strategy to improve score and speed.",
+    introduction: [
+      "Previous year question papers are the single most useful resource for GATE EEE preparation. They show you what is actually asked, how questions are framed, and which topics recur across years. Most GATE toppers spend a significant part of their preparation time on PYQs — and for good reason.",
+      "This page has year-wise GATE EE papers with solutions and topic-wise question sets for all subjects.",
+    ],
+    inclusionHeading: "Why Previous Year Papers Matter for GATE EEE",
+    includes: [
+      "GATE questions do not repeat exactly, but concepts and problem types do — sometimes for 5 to 10 years in a row.",
+      "PYQs show you the exact difficulty level you need to prepare for.",
+      "Solving past papers builds calculation speed and reduces exam-day anxiety.",
+      "Topic-wise PYQ practice helps you identify weak areas faster than most other methods.",
+      "Most serious GATE coaching plans are designed around PYQ patterns.",
+    ],
+    additionalSections: [
+      {
+        heading: "GATE EEE Previous Year Papers — Year-wise",
+        bullets: [
+          "GATE EE 2025 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2024 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2023 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2022 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2021 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2020 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2019 — Question Paper with Solutions [Purchase link to be added].",
+          "GATE EE 2018 — Question Paper with Solutions [Purchase link to be added].",
+        ],
+      },
+      {
+        heading: "Topic-wise PYQs — Practise by Subject",
+        bullets: [
+          "Power Systems PYQs → btechtutor.com/gate/eee/power-systems/.",
+          "Electric Machines PYQs → btechtutor.com/gate/eee/electric-machines/.",
+          "Control Systems PYQs → btechtutor.com/gate/eee/control-systems/.",
+          "Power Electronics PYQs → btechtutor.com/gate/eee/power-electronics/.",
+          "Electric Circuits PYQs → btechtutor.com/gate/eee/electric-circuits/.",
+          "Engineering Mathematics PYQs → btechtutor.com/gate/eee/engineering-mathematics/.",
+          "All other subjects → btechtutor.com/gate/eee/.",
+        ],
+      },
+      {
+        heading: "How to Use Previous Year Papers Effectively",
+        bullets: [
+          "Start topic-wise — solve all questions on one topic before moving to the next.",
+          "Do not just read solutions — understand why your answer was wrong.",
+          "Identify topics you consistently get wrong and prioritize them.",
+          "After topic completion, attempt full year-wise papers under exam conditions.",
+          "Time yourself strictly — 3 hours, no breaks.",
+          "Review performance after each paper and track improvements.",
+          "Always attempt each question before viewing the solution.",
+        ],
+      },
+      {
+        heading: "GATE EEE Paper Analysis — Key Trends",
+        bullets: [
+          "Power Systems and Electric Machines together account for around 25 to 30 marks each year.",
+          "Engineering Mathematics is the most consistent section, usually around 13 to 15 marks.",
+          "NAT (numerical answer type) questions have increased over the years, so calculation accuracy is critical.",
+          "Control Systems and Power Electronics often include multi-step calculations.",
+          "General Aptitude is usually the most straightforward section with focused practice.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear plan on what to study, what to skip, and realistic timelines.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/previous-year-papers/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Start GATE EEE PYQ Preparation",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many years of GATE EEE previous papers should I solve?",
+        answer:
+          "At minimum, solve the last 10 years of papers. The last 5 years are most relevant for current trends, while older papers give wider pattern coverage and topic variation.",
+      },
+      {
+        question: "Should I solve year-wise or topic-wise papers first?",
+        answer:
+          "Topic-wise first. Solve subject-wise PYQs to build concept strength, then move to full year-wise papers for exam simulation and time management.",
+      },
+      {
+        question: "Are GATE EEE questions repeated?",
+        answer:
+          "Exact questions are rarely repeated, but concepts, calculation methods, and problem patterns repeat frequently across years. This is why PYQ practice is highly effective.",
+      },
+      {
+        question: "Is it possible to score well in GATE EEE by only solving PYQs?",
+        answer:
+          "PYQs alone are not enough without concept clarity, but once fundamentals are in place, PYQs are the most efficient way to improve score. Many toppers spend around half their preparation time on PYQ practice.",
+      },
+      {
+        question: "Where can I download GATE EEE previous year papers?",
+        answer:
+          "Year-wise papers with solutions are being listed on this BTechTutor page, with purchase links added progressively. Topic-wise question sets are also available through subject pages.",
+      },
+      {
+        question: "Do you offer coaching to help me analyse my GATE EEE paper performance?",
+        answer:
+          "Yes. One-to-one sessions include performance analysis and targeted prep plans based on your weak areas. Call or WhatsApp +91 98950 09337 for details.",
+      },
+    ],
+  },
+  {
+    pageNumber: 26,
+    slug: "eee-mock-test",
+    navLabel: "Page 26",
+    seo: {
+      title: "GATE EEE Mock Test Online — Practice Full Papers | BTechTutor",
+      description:
+        "Take GATE EEE mock tests online at BTechTutor. Full-length practice papers with solutions to improve speed, accuracy, and exam confidence.",
+      h1: "GATE EEE Mock Test — Practice the Full Paper Before the Actual Exam",
+      primaryKeyword: "GATE EEE mock test",
+      secondaryKeywords: ["GATE EE practice test online", "GATE Electrical mock exam"],
+      featuredSnippet:
+        "A GATE EEE mock test simulates the full 3-hour exam with 65 questions and 100 marks. Regular full-length practice improves speed, accuracy, and confidence before exam day.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Full-length GATE EEE mock tests in real exam format with timed simulation, solutions, and performance analysis.",
+    introduction: [
+      "A mock test is not just practice — it is a simulation of the actual exam. Students who score well in GATE are almost always the ones who have taken multiple full-length mock tests before the real paper. They know the time pressure, the question flow, and how to manage 3 hours under exam conditions.",
+      "This page has full-length GATE EEE mock tests that simulate the actual exam format — 65 questions, 100 marks, 3 hours.",
+    ],
+    inclusionHeading: "Why Mock Tests Matter for GATE EEE",
+    includes: [
+      "You can know concepts and still run out of time — mock tests fix time management issues.",
+      "They expose weak subjects before the actual exam, while there is still time to improve.",
+      "GATE includes NAT questions with no options — mock tests train option-free solving.",
+      "Regular mock practice significantly reduces exam-day anxiety.",
+      "Performance analysis after each mock helps track improvement over time.",
+    ],
+    additionalSections: [
+      {
+        heading: "What Our Mock Tests Cover",
+        bullets: [
+          "65 questions — 10 General Aptitude + 55 technical.",
+          "Full GATE EEE syllabus coverage across all 11 subjects.",
+          "Mix of MCQ, MSQ, and NAT question types.",
+          "Negative marking applied as per GATE rules.",
+          "3-hour timed format with auto-submit.",
+          "Detailed solutions and performance analysis after each test.",
+        ],
+      },
+      {
+        heading: "How to Use Mock Tests Effectively",
+        bullets: [
+          "Take mocks only after covering at least 70% of the syllabus.",
+          "Sit in strict exam conditions — no phone, no distractions, full 3-hour limit.",
+          "Do not check solutions mid-test — complete the entire paper first.",
+          "After the test, analyze every wrong answer and fix concept gaps.",
+          "Track subject-wise scores across multiple mocks to identify patterns.",
+          "Take at least 4 to 5 full mocks before the actual GATE exam.",
+          "The highest impact period for mocks is usually the final 6 to 8 weeks.",
+        ],
+      },
+      {
+        heading: "Mock Test Schedule — Recommended Timeline",
+        bullets: [
+          "8 weeks before exam — first mock test to establish baseline and weak areas.",
+          "6 weeks before exam — second mock after major subject coverage.",
+          "4 weeks before exam — increase to two mock tests per week.",
+          "2 weeks before exam — increase to three mock tests per week.",
+          "1 week before exam — full-length mock every alternate day.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether your preparation is on track, early guidance can save time. Talk to a mentor at +91 98950 09337 for a focused plan.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/mock-test/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee-mock-test/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Start GATE EEE Mock Test Preparation",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many mock tests should I take for GATE EEE?",
+        answer:
+          "Take at least 8 to 10 full-length mock tests before the exam. In the final 4 to 5 weeks, aim for 2 to 3 mocks per week and analyze each test thoroughly.",
+      },
+      {
+        question: "When should I start taking mock tests?",
+        answer:
+          "Start after covering at least 70% of the syllabus, typically 8 to 10 weeks before the exam. Taking mocks too early usually gives low-value results.",
+      },
+      {
+        question: "Are mock tests enough to qualify GATE EEE?",
+        answer:
+          "Mock tests alone are not enough. You need strong subject preparation first. But without mock testing, many prepared students still lose marks due to timing and pressure.",
+      },
+      {
+        question: "How is GATE EEE mock test different from practicing PYQs?",
+        answer:
+          "PYQs build topic-wise subject strength, while mock tests simulate the full exam experience with timing, question selection decisions, and subject switching. Both are essential.",
+      },
+      {
+        question: "What score should I target in mock tests?",
+        answer:
+          "The qualifying cutoff is usually around 27 to 30 marks. For IIT opportunities, many aspirants target 55+ marks. For top PSUs like NTPC or BHEL, target around 65 to 75+ marks.",
+      },
+      {
+        question: "Do you offer one-to-one coaching to improve mock test performance?",
+        answer:
+          "Yes. One-to-one coaching includes mock performance analysis and targeted correction plans. Call or WhatsApp +91 98950 09337 for details.",
+      },
+    ],
+  },
+  {
+    pageNumber: 27,
+    slug: "eee-cutoff",
+    navLabel: "Page 27",
+    seo: {
+      title: "GATE EEE Cutoff Marks 2026 — Category Wise | BTechTutor",
+      description:
+        "Check GATE EEE cutoff marks 2026 for qualifying, IIT, NIT, and PSU admission. Category-wise cutoff trends and what score you should target.",
+      h1: "GATE EEE Cutoff 2026 — Qualifying Marks, IIT/NIT Cutoff, and PSU Score",
+      primaryKeyword: "GATE EEE cutoff",
+      secondaryKeywords: ["GATE EE cutoff marks 2026", "GATE Electrical qualifying marks"],
+      featuredSnippet:
+        "GATE EEE cutoff includes qualifying marks, institute admission thresholds, and PSU recruitment ranges. Setting the right target score depends on your end goal.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Understand category-wise qualifying cutoff, IIT/NIT admission ranges, and PSU score expectations for GATE EEE 2026.",
+    introduction: [
+      "Understanding the GATE EEE cutoff helps you set the right target score before you start preparing. Three different cutoffs matter — qualifying cutoff, admission cutoff for IITs and NITs, and PSU recruitment cutoff.",
+      "Each cutoff serves a different purpose. Qualifying is only the first milestone; admission and PSU shortlisting usually require much higher scores.",
+    ],
+    inclusionHeading: "GATE EEE Qualifying Cutoff 2026",
+    includes: [
+      "General / UR category — 27.7 marks.",
+      "OBC-NCL / EWS category — 24.9 marks.",
+      "SC / ST / PwD category — 18.4 marks.",
+      "Scoring above this cutoff makes you GATE qualified, but does not guarantee IIT/NIT admission or PSU shortlisting.",
+      "Source — GATE 2026 official result published by IIT Guwahati.",
+    ],
+    additionalSections: [
+      {
+        heading: "GATE EEE Qualifying Cutoff — Year-wise Trend",
+        bullets: [
+          "GATE EE 2026 — 27.7 marks.",
+          "GATE EE 2025 — 29.1 marks.",
+          "GATE EE 2024 — 29.4 marks.",
+          "GATE EE 2023 — 27.9 marks.",
+          "GATE EE 2022 — 29.9 marks.",
+          "GATE EE 2021 — 30.5 marks.",
+          "General category qualifying cutoff has remained broadly in the 27 to 32 marks range in recent years.",
+        ],
+      },
+      {
+        heading: "GATE EEE Cutoff for IIT and NIT Admission",
+        bullets: [
+          "Top IITs (IIT Bombay, Delhi, Madras, Kharagpur) — typically 60 to 75+ marks.",
+          "Other IITs — typically 50 to 65 marks.",
+          "Top NITs (NIT Trichy, Warangal, Surathkal) — typically 45 to 60 marks.",
+          "Other NITs — typically 35 to 50 marks.",
+          "Admission cutoffs vary by specialisation and seat availability; ranges are indicative from recent counselling trends.",
+        ],
+      },
+      {
+        heading: "GATE EEE Cutoff for PSU Recruitment",
+        bullets: [
+          "NTPC (National Thermal Power Corporation) — around 65 to 72 marks (General).",
+          "BHEL (Bharat Heavy Electricals) — around 60 to 70 marks (General).",
+          "PGCIL (Power Grid Corporation) — around 63 to 71 marks (General).",
+          "IOCL (Indian Oil Corporation) — around 66 to 74 marks (General).",
+          "GAIL (Gas Authority of India) — around 64 to 72 marks (General).",
+          "HPCL (Hindustan Petroleum) — around 62 to 70 marks (General).",
+          "PSU cutoffs vary each year with vacancies, paper level, and applicant competition.",
+        ],
+      },
+      {
+        heading: "What Score Should You Target?",
+        bullets: [
+          "If your goal is just qualification — target 35+ marks for safety above cutoff.",
+          "For NIT admission — target around 50 to 60 marks.",
+          "For top IIT admission — target around 65 to 75 marks.",
+          "For PSU shortlisting — target around 65 to 75+ marks in General category.",
+          "For top PSUs like NTPC and PGCIL — target 70+ marks.",
+          "Aim 10 to 15 marks above your minimum target cutoff to handle year-to-year variation.",
+        ],
+      },
+      {
+        heading: "How Cutoff is Calculated",
+        bullets: [
+          "General cutoff = max(25, min(40, mean + standard deviation)).",
+          "OBC/EWS cutoff = 9/10 × General cutoff.",
+          "SC/ST/PwD cutoff = 2/3 × General cutoff.",
+          "Cutoff is not fixed; it changes based on candidate performance and paper difficulty.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether your target is realistic, early guidance can save time. Talk to a mentor at +91 98950 09337 for a practical preparation plan.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/cutoff/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee-mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee-cutoff/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Plan Your GATE EEE Target Score",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "What is the GATE EEE cutoff for 2026?",
+        answer:
+          "The GATE EE 2026 qualifying cutoff is 27.7 marks for General category, 24.9 for OBC-NCL/EWS, and 18.4 for SC/ST/PwD. This is only the qualifying threshold; higher scores are needed for admission and PSUs.",
+      },
+      {
+        question: "Is 40 marks a good score in GATE EEE?",
+        answer:
+          "A 40 score usually qualifies comfortably, but it may not be enough for top IITs or major PSU shortlisting. For stronger outcomes, many aspirants target 55+ for NIT opportunities and 65+ for PSU-focused goals.",
+      },
+      {
+        question: "How much GATE score is needed for PSU jobs in EEE?",
+        answer:
+          "Many top PSUs such as NTPC, BHEL, and PGCIL often require around 65 to 75+ marks in General category. Exact cutoffs vary each year by vacancy and competition.",
+      },
+      {
+        question: "What rank is needed for IIT admission in GATE EEE?",
+        answer:
+          "For top IITs, a rank roughly within top 200 to 500 is often targeted. For newer or less competitive IIT options, top 1000 to 2000 may still be workable depending on specialization and seat matrix.",
+      },
+      {
+        question: "Does GATE EEE score expire?",
+        answer:
+          "Yes. A GATE score is valid for 3 years from the result date and can be used within that period for admissions and many recruitment processes.",
+      },
+      {
+        question: "What is the difference between qualifying cutoff and admission cutoff?",
+        answer:
+          "Qualifying cutoff is the minimum required to receive a scorecard. Admission cutoff is the score needed for a particular institute or specialization. Admission and PSU targets are usually much higher than qualifying marks.",
+      },
+      {
+        question: "Can I improve my GATE EEE score in a re-attempt?",
+        answer:
+          "Yes. Many repeaters improve significantly with better strategy, stronger revision cycles, and targeted weak-area correction. One-to-one mentoring helps identify exactly where marks were lost and how to recover them.",
+      },
+    ],
+  },
 ];
 
 export const gatePageNav = gatePagesContent.map((page) => ({
