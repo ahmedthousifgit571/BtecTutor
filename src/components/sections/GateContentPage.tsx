@@ -36,8 +36,8 @@ const branchAccentRotation = [
 
 export function GateContentPage({ content, path }: GateContentPageProps) {
   const getSeries = (slug: string, pageNumber: number) => {
-    if (slug === "ece" || slug.startsWith("ece-")) return "ece";
-    if (slug === "eee" || slug.startsWith("eee-")) return "eee";
+    if (slug === "ece" || slug.startsWith("ece-") || slug.startsWith("ece/")) return "ece";
+    if (slug === "eee" || slug.startsWith("eee-") || slug.startsWith("eee/")) return "eee";
     if (pageNumber <= 10) return "gate";
     return "other";
   };

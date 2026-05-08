@@ -8,30 +8,32 @@ import {
 import { generateMeta } from "@/lib/seo";
 
 interface Props {
-  params: { slug: string };
+  params: { slug: string[] };
 }
 
 export function generateStaticParams() {
   return gatePagesContent
     .filter((page) => page.pageNumber !== 1)
-    .map((page) => ({ slug: page.slug }));
+    .map((page) => ({ slug: page.slug.split("/") }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const content = getGatePageContentBySlug(params.slug);
+  const slugPath = params.slug.join("/");
+  const content = getGatePageContentBySlug(slugPath);
   if (!content) return {};
 
   return generateMeta({
     title: content.seo.title,
     description: content.seo.description,
     keywords: [content.seo.primaryKeyword, ...content.seo.secondaryKeywords],
-    canonicalUrl: `/gate/${params.slug}`,
+    canonicalUrl: `/gate/${slugPath}`,
   });
 }
 
 export default function GateSubPage({ params }: Props) {
-  const content = getGatePageContentBySlug(params.slug);
+  const slugPath = params.slug.join("/");
+  const content = getGatePageContentBySlug(slugPath);
   if (!content || content.pageNumber === 1) notFound();
 
-  return <GateContentPage content={content} path={`/gate/${params.slug}`} />;
+  return <GateContentPage content={content} path={`/gate/${slugPath}`} />;
 }

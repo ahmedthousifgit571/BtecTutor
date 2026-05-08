@@ -3221,7 +3221,7 @@ export const gatePagesContent: GatePageContent[] = [
   },
   {
     pageNumber: 25,
-    slug: "eee-previous-year-papers",
+    slug: "eee/previous-year-papers",
     navLabel: "Page 25",
     seo: {
       title: "GATE EEE Previous Year Papers with Solutions | BTechTutor",
@@ -3315,7 +3315,7 @@ export const gatePagesContent: GatePageContent[] = [
     ],
     internalLinks: [
       { label: "GATE EEE Hub", href: "/gate/eee/" },
-      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
       { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
       { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
       { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
@@ -3361,7 +3361,7 @@ export const gatePagesContent: GatePageContent[] = [
   },
   {
     pageNumber: 26,
-    slug: "eee-mock-test",
+    slug: "eee/mock-test",
     navLabel: "Page 26",
     seo: {
       title: "GATE EEE Mock Test Online — Practice Full Papers | BTechTutor",
@@ -3438,8 +3438,8 @@ export const gatePagesContent: GatePageContent[] = [
     ],
     internalLinks: [
       { label: "GATE EEE Hub", href: "/gate/eee/" },
-      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
-      { label: "GATE EEE Mock Test", href: "/gate/eee-mock-test/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
       { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
       { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
       { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
@@ -3484,7 +3484,7 @@ export const gatePagesContent: GatePageContent[] = [
   },
   {
     pageNumber: 27,
-    slug: "eee-cutoff",
+    slug: "eee/cutoff",
     navLabel: "Page 27",
     seo: {
       title: "GATE EEE Cutoff Marks 2026 — Category Wise | BTechTutor",
@@ -3582,9 +3582,9 @@ export const gatePagesContent: GatePageContent[] = [
     ],
     internalLinks: [
       { label: "GATE EEE Hub", href: "/gate/eee/" },
-      { label: "GATE EEE Previous Year Papers", href: "/gate/eee-previous-year-papers/" },
-      { label: "GATE EEE Mock Test", href: "/gate/eee-mock-test/" },
-      { label: "GATE EEE Cutoff", href: "/gate/eee-cutoff/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
       { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
       { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
       { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
@@ -3627,6 +3627,701 @@ export const gatePagesContent: GatePageContent[] = [
         question: "Can I improve my GATE EEE score in a re-attempt?",
         answer:
           "Yes. Many repeaters improve significantly with better strategy, stronger revision cycles, and targeted weak-area correction. One-to-one mentoring helps identify exactly where marks were lost and how to recover them.",
+      },
+    ],
+  },
+  {
+    pageNumber: 28,
+    slug: "eee/electric-circuits",
+    navLabel: "Page 28",
+    seo: {
+      title: "GATE EEE Electric Circuits — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Electric Circuits for GATE EEE with exam-focused syllabus, key topics, and preparation tips. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Electric Circuits — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Electric Circuits",
+      secondaryKeywords: [
+        "Circuit Analysis GATE EEE",
+        "Thevenin Norton GATE Electrical",
+        "how to study Electric Circuits for GATE EEE",
+        "KVL KCL GATE EEE tips",
+        "AC circuit analysis GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Electric Circuits in GATE EEE typically carries 8 to 12 marks and forms the analytical base for Power Systems, Electrical Machines, and Power Electronics. Focus on Thevenin/Norton equivalents, phasor analysis, two-port parameters, and resonance for the highest yield.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Electric Circuits is a foundational GATE EEE subject worth 8 to 12 marks and the analytical base for Power Systems, Machines, and Power Electronics. Get this right early and you save time across multiple subjects.",
+    introduction: [
+      "Electric Circuits is a foundational subject in GATE EEE, typically carrying 8 to 12 marks. More importantly, it forms the analytical base for Power Systems, Electrical Machines, and Power Electronics. Getting this subject right early in your preparation pays off across multiple subjects.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything you need in one place.",
+    ],
+    inclusionHeading: "What is Electric Circuits in GATE EEE?",
+    includes: [
+      "Covers DC and AC circuit analysis using standard laws, theorems, and network methods.",
+      "Most questions are numerical — applying KCL, KVL, Thevenin/Norton, and phasor analysis to find voltages, currents, and power.",
+      "Question patterns are well-structured and predictable, which makes consistent practice highly effective.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Electric Circuits",
+        bullets: [
+          "Network elements — resistors, capacitors, inductors, dependent and independent sources.",
+          "KCL and KVL — nodal analysis and mesh analysis.",
+          "Network theorems — Thevenin, Norton, Superposition, Maximum Power Transfer.",
+          "Sinusoidal steady state — phasors, impedance, admittance, complex power.",
+          "AC power — real power, reactive power, apparent power, power factor.",
+          "Two-port networks — Z, Y, h, ABCD parameters and conversions.",
+          "Resonance — series, parallel, quality factor, half-power frequencies.",
+          "Network functions — poles, zeros, frequency response basics.",
+          "Transient analysis — RL, RC, RLC first and second order step response.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Thevenin and Norton equivalents — very consistent across GATE EEE papers.",
+          "Phasor analysis — AC power, power factor, complex power calculations.",
+          "Two-port network parameters — appears almost every year.",
+          "Resonance — quality factor, bandwidth, half-power frequency.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Long derivations of circuit theorems — apply standard results directly.",
+          "Rare transient edge cases beyond standard RL, RC, RLC step response.",
+          "Deep theoretical network proofs not tested in GATE.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Electric Circuits",
+        bullets: [
+          "Start with KCL and KVL — nodal and mesh analysis.",
+          "Cover Thevenin and Norton — master the step-by-step method.",
+          "Study sinusoidal steady state — phasors, impedance, real and reactive power.",
+          "Cover two-port networks — parameter types and conversion formulas.",
+          "Study resonance — series and parallel, Q factor, half-power frequencies.",
+          "Cover transient analysis — initial conditions, step response of RL, RC, RLC.",
+          "Solve PYQs topic-wise throughout — Thevenin and phasor problems repeat every year.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Calculation errors in phasor analysis — wrong angle conventions lead to wrong power factors.",
+          "Confusing two-port parameter types — practise all four and know the conversion formulas.",
+          "Not identifying superposition conditions correctly before solving.",
+          "Rushing through transient problems without determining initial and final conditions first.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Electric Circuits",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Electric Circuits. Link to be added.",
+          "Notes (FREE) — Module-wise notes to build concepts and revise important formulas. Link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Topic-wise real GATE questions with consistent repeating patterns. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering all topics with step-by-step problem solving. Purchase link to be added.",
+          "Demo Class (FREE) — One module available as a free sample lecture on YouTube. Link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Power Systems — circuit analysis techniques apply directly in load flow, fault analysis, and per-unit calculations.",
+          "Power Electronics — converter circuit analysis builds directly on circuit fundamentals.",
+          "Electric Machines — transformer and motor equivalent circuit analysis uses the same methods.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/electric-circuits/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Electric Circuits",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Electric Circuits carry in GATE EEE?",
+        answer:
+          "Usually 8 to 12 marks per paper. Thevenin and Norton equivalents, phasor analysis, and two-port networks are the most consistent topics and appear almost every year.",
+      },
+      {
+        question: "Is Electric Circuits the same as Network Theory in GATE ECE?",
+        answer:
+          "Yes, essentially the same subject. The syllabus and question types are identical — only the subject name differs between EEE and ECE branches.",
+      },
+      {
+        question: "What is the most important topic in Electric Circuits for GATE EEE?",
+        answer:
+          "Thevenin and Norton equivalents combined with phasor-based AC power calculations. These two areas together account for a significant portion of the marks and appear in nearly every paper.",
+      },
+      {
+        question: "How long does it take to prepare Electric Circuits for GATE EEE?",
+        answer:
+          "Around 3 to 4 weeks with consistent daily practice. Transient analysis and two-port networks take the most time — give them proper attention.",
+      },
+      {
+        question: "Why is Electric Circuits important beyond its own marks?",
+        answer:
+          "Because the circuit analysis methods — Thevenin reduction, phasor analysis, equivalent circuits — are used directly in Power Systems, Electric Machines, and Power Electronics. Strong circuits preparation saves time across all three subjects.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+      },
+      {
+        question: "Do you offer one-to-one coaching for Electric Circuits?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised study plan and direct doubt solving sessions.",
+      },
+    ],
+  },
+  {
+    pageNumber: 29,
+    slug: "eee/electromagnetic-fields",
+    navLabel: "Page 29",
+    seo: {
+      title: "GATE EEE Electromagnetic Fields — Coaching | BTechTutor",
+      description:
+        "Prepare Electromagnetic Fields for GATE EEE with the right syllabus, high-weightage topics, and exam tips. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Electromagnetic Fields — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Electromagnetic Fields",
+      secondaryKeywords: [
+        "EM Fields GATE EEE",
+        "Maxwell equations GATE Electrical",
+        "how to prepare Electromagnetic Fields GATE EEE",
+        "Gauss law GATE EEE problems",
+        "Faraday law GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Electromagnetic Fields in GATE EEE typically carries 6 to 10 marks. GATE focuses on Gauss's law, boundary conditions, and Maxwell's equations applications — with the right plan, it is a manageable and scoreable subject.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Electromagnetic Fields carries 6 to 10 marks in GATE EEE. The exam tests a focused set of topics — Gauss's law, boundary conditions, and Maxwell's equations — making it manageable and scoreable with the right plan.",
+    introduction: [
+      "Electromagnetic Fields carries 6 to 10 marks in GATE EEE. The subject has a reputation for being mathematically heavy, but GATE questions are focused on a specific set of well-defined topics — Gauss's law, boundary conditions, and applications of Maxwell's equations. With the right focus, it is a manageable and scoreable subject.",
+      "This page has the syllabus, notes, previous year questions, and video classes — all organised for GATE EEE.",
+    ],
+    inclusionHeading: "What is Electromagnetic Fields in GATE EEE?",
+    includes: [
+      "Studies the behaviour of electric and magnetic fields in different media and configurations.",
+      "GATE questions focus on applying Gauss's law, Ampere's law, Faraday's law, and Maxwell's equations to calculate field quantities.",
+      "Standard problems include energy stored in fields and boundary conditions at material interfaces — both repeat regularly in EEE papers.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Electromagnetic Fields",
+        bullets: [
+          "Vector calculus — gradient, divergence, curl, Stokes' theorem, Divergence theorem.",
+          "Electrostatics — Coulomb's law, Gauss's law, electric field, potential, energy.",
+          "Boundary conditions — for E and D fields at dielectric interfaces.",
+          "Magnetostatics — Biot-Savart law, Ampere's law, magnetic flux density, vector potential.",
+          "Faraday's law — electromagnetic induction, Lenz's law.",
+          "Maxwell's equations — all four forms, displacement current, integral and differential forms.",
+          "Plane wave propagation — wave equation, phase velocity, intrinsic impedance, skin depth.",
+          "Energy stored — energy density in electric and magnetic fields.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Gauss's law applications — field due to line, surface, and volume charge distributions.",
+          "Boundary conditions — for E, D, B, and H fields, appears regularly in GATE EEE.",
+          "Maxwell's equations — application-based problems, not derivations.",
+          "Energy density — stored energy in electric and magnetic fields.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Detailed antenna and waveguide theory — not in GATE EEE scope.",
+          "Complex transmission line analysis — minimal in EEE compared to ECE.",
+          "Lengthy vector identity derivations — apply results directly.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Electromagnetic Fields",
+        bullets: [
+          "Start with vector calculus — gradient, divergence, curl, and the two theorems.",
+          "Study electrostatics — apply Gauss's law for line, cylinder, and sphere charge distributions.",
+          "Cover boundary conditions for all four field quantities — E, D, B, H.",
+          "Study magnetostatics — Biot-Savart and Ampere's law applications.",
+          "Cover Faraday's law and Maxwell's displacement current.",
+          "Study plane wave propagation basics — intrinsic impedance and skin depth.",
+          "Solve PYQs topic-wise — Gauss's law and boundary condition problems repeat frequently.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Weak vector calculus — most EM problems use gradient, divergence, or curl somewhere.",
+          "Confusing boundary conditions — tangential and normal components of E, D, B, H mixed up.",
+          "Not practising Gauss's law for different geometries — these are standard GATE question types.",
+          "Skipping energy density problems — they appear regularly and are relatively straightforward.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Electromagnetic Fields",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Electromagnetic Fields. Link to be added.",
+          "Notes (FREE) — Module-wise notes to build concepts and revise important formulas. Link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Topic-wise real GATE questions with consistent repeating patterns. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering all topics with step-by-step problem solving. Purchase link to be added.",
+          "Demo Class (FREE) — One module available as a free sample lecture on YouTube. Link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Electric Machines — magnetic field analysis and inductance calculations form the basis of machine theory.",
+          "Power Systems — transformer field analysis and insulation concepts build on EM field principles.",
+          "Electric Circuits — field-based capacitor and inductor energy analysis connects both subjects.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/electromagnetic-fields/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Electromagnetic Fields",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Electromagnetic Fields carry in GATE EEE?",
+        answer:
+          "Usually 6 to 10 marks. Gauss's law applications, boundary conditions, and Maxwell's equations problems are the most consistent topics across papers.",
+      },
+      {
+        question: "Is Electromagnetic Fields difficult for GATE EEE?",
+        answer:
+          "The mathematical framework can seem complex, but GATE questions follow predictable patterns. Gauss's law for standard geometries and boundary condition problems cover most of what is asked. Vector calculus fundamentals are the key — get those right and the rest becomes manageable.",
+      },
+      {
+        question: "Do I need to study all four Maxwell's equations for GATE EEE?",
+        answer:
+          "Yes, but you need to apply them — not derive them. Know what each equation represents physically and how to use it in field calculations. GATE tests application, not derivation.",
+      },
+      {
+        question: "Can I skip Electromagnetic Fields and still qualify GATE EEE?",
+        answer:
+          "You can qualify without it, but 6 to 10 marks is a significant cost. A focused 3-week preparation on the high-weightage topics gives a good return — it is not worth skipping entirely.",
+      },
+      {
+        question: "How long does it take to prepare Electromagnetic Fields for GATE EEE?",
+        answer:
+          "Around 3 weeks with focused preparation on Gauss's law, boundary conditions, and Maxwell's equations. Do not try to cover the full academic syllabus — stay GATE-focused.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+      },
+      {
+        question: "Do you offer coaching for Electromagnetic Fields?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised study plan and direct doubt solving sessions.",
+      },
+    ],
+  },
+  {
+    pageNumber: 30,
+    slug: "eee/power-systems",
+    navLabel: "Page 30",
+    seo: {
+      title: "GATE EEE Power Systems — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Power Systems for GATE EEE with the right syllabus, high-weightage topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Power Systems — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Power Systems",
+      secondaryKeywords: [
+        "Power Systems GATE EEE",
+        "fault analysis GATE Electrical",
+        "how to study Power Systems for GATE EEE",
+        "load flow GATE EEE problems",
+        "fault analysis GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Power Systems is the highest-weightage subject in GATE EEE, typically carrying 12 to 18 marks. Fault analysis using sequence networks, per-unit calculations, equal area criterion, and economic dispatch are the highest-yield topics across recent papers.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Power Systems is the highest-weightage subject in GATE EEE at 12 to 18 marks. It covers transmission, faults, stability, and protection — strong performance here can significantly improve your rank.",
+    introduction: [
+      "Power Systems is the highest-weightage subject in GATE EEE, typically carrying 12 to 18 marks. It covers transmission, distribution, fault analysis, stability, and protection — the core of electrical engineering practice. A strong performance here can significantly improve your rank.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything structured for GATE EEE.",
+    ],
+    inclusionHeading: "What is Power Systems in GATE EEE?",
+    includes: [
+      "Covers analysis of electrical power networks — from transmission line modelling to fault calculations and economic operation.",
+      "GATE questions are mostly numerical and test per-unit calculations, sequence network fault analysis, and stability problems.",
+      "Standard topics like swing equation, equal area criterion, and economic dispatch repeat consistently across papers.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Power Systems",
+        bullets: [
+          "Transmission lines — parameters (R, L, C, G), short, medium, and long line models, ABCD parameters.",
+          "Per-unit system — base values, conversion, per-unit impedance calculations.",
+          "Load flow analysis — bus types, Gauss-Seidel basics, Newton-Raphson concept.",
+          "Symmetrical fault analysis — three-phase fault current, fault MVA.",
+          "Unsymmetrical faults — sequence networks (positive, negative, zero), LG, LL, LLG faults.",
+          "Power system stability — swing equation, equal area criterion, critical clearing angle.",
+          "Economic operation — incremental cost, economic dispatch, lambda iteration.",
+          "Power system protection — relays (overcurrent, distance, differential), circuit breakers.",
+          "HVDC transmission — comparison with AC, basic rectifier and inverter control concept.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Fault analysis — symmetrical and unsymmetrical faults using sequence networks, appears almost every year.",
+          "Transmission line ABCD parameters — per-unit calculations and voltage regulation.",
+          "Power system stability — swing equation and equal area criterion.",
+          "Economic dispatch — equal incremental cost and lambda iteration problems.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Detailed relay coordination and grading calculations — not frequently tested.",
+          "Advanced HVDC converter control theory — basic concept is enough.",
+          "Complex iterative load flow procedures — understand bus types and method, not full iteration.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Power Systems",
+        bullets: [
+          "Master the per-unit system — base values, conversion, per-unit impedance.",
+          "Study transmission line models — short, medium, and long line ABCD parameters.",
+          "Cover symmetrical fault analysis — three-phase fault current calculation.",
+          "Study sequence networks — positive, negative, zero sequence for unsymmetrical faults.",
+          "Cover LG, LL, and LLG fault current calculations using sequence networks.",
+          "Study power system stability — swing equation and equal area criterion.",
+          "Cover economic dispatch — equal incremental cost and lambda iteration.",
+          "Solve PYQs topic-wise — fault analysis and stability questions repeat consistently.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Not being comfortable with per-unit calculations — most Power Systems numericals use PU values.",
+          "Confusing positive, negative, and zero sequence networks in unsymmetrical fault analysis.",
+          "Skipping equal area criterion — it is a standard GATE question type and not as complex as it looks.",
+          "Not practising economic dispatch numericals — lambda iteration problems appear regularly.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Power Systems",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Power Systems. Link to be added.",
+          "Notes (FREE) — Module-wise notes to build concepts and revise important formulas. Link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Topic-wise real GATE questions with consistent repeating patterns. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering all topics with step-by-step problem solving. Purchase link to be added.",
+          "Demo Class (FREE) — One module available as a free sample lecture on YouTube. Link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Electric Circuits — circuit analysis, phasor methods, and equivalent circuits apply throughout Power Systems.",
+          "Electric Machines — generators and transformers are key components in every power system.",
+          "Power Electronics — HVDC and FACTS devices connect power electronics with power systems.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/power-systems/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Power Systems",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Power Systems carry in GATE EEE?",
+        answer:
+          "Usually 12 to 18 marks — the highest weightage of any subject in GATE EEE. Fault analysis using sequence networks and power system stability are the most consistent topics across papers.",
+      },
+      {
+        question: "Is Power Systems difficult for GATE EEE?",
+        answer:
+          "It is content-heavy, but the question types are well-defined. Fault analysis and per-unit calculations need practice, not just reading. Once you get the calculation approach right, most problems follow a standard pattern.",
+      },
+      {
+        question: "What is the most important topic in Power Systems for GATE EEE?",
+        answer:
+          "Fault analysis using sequence networks — specifically LG and LLG fault current calculations. This topic appears almost every year and typically carries 3 to 5 marks. Equal area criterion for stability is the second most important.",
+      },
+      {
+        question: "How long does it take to prepare Power Systems for GATE EEE?",
+        answer:
+          "Around 4 to 5 weeks. It is the longest subject in GATE EEE — give it proper time. Rushing through Power Systems is one of the most common reasons students miss their target score.",
+      },
+      {
+        question: "Why is per-unit system so important in Power Systems?",
+        answer:
+          "Almost every Power Systems numerical uses per-unit values — fault calculations, load flow, transmission line analysis. Not being comfortable with PU conversion is the single biggest mistake students make in this subject.",
+      },
+      {
+        question: "Is Power Systems important for PSU jobs?",
+        answer:
+          "Yes, very much so. PSUs like NTPC, BHEL, and PGCIL are power sector companies — Power Systems knowledge is directly tested in both GATE and their interview rounds.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+      },
+      {
+        question: "Do you offer one-to-one coaching for Power Systems?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised study plan and direct doubt solving sessions.",
+      },
+    ],
+  },
+  {
+    pageNumber: 31,
+    slug: "eee/power-electronics",
+    navLabel: "Page 31",
+    seo: {
+      title: "GATE EEE Power Electronics — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Power Electronics for GATE EEE with the right syllabus, key topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Power Electronics — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Power Electronics",
+      secondaryKeywords: [
+        "Power Electronics GATE EEE",
+        "converters GATE Electrical",
+        "how to prepare Power Electronics GATE EEE",
+        "rectifier chopper GATE EEE problems",
+        "inverter GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Power Electronics in GATE EEE typically carries 8 to 12 marks. Focus on controlled rectifiers (firing angle and output voltage), DC choppers (duty cycle for buck, boost, buck-boost), and inverter basics — these account for most of the recurring marks.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Power Electronics carries 8 to 12 marks in GATE EEE. Master controlled rectifiers, DC choppers, and inverters — converter calculations are heavily numerical and reward consistent practice.",
+    introduction: [
+      "Power Electronics carries 8 to 12 marks in GATE EEE. It covers semiconductor power devices and converter circuits — rectifiers, choppers, inverters, and AC voltage controllers. The subject is heavily numerical and rewards students who understand circuit operation and can calculate output voltages, currents, and ripple for different converter configurations.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything organised for GATE EEE.",
+    ],
+    inclusionHeading: "What is Power Electronics in GATE EEE?",
+    includes: [
+      "Deals with controlled conversion of electrical power using semiconductor switching devices.",
+      "GATE questions focus on circuit operation modes, output voltage and current calculations for each converter type.",
+      "Standard problems include firing angle relationships for controlled converters and duty cycle relationships for DC choppers.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Power Electronics",
+        bullets: [
+          "Power semiconductor devices — SCR (thyristor), MOSFET, IGBT, diode, characteristics and switching.",
+          "Uncontrolled rectifiers — half wave, full wave, full bridge, output voltage and ripple.",
+          "Controlled rectifiers — single phase and three phase, firing angle alpha, average output voltage.",
+          "DC choppers — step-down (buck), step-up (boost), step-down/up (buck-boost), duty cycle relations.",
+          "Inverters — single phase VSI, three phase VSI, square wave and PWM output.",
+          "AC voltage controllers — single phase, phase angle control, output voltage.",
+          "Commutation techniques — natural and forced commutation.",
+          "Drives — basic DC and AC motor drive configurations.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Controlled rectifiers — firing angle alpha and average output voltage, appears almost every year.",
+          "DC choppers — duty cycle D and output voltage for buck, boost, and buck-boost.",
+          "Semiconductor device characteristics — SCR triggering, IGBT vs MOSFET comparison.",
+          "Inverter output — VSI square wave output voltage and harmonic content.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Advanced resonant converter design beyond basic ZVS / ZCS understanding.",
+          "Detailed gate drive circuit design — not directly tested.",
+          "Complex multilevel inverter topologies not seen in standard GATE papers.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Power Electronics",
+        bullets: [
+          "Study power semiconductor devices — SCR, MOSFET, IGBT characteristics and switching behaviour.",
+          "Cover uncontrolled rectifiers — half wave and full wave output voltage derivation.",
+          "Study controlled rectifiers — effect of firing angle on output for single and three phase.",
+          "Cover DC choppers — duty cycle relationships for buck, boost, and buck-boost.",
+          "Study inverters — square wave output for single phase VSI, three phase basics.",
+          "Cover AC voltage controllers — phase angle control and RMS output voltage.",
+          "Solve PYQs topic-wise — rectifier and chopper problems appear in most GATE EEE papers.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Confusing average and RMS output voltage formulas for different rectifier types.",
+          "Not understanding the effect of firing angle alpha on output — this is the core of controlled converters.",
+          "Mixing up chopper duty cycle definitions for different topologies.",
+          "Skipping inverter analysis — it has become more common in recent GATE papers.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Power Electronics",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Power Electronics. Link to be added.",
+          "Notes (FREE) — Module-wise notes to build concepts and revise important formulas. Link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Topic-wise real GATE questions with consistent repeating patterns. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering all topics with step-by-step problem solving. Purchase link to be added.",
+          "Demo Class (FREE) — One module available as a free sample lecture on YouTube. Link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, early guidance can save time. Talk to a mentor at +91 98950 09337 for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Electric Circuits — circuit analysis and phasor methods are used throughout converter analysis.",
+          "Electronic Devices — semiconductor device characteristics form the foundation of power devices.",
+          "Power Systems — HVDC and FACTS device concepts connect both subjects.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/power-electronics/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Power Electronics",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Power Electronics carry in GATE EEE?",
+        answer:
+          "Usually 8 to 12 marks. Controlled rectifiers and DC choppers are the most consistent topics — they appear in almost every GATE EEE paper.",
+      },
+      {
+        question: "Is Power Electronics difficult for GATE EEE?",
+        answer:
+          "The circuit analysis is straightforward once you understand device operation and converter switching modes. The key is getting the output voltage formulas right for each converter type — which comes from practice, not just reading.",
+      },
+      {
+        question: "What is the most important topic in Power Electronics for GATE EEE?",
+        answer:
+          "Controlled single-phase and three-phase rectifiers — the relationship between firing angle alpha and average output voltage. This appears almost every year. DC choppers with duty cycle calculations are the second most important area.",
+      },
+      {
+        question: "What is the difference between a chopper and an inverter?",
+        answer:
+          "A chopper converts DC to DC — it steps the voltage up or down using a switching device. An inverter converts DC to AC. Both are tested in GATE EEE, but choppers appear more frequently in terms of calculation-based questions.",
+      },
+      {
+        question: "Do I need to study drives for GATE EEE Power Electronics?",
+        answer:
+          "Basic DC and AC drive configurations are part of the syllabus, but detailed drive design is not heavily tested. Know the basic connection between power converters and motor drives.",
+      },
+      {
+        question: "How long does it take to prepare Power Electronics for GATE EEE?",
+        answer:
+          "Around 3 weeks with focused preparation on rectifiers, choppers, and inverters. Practice numerical problems daily — this subject rewards consistent problem solving.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+      },
+      {
+        question: "Do you offer one-to-one coaching for Power Electronics?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised preparation plan and direct doubt solving sessions.",
       },
     ],
   },
