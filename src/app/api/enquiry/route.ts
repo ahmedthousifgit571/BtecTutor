@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
+import { sendWhatsAppEnquiryAlert } from "@/lib/whatsapp";
 
 export async function POST(request: Request) {
   try {
@@ -54,6 +55,14 @@ export async function POST(request: Request) {
         // Email sending failure shouldn't block the enquiry submission
         console.error("Failed to send notification email");
       }
+    }
+
+    // Optional WhatsApp alert to the team number. Fail-open: we never block the
+    // enquiry submission on this — the lead is already safely persisted above.
+    try {
+      await sendWhatsAppEnquiryAlert({ name, email, phone, course, message });
+    } catch (whatsappError) {
+      console.error("Failed to send WhatsApp enquiry alert:", whatsappError);
     }
 
     return NextResponse.json(

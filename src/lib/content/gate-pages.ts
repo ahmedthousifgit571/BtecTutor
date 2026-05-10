@@ -4325,6 +4325,901 @@ export const gatePagesContent: GatePageContent[] = [
       },
     ],
   },
+  {
+    pageNumber: 32,
+    slug: "eee/electric-machines",
+    navLabel: "Page 32",
+    seo: {
+      title: "GATE EEE Electric Machines — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Electric Machines for GATE EEE with the right syllabus, high-weightage topics, and exam tips. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Electric Machines — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Electric Machines",
+      secondaryKeywords: [
+        "Electrical Machines GATE EEE",
+        "induction motor transformer GATE",
+        "how to study Electric Machines for GATE EEE",
+        "induction motor torque slip GATE",
+        "transformer equivalent circuit GATE EEE problems",
+      ],
+      featuredSnippet:
+        "Electric Machines is the second-highest-weightage subject in GATE EEE, typically carrying 10 to 15 marks. Induction motor torque-slip and equivalent circuit analysis, transformer OC/SC parameters, and synchronous generator regulation are the most consistent scoring topics.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Electric Machines carries 10 to 15 marks in GATE EEE — second only to Power Systems. Master transformers, DC machines, induction and synchronous machines; numericals on equivalent circuits and torque-speed behaviour carry most of the marks.",
+    introduction: [
+      "Electric Machines is the second-highest-weightage subject in GATE EEE, typically carrying 10 to 15 marks. It covers transformers, DC machines, induction motors, and synchronous machines — the practical heart of electrical engineering. Strong preparation here directly improves your overall GATE score and is equally valuable for PSU interviews.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything you need in one place.",
+    ],
+    inclusionHeading: "What is Electric Machines in GATE EEE?",
+    includes: [
+      "Electric Machines deals with electromechanical energy conversion in rotating machines and transformers.",
+      "GATE questions test equivalent circuit analysis, torque-speed characteristics, efficiency calculations, and performance under different operating conditions, mostly through numerical problems.",
+      "Induction motors, transformers, and synchronous machines account for the largest share of recurring marks across recent papers.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Electric Machines",
+        bullets: [
+          "Transformers — equivalent circuit, OC and SC tests, voltage regulation, efficiency, auto-transformer.",
+          "DC machines — separately excited, shunt, series motor and generator — torque-speed characteristics.",
+          "DC motor starting — starters, speed control methods (armature voltage, field weakening).",
+          "Three-phase induction motors — equivalent circuit, torque-slip characteristic, starting and speed control.",
+          "Single-phase induction motors — double revolving field theory, starting methods.",
+          "Synchronous generators — equivalent circuit, voltage regulation, phasor diagram, parallel operation.",
+          "Synchronous motors — V-curves, reluctance torque, hunting and damping.",
+          "Special machines — stepper motor, BLDC motor basics.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Induction motor — torque-slip characteristic and equivalent circuit analysis — most consistent topic.",
+          "Transformer — equivalent circuit parameters from OC/SC tests, regulation, efficiency.",
+          "Synchronous generator — voltage regulation and phasor diagram under different load conditions.",
+          "DC motor — torque-speed characteristic and speed control methods.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Detailed armature winding design theory — not directly tested in GATE.",
+          "Complex stepper motor microstepping calculations.",
+          "Advanced harmonic analysis of machine windings.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Electric Machines",
+        bullets: [
+          "Study transformer equivalent circuit — extract parameters from OC and SC test data.",
+          "Cover transformer efficiency and voltage regulation — standard numerical types.",
+          "Study DC machines — separately excited, shunt, and series characteristics.",
+          "Cover DC motor speed control methods — armature resistance, armature voltage, field weakening.",
+          "Study the induction motor equivalent circuit and torque-slip relationship in depth.",
+          "Cover induction motor starting methods — DOL, star-delta, autotransformer.",
+          "Study synchronous generator — equivalent circuit and phasor diagram under lagging and leading load.",
+          "Solve PYQs topic-wise — induction motor and transformer problems repeat consistently.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Not being comfortable with OC/SC test parameter extraction — these values appear directly in GATE numericals.",
+          "Confusing motoring, plugging, and regenerative braking regions on the torque-slip curve.",
+          "Weak phasor diagram understanding for synchronous generators under different power factor loads.",
+          "Not practising efficiency calculations — they are straightforward marks that students often miss.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Electric Machines",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Electric Machines. View module-wise syllabus — link to be added.",
+          "Notes (FREE) — Build concepts and revise important formulas; notes are module-wise. Access notes — link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering concepts and problem-solving step by step. Purchase link to be added.",
+          "Demo Class (FREE) — One module as a free sample lecture on YouTube. Watch demo class — YouTube link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, getting early guidance can save time. Talk to a mentor at +91 98950 09337 — one call for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Power Systems — generators and transformers are key components in every power system.",
+          "Power Electronics — motor drive systems connect power electronics with electric machines.",
+          "Electric Circuits — equivalent circuit analysis methods are applied throughout machine analysis.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/electric-machines/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Electric Machines",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Electric Machines carry in GATE EEE?",
+        answer:
+          "Usually 10 to 15 marks — the second highest weightage in GATE EEE. Induction motor, transformer, and synchronous machine questions appear most consistently across papers.",
+      },
+      {
+        question: "Which is the most important topic in Electric Machines for GATE EEE?",
+        answer:
+          "Induction motor — the torque-slip characteristic and equivalent circuit analysis. This topic appears in almost every GATE EEE paper and typically carries 3 to 5 marks. Transformer equivalent circuit is the second most important.",
+      },
+      {
+        question: "What should I study first in Electric Machines?",
+        answer:
+          "Start with the transformer equivalent circuit. It introduces the analysis approach — OC/SC test parameter extraction, referred values, efficiency — that is used for all other machines. Induction motor comes right after.",
+      },
+      {
+        question: "Is Electric Machines important for PSU jobs?",
+        answer:
+          "Yes, very much. PSU interviews for companies like BHEL, NTPC, and PGCIL regularly test Electric Machines concepts — especially induction motors, transformers, and synchronous machines.",
+      },
+      {
+        question: "How long does it take to prepare Electric Machines for GATE EEE?",
+        answer:
+          "Around 4 to 5 weeks. It is one of the most content-heavy subjects in GATE EEE — give it proper time. Rushing through machines is one of the most common preparation mistakes.",
+      },
+      {
+        question: "Is there overlap between Electric Machines and Power Systems?",
+        answer:
+          "Yes. Transformers appear in both subjects — in Machines for device-level analysis and in Power Systems for system-level per-unit modelling. Preparing both together reinforces understanding.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+      },
+      {
+        question: "Do you offer one-to-one coaching for Electric Machines?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised study plan.",
+      },
+    ],
+  },
+  {
+    pageNumber: 33,
+    slug: "eee/control-systems",
+    navLabel: "Page 33",
+    seo: {
+      title: "GATE EEE Control Systems — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Control Systems for GATE EEE with the right syllabus, high-weightage topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Control Systems — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Control Systems",
+      secondaryKeywords: [
+        "Control Systems GATE EEE",
+        "Bode plot root locus GATE Electrical",
+        "how to prepare Control Systems for GATE EEE",
+        "Routh Hurwitz GATE EEE problems",
+        "PID controller GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Control Systems in GATE EEE typically carries 8 to 12 marks. Bode plot stability (gain and phase margin), Routh-Hurwitz criterion, root locus construction, and second-order time-domain response are the highest-yield topics and overlap strongly with Signals and Systems.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Control Systems carries 8 to 12 marks in GATE EEE. The syllabus is well-defined, patterns are predictable, and much of the content overlaps with Signals and Systems — preparing both together saves significant time.",
+    introduction: [
+      "Control Systems is a consistent high-scoring subject in GATE EEE, typically carrying 8 to 12 marks. The syllabus is well-defined, question patterns are predictable, and many topics overlap with Signals and Systems — preparing both subjects together saves significant time.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything organised for GATE EEE.",
+    ],
+    inclusionHeading: "What is Control Systems in GATE EEE?",
+    includes: [
+      "Control Systems covers the analysis and design of feedback control systems using time-domain and frequency-domain methods.",
+      "GATE questions test transfer functions, stability analysis, root locus, Bode plots, and PID controller effects.",
+      "Most questions are numerical with clear solution approaches once the standard methods are practised.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Control Systems",
+        bullets: [
+          "Basic concepts — open loop, closed loop, feedback, steady-state error types.",
+          "Transfer functions — block diagram reduction, signal flow graph, Mason's gain formula.",
+          "Time domain analysis — first and second order system response, peak overshoot, settling time.",
+          "Stability — BIBO stability, Routh-Hurwitz criterion, range of gain problems.",
+          "Root locus — construction rules, closed-loop pole locations, effect of gain K.",
+          "Frequency domain — Bode plot, Nyquist criterion, gain margin, phase margin.",
+          "PID controllers — effect of P, I, D actions on transient and steady-state response.",
+          "Compensators — lead, lag, lead-lag design basics.",
+          "State space — state equations, controllability, observability, state transition matrix.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Bode plot — gain margin, phase margin, stability analysis from frequency response.",
+          "Routh-Hurwitz criterion — stability and range of gain K problems.",
+          "Root locus — sketching and interpreting closed-loop pole locations.",
+          "Second order system response — overshoot, settling time, damping ratio.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Advanced nonlinear control theory — not in GATE scope.",
+          "Detailed PID tuning methods beyond understanding each action's effect.",
+          "Complex lead-lag compensator design procedures.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Control Systems",
+        bullets: [
+          "Start with transfer functions and block diagram reduction.",
+          "Study Mason's gain formula for signal flow graphs.",
+          "Cover time domain analysis — first and second order system parameters.",
+          "Study Routh-Hurwitz criterion — stability conditions and range of K problems.",
+          "Learn root locus construction rules — not just the concept, but the actual steps.",
+          "Study Bode plots — gain margin, phase margin, stability from asymptotic approximation.",
+          "Cover PID controller — effect of each P, I, D term on transient and steady-state behaviour.",
+          "Study state space basics — controllability and observability conditions.",
+          "Solve PYQs topic-wise — Bode and Routh questions repeat in most papers.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Sign errors in block diagram reduction — small mistakes change the entire transfer function.",
+          "Not knowing Routh-Hurwitz special row conditions — all-zero row and row of same-sign elements.",
+          "Drawing root locus incorrectly — learn the construction rules properly, not just conceptually.",
+          "Confusing gain margin and phase margin — clear definitions first, then numerical practice.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Control Systems",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Control Systems. View module-wise syllabus — link to be added.",
+          "Notes (FREE) — Build concepts and revise important formulas; notes are module-wise. Access notes — link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering concepts and problem-solving step by step. Purchase link to be added.",
+          "Demo Class (FREE) — One module as a free sample lecture on YouTube. Watch demo class — YouTube link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, getting early guidance can save time. Talk to a mentor at +91 98950 09337 — one call for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Signals and Systems — Laplace transforms, transfer functions, and frequency response concepts are shared.",
+          "Electric Machines — motor control and drive systems connect both subjects directly.",
+          "Power Electronics — converter control loops use control system feedback concepts.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/control-systems/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Signals and Systems", href: "/gate/eee/signals-and-systems/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Control Systems",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Control Systems carry in GATE EEE?",
+        answer:
+          "Usually 8 to 12 marks. Bode plot, Routh-Hurwitz, root locus, and second order system response questions appear most consistently across GATE EEE papers.",
+      },
+      {
+        question: "Is Control Systems the same for GATE EEE and GATE ECE?",
+        answer:
+          "Yes — the syllabus is identical. Both branches have the same Control Systems questions in GATE. If you are preparing for both, the preparation is fully shared.",
+      },
+      {
+        question: "What is the most important topic in Control Systems for GATE EEE?",
+        answer:
+          "Bode plot stability analysis and Routh-Hurwitz criterion together. Master these two first — they appear in almost every paper and cover the largest share of marks.",
+      },
+      {
+        question: "How does Control Systems connect to Signals and Systems?",
+        answer:
+          "Very directly. Laplace transforms, transfer functions, poles and zeros, and frequency response are used in both subjects. Preparing them together or back-to-back saves time and reinforces understanding.",
+      },
+      {
+        question: "How long does it take to prepare Control Systems for GATE EEE?",
+        answer:
+          "Around 3 to 4 weeks with consistent daily practice. Frequency domain topics — Bode and Nyquist — take slightly more time than time domain analysis.",
+      },
+      {
+        question: "Is PID controller important for GATE EEE?",
+        answer:
+          "Yes. GATE EEE tests the effect of each P, I, and D action on system response — how each term affects overshoot, settling time, and steady-state error. Know these effects clearly.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+      },
+      {
+        question: "Do you offer coaching for Control Systems?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised preparation plan.",
+      },
+    ],
+  },
+  {
+    pageNumber: 34,
+    slug: "eee/signals-and-systems",
+    navLabel: "Page 34",
+    seo: {
+      title: "GATE EEE Signals and Systems — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Signals and Systems for GATE EEE with the right syllabus, key topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Signals and Systems — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Signals and Systems",
+      secondaryKeywords: [
+        "Signals Systems GATE EEE",
+        "Laplace Z transform GATE Electrical",
+        "how to study Signals and Systems GATE EEE",
+        "Fourier transform GATE Electrical problems",
+        "Z transform GATE EEE important topics",
+      ],
+      featuredSnippet:
+        "Signals and Systems in GATE EEE typically carries 6 to 10 marks and underpins Control Systems. Laplace and Z-transforms (with ROC), Fourier analysis, and system property questions appear most often; studying this subject before Control Systems avoids duplicating the same transform toolkit.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Signals and Systems carries 6 to 10 marks in GATE EEE and forms the mathematical foundation for Control Systems. Laplace and frequency-response ideas carry straight into the next subject — one strong preparation pass benefits both.",
+    introduction: [
+      "Signals and Systems carries 6 to 10 marks in GATE EEE and forms the mathematical foundation for Control Systems. Preparing this subject well gives you a direct advantage in two subjects at once — the Laplace transform and frequency response concepts are shared almost entirely.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything in one place.",
+    ],
+    inclusionHeading: "What is Signals and Systems in GATE EEE?",
+    includes: [
+      "Signals and Systems deals with the mathematical representation and analysis of signals using transforms and system properties.",
+      "In GATE EEE, questions test signal classification, system properties, convolution, Fourier analysis, Laplace and Z-transforms, similar to GATE ECE but with slightly less depth in communications-related topics.",
+      "Strong preparation here reduces repeated work when you move to Control Systems.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Signals and Systems",
+        bullets: [
+          "Signal classification — continuous, discrete, periodic, energy, power signals.",
+          "System properties — linearity, time invariance, causality, stability, invertibility.",
+          "Continuous time convolution — convolution integral, graphical convolution.",
+          "Discrete time convolution — convolution sum.",
+          "Fourier series — trigonometric and exponential forms, Dirichlet conditions.",
+          "Fourier transform — properties, standard pairs, DTFT basics.",
+          "Laplace transform — ROC, properties, inverse Laplace, initial and final value theorems.",
+          "Z-transform — ROC, properties, inverse Z-transform, difference equations.",
+          "Sampling theorem — Nyquist rate, aliasing, reconstruction.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Laplace transform — properties, inverse, ROC — appears every year.",
+          "Z-transform — ROC conditions, difference equation solution.",
+          "Fourier transform properties and standard signal pairs.",
+          "System property identification — linearity, causality, stability — quick marks.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Advanced multirate signal processing — not in GATE EEE scope.",
+          "Deep convergence proofs for transform theory.",
+          "Complex multi-dimensional signal analysis.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Signals and Systems",
+        bullets: [
+          "Start with signal and system property identification — quick concept, easy marks.",
+          "Study continuous time convolution — both graphical and formula methods.",
+          "Cover Fourier series and Fourier transform with all standard properties.",
+          "Study Laplace transform thoroughly — ROC, poles and zeros, partial fraction inverse.",
+          "Cover Z-transform — ROC conditions, inverse methods, difference equations.",
+          "Study sampling theorem and aliasing briefly.",
+          "Solve PYQs topic-wise — Laplace and Z-transform patterns repeat every year.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Not checking ROC carefully — wrong ROC gives wrong answer even if the transform is correct.",
+          "Confusing CTFT and DTFT properties — keep them separate from the start.",
+          "Not practising convolution for non-standard signal shapes — these appear in GATE.",
+          "Skipping sampling theorem — it is easy marks that students often ignore.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Signals and Systems",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Signals and Systems. View module-wise syllabus — link to be added.",
+          "Notes (FREE) — Build concepts and revise important formulas; notes are module-wise. Access notes — link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering concepts and problem-solving step by step. Purchase link to be added.",
+          "Demo Class (FREE) — One module as a free sample lecture on YouTube. Watch demo class — YouTube link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, getting early guidance can save time. Talk to a mentor at +91 98950 09337 — one call for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Control Systems — Laplace transforms, transfer functions, and frequency response concepts are directly shared.",
+          "Power Systems — harmonic analysis and power quality concepts build on signal analysis.",
+          "Analog Electronics — frequency response of amplifiers connects with signal analysis methods.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/signals-and-systems/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Signals and Systems", href: "/gate/eee/signals-and-systems/" },
+      { label: "GATE EEE Analog Electronics", href: "/gate/eee/analog-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Signals and Systems",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Signals and Systems carry in GATE EEE?",
+        answer:
+          "Usually 6 to 10 marks. Laplace transform, Z-transform, and Fourier analysis are the most consistent topics across GATE EEE papers.",
+      },
+      {
+        question: "Is Signals and Systems more important for ECE or EEE in GATE?",
+        answer:
+          "Both branches have similar weightage. For EEE, the biggest benefit of strong Signals and Systems preparation is the direct advantage it gives in Control Systems — the two subjects share most of the mathematical tools.",
+      },
+      {
+        question: "Do I need to study Z-transforms for GATE EEE?",
+        answer:
+          "Yes. Z-transforms appear regularly in GATE EEE — both ROC-based questions and difference equation solutions. Do not skip them.",
+      },
+      {
+        question: "How does Signals and Systems connect to Control Systems in GATE EEE?",
+        answer:
+          "Laplace transforms, transfer functions, poles and zeros, and frequency response concepts are used in both subjects. Preparing Signals and Systems first and then Control Systems is the most efficient sequence — you avoid repeating the same mathematical tools twice.",
+      },
+      {
+        question: "How long does it take to prepare Signals and Systems for GATE EEE?",
+        answer:
+          "Around 3 to 4 weeks. If you study it alongside Control Systems, you save time on the overlapping transform concepts.",
+      },
+      {
+        question: "Is ROC always asked in GATE for Laplace and Z-transforms?",
+        answer:
+          "Not always explicitly, but ROC determines the correct inverse transform — so understanding it is essential for solving any transform problem correctly. Do not treat it as optional.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+      },
+      {
+        question: "Do you offer coaching for Signals and Systems for GATE EEE?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for personalised guidance.",
+      },
+    ],
+  },
+  {
+    pageNumber: 35,
+    slug: "eee/analog-electronics",
+    navLabel: "Page 35",
+    seo: {
+      title: "GATE EEE Analog Electronics — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Analog Electronics for GATE EEE with the right topics, syllabus, and exam tips. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Analog Electronics — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Analog Electronics",
+      secondaryKeywords: [
+        "Analog Electronics GATE EEE",
+        "op amp BJT GATE Electrical",
+        "how to study Analog Electronics for GATE EEE",
+        "op amp circuits GATE Electrical problems",
+        "BJT amplifier GATE EEE important topics",
+      ],
+      featuredSnippet:
+        "Analog Electronics in GATE EEE typically carries 6 to 10 marks with emphasis on op-amp circuits (virtual ground, ideal analysis), BJT and MOSFET biasing and region identification, and basic feedback — less depth than GATE ECE on multistage amplifier design.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Analog Electronics carries 6 to 10 marks in GATE EEE. For EEE, the focus is on device applications and op-amp circuits rather than deep amplifier design — virtual ground and ideal op-amp analysis alone cover a large share of recurring marks.",
+    introduction: [
+      "Analog Electronics carries 6 to 10 marks in GATE EEE. For EEE students, the focus is on device applications and op-amp circuits rather than deep amplifier design. Op-amp circuits in particular are heavily tested — understanding virtual ground and ideal op-amp analysis covers a significant portion of the marks.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything you need.",
+    ],
+    inclusionHeading: "What is Analog Electronics in GATE EEE?",
+    includes: [
+      "Analog Electronics covers semiconductor device characteristics and basic amplifier circuits.",
+      "In GATE EEE, questions focus on PN junction diodes, BJT and MOSFET operation, op-amp circuit analysis, and basic feedback amplifier concepts.",
+      "The depth is less than in GATE ECE — the emphasis is on application rather than detailed circuit design.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Analog Electronics",
+        bullets: [
+          "Semiconductor basics — PN junction, diode characteristics, reverse saturation current.",
+          "Rectifiers and clippers — half wave, full wave, bridge rectifier, zener regulator.",
+          "BJT — CE, CB, CC configurations, biasing, operating regions, small-signal parameters.",
+          "MOSFET — NMOS, PMOS, threshold voltage, drain current, triode and saturation regions.",
+          "Op-amp — ideal model, inverting, non-inverting, virtual ground concept.",
+          "Op-amp applications — summing amplifier, integrator, differentiator, comparator.",
+          "Feedback amplifiers — four topologies, gain with feedback.",
+          "Oscillators — Barkhausen criterion, RC and LC oscillator frequency.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "Op-amp circuits — appears in almost every GATE EEE paper.",
+          "BJT and MOSFET biasing and operating region identification.",
+          "Feedback amplifier gain calculation and topology identification.",
+          "Diode circuit analysis — zener regulator and rectifier output.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Deep multistage BJT amplifier design — minimal in GATE EEE.",
+          "Complex oscillator frequency derivations — know the standard result.",
+          "Advanced BJT high-frequency small-signal model.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Analog Electronics",
+        bullets: [
+          "Start with PN junction and basic diode circuit analysis.",
+          "Study BJT — biasing circuits, operating region identification, basic small-signal model.",
+          "Cover MOSFET — threshold voltage, drain current equations, region identification.",
+          "Study op-amp circuits thoroughly — ideal analysis, virtual ground approach.",
+          "Cover op-amp applications — inverting, non-inverting, integrator, differentiator, summing.",
+          "Study feedback amplifiers — topology identification and closed-loop gain.",
+          "Solve PYQs topic-wise — op-amp questions repeat most consistently.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Not identifying BJT or MOSFET operating region before solving — the answer changes completely based on region.",
+          "Mistakes in virtual ground analysis for op-amp circuits — this one concept fixes most calculation errors.",
+          "Confusing inverting and non-inverting gain formulas under time pressure.",
+          "Skipping feedback amplifiers — they carry marks in most papers.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Analog Electronics",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Analog Electronics. View module-wise syllabus — link to be added.",
+          "Notes (FREE) — Build concepts and revise important formulas; notes are module-wise. Access notes — link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering concepts and problem-solving step by step. Purchase link to be added.",
+          "Demo Class (FREE) — One module as a free sample lecture on YouTube. Watch demo class — YouTube link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, getting early guidance can save time. Talk to a mentor at +91 98950 09337 — one call for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Electric Circuits — circuit analysis techniques apply directly in analog circuit analysis.",
+          "Power Electronics — semiconductor device switching behaviour connects both subjects.",
+          "Digital Electronics — device-level knowledge supports logic gate and ADC/DAC analysis.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/analog-electronics/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Signals and Systems", href: "/gate/eee/signals-and-systems/" },
+      { label: "GATE EEE Analog Electronics", href: "/gate/eee/analog-electronics/" },
+      { label: "GATE EEE Digital Electronics", href: "/gate/eee/digital-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Analog Electronics",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Analog Electronics carry in GATE EEE?",
+        answer:
+          "Usually 6 to 10 marks. Op-amp circuits and BJT/MOSFET biasing are the most consistent topics across papers.",
+      },
+      {
+        question: "Is Analog Electronics in GATE EEE the same as in GATE ECE?",
+        answer:
+          "The core topics overlap, but GATE ECE goes significantly deeper into amplifier design. For EEE, the emphasis is on device characteristics and op-amp applications — the preparation is less extensive.",
+      },
+      {
+        question: "What is the most important topic in Analog Electronics for GATE EEE?",
+        answer:
+          "Op-amp circuits. Inverting, non-inverting, integrator, differentiator, and summing amplifier problems appear in most GATE EEE papers. Master ideal op-amp analysis with virtual ground — it covers the majority of what is asked.",
+      },
+      {
+        question: "Do I need to study BJT and MOSFET in depth for GATE EEE?",
+        answer:
+          "Not as deeply as ECE. For EEE, you need to understand biasing, identify operating regions, and apply basic small-signal models. Deep amplifier design is not heavily tested.",
+      },
+      {
+        question: "How long does it take to prepare Analog Electronics for GATE EEE?",
+        answer:
+          "Around 2 to 3 weeks — it is less extensive for EEE than for ECE. Focus time on op-amp circuits and device biasing.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+      },
+      {
+        question: "Do you offer coaching for Analog Electronics for GATE EEE?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for personalised guidance.",
+      },
+    ],
+  },
+  {
+    pageNumber: 36,
+    slug: "eee/digital-electronics",
+    navLabel: "Page 36",
+    seo: {
+      title: "GATE EEE Digital Electronics — Syllabus & Coaching | BTechTutor",
+      description:
+        "Prepare Digital Electronics for GATE EEE with the right syllabus, key topics, and exam tips. One-to-one coaching at BTechTutor Kerala.",
+      h1: "GATE EEE Digital Electronics — What to Study, What to Skip, and How to Score",
+      primaryKeyword: "GATE EEE Digital Electronics",
+      secondaryKeywords: [
+        "Digital Electronics GATE EEE",
+        "logic design microprocessor GATE",
+        "how to study Digital Electronics for GATE EEE",
+        "K map GATE EEE problems",
+        "flip flop counter GATE Electrical important topics",
+      ],
+      featuredSnippet:
+        "Digital Electronics in GATE EEE typically carries 4 to 8 marks. K-map minimisation, MUX-based combinational design, flip-flops and counters, and Boolean algebra repeat often — focused practice yields reliable marks despite lower total weightage than Power Systems or Machines.",
+      schema: ["Course", "FAQPage", "Organization", "BreadcrumbList"],
+    },
+    heroSubheading:
+      "Digital Electronics carries 4 to 8 marks in GATE EEE. Question types are predictable — K-maps, MUX design, and sequential circuits — so it is one of the most efficient subjects to convert prep time into secure marks.",
+    introduction: [
+      "Digital Electronics carries 4 to 8 marks in GATE EEE. While it has lower weightage than Power Systems or Electric Machines, it is a well-structured subject with predictable question types — making it one of the more efficient areas to prepare. The topics are straightforward and marks can be secured reliably with focused practice.",
+      "This page has the syllabus, notes, previous year questions, and video classes — everything you need.",
+    ],
+    inclusionHeading: "What is Digital Electronics in GATE EEE?",
+    includes: [
+      "Digital Electronics covers number systems, logic design, combinational circuits, and sequential circuits.",
+      "In GATE EEE, questions follow the same pattern as GATE ECE — Boolean algebra, K-map minimisation, MUX-based design, and flip-flop analysis are the most frequently tested areas.",
+      "Short preparation cycles work well here because patterns repeat and numerical load is moderate compared with machines or power systems.",
+    ],
+    additionalSections: [
+      {
+        heading: "Topics Covered in GATE EEE Digital Electronics",
+        bullets: [
+          "Number systems — binary, octal, hexadecimal, BCD, Gray code conversions.",
+          "Boolean algebra — theorems, De Morgan's laws, SOP and POS forms.",
+          "Logic gates — AND, OR, NOT, NAND, NOR, XOR, XNOR.",
+          "K-map minimisation — 3 and 4 variable maps, don't care conditions, SOP and POS.",
+          "Combinational circuits — half adder, full adder, subtractor.",
+          "Multiplexers and demultiplexers — MUX as universal logic, circuit implementation.",
+          "Encoders, decoders, priority encoders.",
+          "Sequential circuits — SR, JK, D, T flip-flops, state tables, excitation tables.",
+          "Counters — ripple counter, synchronous counter, modulo-N counter design.",
+          "Shift registers — SISO, SIPO, PISO, PIPO configurations.",
+        ],
+      },
+      {
+        heading: "High-Weightage Topics — Focus on These First",
+        bullets: [
+          "K-map minimisation — appears almost every year in GATE EEE.",
+          "Combinational circuit design using MUX and basic gates.",
+          "Flip-flop state analysis — state transition tables and excitation tables.",
+          "Counter design — modulo-N and synchronous counter problems.",
+        ],
+      },
+      {
+        heading: "What You Can Skip or Deprioritise",
+        bullets: [
+          "Deep microprocessor programming — only basic 8085 architecture concepts if applicable.",
+          "Advanced PLD and FPGA implementation theory.",
+          "Complex multi-level logic minimisation beyond standard 4-variable K-maps.",
+        ],
+      },
+      {
+        heading: "How to Prepare GATE EEE Digital Electronics",
+        bullets: [
+          "Cover number systems and conversions — fast marks, cover quickly.",
+          "Study Boolean algebra — De Morgan's theorems and simplification.",
+          "Master K-map minimisation — 3 and 4 variable maps with don't care conditions.",
+          "Study combinational circuits — adders, MUX-based design, decoders.",
+          "Cover flip-flops — understand state tables and excitation tables for all four types.",
+          "Study counters — modulo-N design and synchronous counter analysis.",
+          "Solve PYQs topic-wise — K-map and MUX problems repeat most consistently.",
+        ],
+      },
+      {
+        heading: "Where Most Students Lose Marks",
+        bullets: [
+          "Not practising K-maps under time pressure — errors happen in the exam even when the concept is clear.",
+          "Confusing flip-flop excitation tables — revise all four types together to avoid mix-ups.",
+          "Skipping number conversions as too easy — they are direct, guaranteed marks that take very little prep.",
+          "Not practising MUX-based circuit implementation — it is a specific, recurring GATE question type.",
+        ],
+      },
+      {
+        heading: "Study Resources for GATE EEE Digital Electronics",
+        bullets: [
+          "Syllabus (FREE) — Module-wise syllabus for GATE EEE Digital Electronics. View module-wise syllabus — link to be added.",
+          "Notes (FREE) — Build concepts and revise important formulas; notes are module-wise. Access notes — link to be added.",
+          "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
+          "Video Classes (PAID) — Recorded lectures covering concepts and problem-solving step by step. Purchase link to be added.",
+          "Demo Class (FREE) — One module as a free sample lecture on YouTube. Watch demo class — YouTube link to be added.",
+        ],
+      },
+      {
+        heading: "Mentor Guidance",
+        paragraphs: [
+          "If you are unsure whether you are preparing the right way, getting early guidance can save time. Talk to a mentor at +91 98950 09337 — one call for a clear plan on what to study, what to skip, and how long it will take.",
+        ],
+      },
+      {
+        heading: "Related Subjects",
+        bullets: [
+          "Analog Electronics — semiconductor device knowledge supports logic gate circuit analysis.",
+          "Power Electronics — digital control signals and PWM generation connect both subjects.",
+          "Electric Circuits — basic circuit analysis applies in logic gate implementations.",
+          "Explore all GATE EEE subjects from the GATE EEE hub.",
+        ],
+      },
+      {
+        heading: "Ready to Start?",
+        paragraphs: [
+          "Free notes, PYQs, and a demo class are available now. Video classes are available on purchase.",
+          "Enrol now: btechtutor.com/gate/eee/digital-electronics/ | Call or WhatsApp: +91 98950 09337 | Email: help.btechtutorkerala@gmail.com | Or visit: btechtutor.com/contact/.",
+        ],
+      },
+    ],
+    internalLinks: [
+      { label: "GATE EEE Hub", href: "/gate/eee/" },
+      { label: "GATE EEE Previous Year Papers", href: "/gate/eee/previous-year-papers/" },
+      { label: "GATE EEE Mock Test", href: "/gate/eee/mock-test/" },
+      { label: "GATE EEE Cutoff", href: "/gate/eee/cutoff/" },
+      { label: "GATE EEE Electric Circuits", href: "/gate/eee/electric-circuits/" },
+      { label: "GATE EEE Electromagnetic Fields", href: "/gate/eee/electromagnetic-fields/" },
+      { label: "GATE EEE Power Systems", href: "/gate/eee/power-systems/" },
+      { label: "GATE EEE Power Electronics", href: "/gate/eee/power-electronics/" },
+      { label: "GATE EEE Electric Machines", href: "/gate/eee/electric-machines/" },
+      { label: "GATE EEE Control Systems", href: "/gate/eee/control-systems/" },
+      { label: "GATE EEE Signals and Systems", href: "/gate/eee/signals-and-systems/" },
+      { label: "GATE EEE Analog Electronics", href: "/gate/eee/analog-electronics/" },
+      { label: "GATE EEE Digital Electronics", href: "/gate/eee/digital-electronics/" },
+      { label: "GATE EEE Engineering Mathematics", href: "/gate/eee/engineering-mathematics/" },
+      { label: "Contact", href: "/contact/" },
+    ],
+    ctaLabel: "Enrol for GATE EEE Digital Electronics",
+    ctaHref: "/contact/",
+    faqs: [
+      {
+        question: "How many marks does Digital Electronics carry in GATE EEE?",
+        answer:
+          "Usually 4 to 8 marks. K-map minimisation, combinational circuit design, and flip-flop analysis are the most consistent topics across GATE EEE papers.",
+      },
+      {
+        question: "Is Digital Electronics easier to score in GATE EEE compared to other subjects?",
+        answer:
+          "Yes, relatively. The question types are predictable and the patterns repeat year on year. With good K-map practice and flip-flop revision, it is one of the faster subjects to improve your score in.",
+      },
+      {
+        question: "What is the most important topic in Digital Electronics for GATE EEE?",
+        answer:
+          "K-map minimisation and MUX-based combinational circuit design. Cover these two well and you secure most of the available marks in this subject.",
+      },
+      {
+        question: "Is microprocessor included in GATE EEE Digital Electronics?",
+        answer:
+          "It depends on the year — some papers include basic 8085 architecture questions. However, deep programming is not tested. If you have time, cover basic 8085 architecture and instruction types briefly.",
+      },
+      {
+        question: "How long does it take to prepare Digital Electronics for GATE EEE?",
+        answer:
+          "Around 2 weeks. It is one of the shorter subjects in GATE EEE — the key is practice, not reading theory repeatedly.",
+      },
+      {
+        question: "Are sequential circuits important for GATE EEE?",
+        answer:
+          "Yes. Flip-flops, counters, and state machine analysis appear regularly. They carry a good portion of the marks within this subject — do not skip them.",
+      },
+      {
+        question: "Are the notes and question papers free?",
+        answer:
+          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+      },
+      {
+        question: "Do you offer coaching for Digital Electronics for GATE EEE?",
+        answer:
+          "Yes. Call or WhatsApp +91 98950 09337 for a personalised preparation plan.",
+      },
+    ],
+  },
 ];
 
 export const gatePageNav = gatePagesContent.map((page) => ({

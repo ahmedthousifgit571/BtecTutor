@@ -98,16 +98,25 @@ model Review {
   @@index([approved])
 }
 
+enum EnquiryStatus {
+  NEW
+  CONTACTED
+  CLOSED
+}
+
 model Enquiry {
-  id        String   @id @default(cuid())
+  id        String        @id @default(cuid())
   name      String
   email     String
   phone     String?
   course    String?
-  message   String?  @db.Text
-  createdAt DateTime @default(now())
+  message   String?       @db.Text
+  status    EnquiryStatus @default(NEW)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
 
   @@index([createdAt])
+  @@index([status])
 }
 
 model Faculty {

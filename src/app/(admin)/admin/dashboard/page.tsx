@@ -5,18 +5,18 @@ async function getStats() {
   const [
     totalSubjects,
     totalPosts,
-    totalEnquiries,
+    newEnquiries,
     pendingReviews,
     recentEnquiries,
   ] = await Promise.all([
     prisma.subject.count(),
     prisma.blogPost.count(),
-    prisma.enquiry.count(),
+    prisma.enquiry.count({ where: { status: "NEW" } }),
     prisma.review.count({ where: { approved: false } }),
     prisma.enquiry.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
   ]);
 
-  return { totalSubjects, totalPosts, totalEnquiries, pendingReviews, recentEnquiries };
+  return { totalSubjects, totalPosts, newEnquiries, pendingReviews, recentEnquiries };
 }
 
 export default async function AdminDashboard() {
@@ -25,7 +25,7 @@ export default async function AdminDashboard() {
   const cards = [
     { label: "Total Subjects", value: stats.totalSubjects, icon: <FileText className="h-5 w-5" />, color: "text-brand-orange" },
     { label: "Blog Posts", value: stats.totalPosts, icon: <FileText className="h-5 w-5" />, color: "text-accent-sky" },
-    { label: "Enquiries", value: stats.totalEnquiries, icon: <MessageSquare className="h-5 w-5" />, color: "text-emerald-500" },
+    { label: "New Enquiries", value: stats.newEnquiries, icon: <MessageSquare className="h-5 w-5" />, color: "text-emerald-500" },
     { label: "Pending Reviews", value: stats.pendingReviews, icon: <Star className="h-5 w-5" />, color: "text-amber-500" },
   ];
 

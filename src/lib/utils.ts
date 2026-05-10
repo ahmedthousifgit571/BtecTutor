@@ -35,3 +35,11 @@ export function getBaseUrl(): string {
 export function absoluteUrl(path: string): string {
   return `${getBaseUrl()}${path}`;
 }
+
+// Strips spaces, dashes, parentheses and a leading "+" so that
+// "+91 98950 06772" becomes "919895006772" — the format wa.me requires.
+export function normalizePhoneForWa(raw: string | null | undefined): string {
+  if (!raw) return "";
+  const digits = raw.replace(/[^\d+]/g, "");
+  return digits.replace(/^\+/, "");
+}
