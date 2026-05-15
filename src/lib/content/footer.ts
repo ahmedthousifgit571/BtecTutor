@@ -47,7 +47,7 @@ export const footerContent: FooterContent = {
       links: [
         { label: "ECE", href: "/gate-coaching/ece" },
         { label: "EEE", href: "/gate-coaching/eee" },
-        { label: "Instrumentation", href: "/gate-coaching/instrumentation" },
+        { label: "Instrumentation", href: "/gate/instrumentation/" },
         { label: "Mock Tests", href: "/gate-coaching/ece/mock-test" },
       ],
     },

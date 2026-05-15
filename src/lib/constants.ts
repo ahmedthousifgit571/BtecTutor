@@ -17,7 +17,7 @@ export const NAV_LINKS = [
       { label: "Gate", href: "/gate" },
       { label: "ECE", href: "/gate/ece/" },
       { label: "EEE", href: "/gate/eee/" },
-      { label: "Instrumentation", href: "/gate-coaching/instrumentation" },
+      { label: "Instrumentation", href: "/gate/instrumentation/" },
     ],
   },
   {

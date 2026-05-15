@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
         await resend.emails.send({
           from: process.env.RESEND_FROM_EMAIL || "noreply@btectutor.com",
-          to: "info@btectutor.com",
+          to: "hosting.princy@gmail.com",
           subject: `New Enquiry from ${name}`,
           html: `
             <h2>New Enquiry Received</h2>
