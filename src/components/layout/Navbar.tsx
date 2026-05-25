@@ -16,6 +16,19 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (label: string) => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+    setOpenDropdown(label);
+  };
+
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 120);
+  };
 
   useEffect(() => {
     if (!mobileOpen) {
@@ -58,10 +71,8 @@ export function Navbar() {
               <div
                 key={link.label}
                 className="relative"
-                onMouseEnter={() =>
-                  "children" in link ? setOpenDropdown(link.label) : undefined
-                }
-                onMouseLeave={() => setOpenDropdown(null)}
+                onMouseEnter={() => "children" in link ? openMenu(link.label) : undefined}
+                onMouseLeave={scheduleClose}
               >
                 {"children" in link ? (
                   <>
@@ -72,17 +83,28 @@ export function Navbar() {
                       <ChevronDown className="h-3.5 w-3.5" />
                     </button>
                     {openDropdown === link.label && (
-                      <div className="absolute top-full left-0 w-56 pt-1.5">
-                        <div className="rounded-xl border border-white/15 bg-brand-navy/95 backdrop-blur-xl shadow-xl shadow-black/40 p-2">
-                          {link.children.map((child) => (
-                            <Link
-                              key={child.href}
-                              href={child.href}
-                              className="block rounded-lg px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors"
-                            >
-                              {child.label}
-                            </Link>
-                          ))}
+                      <div
+                        className="absolute top-full left-0 w-56 pt-1.5"
+                        onMouseEnter={() => openMenu(link.label)}
+                        onMouseLeave={scheduleClose}
+                      >
+                        <div className="relative rounded-xl border border-white/15 bg-brand-navy/95 backdrop-blur-xl shadow-xl shadow-black/40">
+                          <div
+                            data-lenis-prevent
+                            className="p-2 max-h-[13.5rem] overflow-y-auto overscroll-contain [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-white/5 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-white/40 [&::-webkit-scrollbar-thumb:hover]:bg-white/70"
+                          >
+                            {link.children.map((child) => (
+                              <Link
+                                key={child.href}
+                                href={child.href}
+                                className="block rounded-lg px-3 py-2.5 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                              >
+                                {child.label}
+                              </Link>
+                            ))}
+                          </div>
+                          {/* Scroll hint gradient */}
+                          <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-8 rounded-b-xl bg-gradient-to-t from-brand-navy/90 to-transparent" />
                         </div>
                       </div>
                     )}
@@ -122,7 +144,7 @@ export function Navbar() {
       {/* Mobile Menu */}
       {mobileOpen && (
         <div className="lg:hidden fixed left-0 right-0 top-20 z-40 border-b border-white/10 bg-brand-navy shadow-2xl shadow-black/50">
-          <div className="mx-auto max-w-7xl max-h-[calc(100dvh-5rem)] overflow-y-auto px-4 py-4 pb-6 space-y-2">
+          <div data-lenis-prevent className="mx-auto max-w-7xl max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain px-4 py-4 pb-6 space-y-2">
             {NAV_LINKS.map((link) => (
               <div key={link.label}>
                 {"children" in link ? (

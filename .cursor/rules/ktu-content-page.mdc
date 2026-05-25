@@ -1,0 +1,328 @@
+---
+description: KTU Hub page pattern — layout, content shape, and API-readiness rules for /ktu and any future KTU landing pages. Apply when editing ktu-hub.ts, KtuHubPage.tsx, or adding new KTU hub content.
+globs:
+  - src/lib/content/ktu-hub.ts
+  - src/components/sections/KtuHubPage.tsx
+  - src/app/(public)/ktu/page.tsx
+alwaysApply: false
+---
+
+# KTU Content Page Pattern
+
+This rule documents the reusable layout, component structure, content shape, and API-integration conventions for the `/ktu` landing page (KTU Study Hub) so that future content additions, section changes, and API migrations are consistent and drift-free.
+
+Apply this rule when:
+- Editing copy or adding new sections in `src/lib/content/ktu-hub.ts`
+- Modifying layout or sections in `src/components/sections/KtuHubPage.tsx`
+- Creating additional KTU landing pages that should follow the same look and feel
+- Replacing static content with API-fetched data
+
+---
+
+## File Structure
+
+- **Content source:** `src/lib/content/ktu-hub.ts`
+  - All copy, FAQs, schemes, branches, offers, why bullets, CTAs, and internal links live here as a single typed object `ktuHubContent`.
+  - Designed to be swapped for an API response — do **not** hardcode copy in JSX.
+  - The exported `KtuHubContent` interface is the API contract. When integrating an API, fetch data and cast/validate it against this interface before passing to `<KtuHubPage />`.
+- **Page renderer:** `src/components/sections/KtuHubPage.tsx`
+  - Single presenter component that accepts `{ content: KtuHubContent }` and renders all sections.
+  - Server component — no `"use client"` directive. Keeps the page SSR-compatible.
+- **Route:** `src/app/(public)/ktu/page.tsx`
+  - Thin Next.js page: imports `ktuHubContent`, exports `metadata`, renders `<KtuHubPage content={ktuHubContent} />`.
+  - When migrating to API: `async` server component that fetches content and passes it down.
+
+---
+
+## Section Order (Top to Bottom)
+
+The component renders sections in this fixed order. Do not reshuffle unless the entire pattern is being redesigned.
+
+1. Breadcrumb (`[{ name: "KTU", url: "/ktu" }]`)
+2. Hero panel (dark charcoal)
+3. Introduction (light card)
+4. What We Offer — programme checklist (dark charcoal)
+5. Choose Your Scheme — scheme cards (light, 2-column grid)
+6. Scheme helper text (neutral hint)
+7. Branches / Departments — compact tiles (white card, 6-column grid)
+8. Why BTechTutor — editorial + stat aside (light card + dark charcoal)
+9. Related Pages (gradient border pills)
+10. Bottom CTA (dark charcoal)
+11. FAQs grid (light, 2 columns)
+12. JSON-LD (Breadcrumb, FAQ, Organization, Course)
+
+---
+
+## Visual Tokens (Always Use These)
+
+Matches the project-wide token system defined in `ui-system-consistency.mdc`.
+
+| Token | Value |
+|---|---|
+| Page wrapper | `bg-white pt-24 pb-16` |
+| Container | `mx-auto max-w-7xl px-4 sm:px-6 lg:px-8` |
+| Light card | `rounded-3xl border border-gray-100 bg-white p-7 md:p-9 shadow-sm` |
+| Sub-card (light) | `rounded-2xl border border-gray-100 bg-white p-6` |
+| Dark card | `rounded-3xl border border-white/10 bg-charcoal p-7 md:p-10 shadow-[0_30px_60px_-40px_rgba(0,0,0,0.8)]` |
+| Mini card on dark | `rounded-2xl border border-white/10 bg-white/[0.04] p-5` |
+| Brand accent | `text-brand-orange`, `bg-brand-orange`, `bg-brand-orange/10`, `border-brand-orange/30` |
+| Section eyebrow | `inline-flex items-center gap-2 rounded-full bg-brand-orange/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-brand-orange` |
+| Section heading | `text-xl font-semibold text-gray-900` (minor) or `text-2xl font-bold text-gray-900` (major) |
+| Hero H1 | `text-fluid-3xl font-extrabold leading-tight text-white` — split on ` — `: lead phrase in `text-brand-orange`, tail in `text-white` |
+| Body (light) | `text-gray-600 leading-8` (long form) or `text-gray-600 leading-relaxed` |
+| Body (dark) | `text-white/70` to `text-white/55` |
+| Section gap | `mb-10` (minor) or `mb-12` (major) between sections |
+| Hover lift | `hover:-translate-y-0.5` (cards) or `hover:-translate-y-1` (scheme/branch tiles) |
+
+---
+
+## Component Conventions
+
+### Hero (always present)
+- Dark `rounded-3xl` panel with two background blur blobs: orange (`-left-20 top-0`) and indigo (`-right-12 top-14`).
+- Two-column grid `[1.1fr_0.9fr]` on `lg`: title + subheading + two CTAs on the left; 3 mini info cards on the right.
+- Three fixed mini cards (do not change without updating this rule):
+  - **Free Study Material** — `BookOpen` icon
+  - **Both Schemes** — `Layers` icon
+  - **Personal Coaching** — `Target` icon
+- Primary CTA: orange `Link` to `content.ctaHref` labelled by `content.ctaLabel`.
+- Secondary CTA: WhatsApp `<a>` using `content.ctaPhone` — strips spaces and `+` before building the `wa.me` URL.
+- Badge uses `variant="violet"` with override classes `!bg-brand-orange/15 !text-brand-orange`.
+
+### Introduction
+- White `rounded-3xl` card.
+- Header row: icon chip (`Sparkles`) + `"Introduction"` heading + `"KTU Strategy"` eyebrow tag.
+- First paragraph always gets `border-l-4 border-brand-orange/70 pl-4 text-gray-700` for editorial accent.
+- Subsequent paragraphs use standard `text-gray-600 leading-8`.
+
+### What We Offer (dark)
+- Dark charcoal card with blur blobs (orange top-right, indigo bottom-left).
+- `"Programme"` eyebrow + `content.offersHeading` as `h2`.
+- 2-column grid (`md:grid-cols-2`) of mini dark cards.
+- Each bullet in `content.offers` is split on ` — `: the left side becomes the **bold title** (`text-sm font-semibold text-white`) and the right side is the detail (`text-white/70`). If no ` — ` is found, the entire string is the detail with no title.
+- `CheckCircle2` icon in `bg-brand-orange/15` chip on each card.
+- Hover: `hover:border-brand-orange/40 hover:bg-white/[0.06]`.
+
+### Choose Your Scheme
+- Light section with eyebrow (`Compass` icon + `"Schemes"`), `h2`, and sub-description.
+- 2-column grid (`md:grid-cols-2`).
+- Scheme card: gradient top accent bar (index from `schemeAccents` array), `GraduationCap` icon chip (flips to solid orange on hover), note badge (gray pill), title, description, `ArrowUpRight` CTA pill.
+- `schemeAccents` rotation (do not change order):
+  - `"from-brand-orange/80 to-amber-400/80"` — 2024 Scheme
+  - `"from-indigo-500/80 to-sky-400/80"` — 2019 Scheme
+- Below the grid: `content.schemeHelperText` rendered as a neutral hint row (`bg-gray-50/70 rounded-xl border border-gray-100`).
+
+### Branches / Departments
+- White `rounded-3xl` card with divider header row: `Users` icon chip + `h2` + sub-description.
+- **6-column** compact tile grid (`grid-cols-2 sm:grid-cols-3 lg:grid-cols-6`).
+- Each tile: gradient top accent (1px, from `branchAccents` rotation), large `shortTitle` in `text-brand-orange`, full `title` in `text-xs text-gray-600`, `ArrowUpRight` at bottom.
+- `branchAccents` rotation (6 entries to match 6 branches — extend if branches are added):
+  - orange, indigo, emerald, rose, violet, cyan
+- Tiles are `Link` elements — `href` should point to the relevant scheme+department page once branch-specific routing is set up.
+- **API note:** `content.branches` is currently hardcoded. When API is live, this array should be fetched from the KTU branch/department endpoint and each `href` built dynamically from `scheme` + `slug`.
+
+### Why BTechTutor
+- 2-column layout `[1.4fr_1fr]` on `lg`.
+- Left: white `rounded-3xl` card — eyebrow, `h2`, bulleted list with `CheckCircle2` icons.
+- Right: dark charcoal aside — stat number (`5,000+`), supporting text, 3 fixed one-liner bullets, phone link (`tel:` + `https://wa.me/`).
+- The stat (`5,000+`) and the 3 aside bullets are **hardcoded** in the component. Update them here when the figure changes:
+  - `"Struggling with a subject? Get guidance early."`
+  - `"One call is enough to get a clear study plan."`
+  - `"Supply and series exam coaching available."`
+
+### Related Pages
+- Gradient border card (`from-brand-orange/5 via-white to-indigo-50/50`).
+- Pills using `ArrowUpRight`, hover lifts with `hover:bg-brand-orange hover:text-white`.
+- Source: `content.internalLinks` array.
+
+### Bottom CTA (dark)
+- Same dark panel pattern with blur blobs.
+- Title split: first line plain white + second line `text-brand-orange` for visual weight.
+- Two buttons: primary orange + WhatsApp outline.
+- WhatsApp URL uses `content.ctaPhone` — same stripping logic as hero secondary CTA.
+
+### FAQs
+- 2-column grid of `rounded-2xl` cards.
+- `Q01`, `Q02`, … chip (orange, flips on group hover).
+- Source: `content.faqs` array.
+
+---
+
+## `KtuHubContent` Interface Reference
+
+```typescript
+interface KtuHubContent {
+  seo: {
+    title: string;           // ≤ 60 chars
+    description: string;     // ≤ 160 chars
+    h1: string;              // split on " — " for hero styling
+    primaryKeyword: string;
+    secondaryKeywords: string[];
+    lsiKeywords?: string[];
+  };
+  heroSubheading: string;    // 1–2 sentences under H1
+  introduction: string[];    // 2–4 paragraphs; first gets accent border
+  offersHeading: string;     // h2 for the offers dark panel
+  offers: string[];          // each in "Title — detail" format for auto-split
+  schemesHeading: string;
+  schemesSubtext: string;
+  schemes: Array<{
+    title: string;
+    description: string;
+    note: string;            // short label shown as gray pill (e.g. "2024-25 batch and onwards")
+    href: string;
+    ctaLabel: string;
+  }>;
+  schemeHelperText: string;  // shown as hint row below scheme cards
+  branchesHeading: string;
+  branchesSubtext: string;
+  branches: Array<{
+    title: string;           // full branch name
+    shortTitle: string;      // abbreviation shown large (e.g. "ECE")
+    href: string;            // currently points to scheme page; update to branch page when ready
+  }>;
+  whyHeading: string;
+  whyBullets: string[];      // plain sentences, no "Title — detail" split needed
+  ctaLabel: string;
+  ctaHref: string;
+  ctaPhone: string;          // used for tel: and wa.me links
+  ctaEmail: string;          // available for footer/contact sections
+  faqs: Array<{
+    question: string;
+    answer: string;
+  }>;
+  internalLinks: Array<{
+    label: string;
+    href: string;
+  }>;
+}
+```
+
+---
+
+## Content Authoring Rules
+
+When updating `src/lib/content/ktu-hub.ts`:
+
+1. Keep `seo.title` ≤ 60 chars and `seo.description` ≤ 160 chars.
+2. `seo.h1` must contain ` — ` at least once so the hero splits the title correctly.
+3. `offers` bullets must use `"Title — detail"` format so the dark panel auto-splits them into bold title + muted detail. If a bullet has no split, the full string renders as detail (no title).
+4. `whyBullets` are plain sentences — no split syntax needed.
+5. `branches.href` currently points to the scheme landing page (`/ktu/2024`). Once branch-specific routing exists, update each href to `/ktu/{scheme}/{branch-slug}`.
+6. `schemes` must always have exactly 2 entries (2019 and 2024). If KTU introduces a third scheme, add a third `schemeAccents` entry in the component before adding a third scheme object here.
+7. Do not put HTML or JSX inside any content string — plain text only.
+8. `ctaPhone` must include country code with `+` prefix (e.g. `"+91 98950 09337"`). The component strips spaces and `+` automatically for `wa.me` URLs.
+
+---
+
+## API Integration Guide
+
+The content is currently a static export. To replace it with live API data:
+
+### Step 1 — Make the route page async
+
+```typescript
+// src/app/(public)/ktu/page.tsx
+import type { Metadata } from "next";
+import { KtuHubPage } from "@/components/sections/KtuHubPage";
+import type { KtuHubContent } from "@/lib/content/ktu-hub";
+import { generateMeta } from "@/lib/seo";
+
+async function fetchKtuHubContent(): Promise<KtuHubContent> {
+  const res = await fetch(`${process.env.API_BASE_URL}/ktu/hub`, {
+    next: { revalidate: 3600 }, // ISR — re-fetch every hour
+  });
+  if (!res.ok) throw new Error("Failed to fetch KTU hub content");
+  return res.json();
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const content = await fetchKtuHubContent();
+  return generateMeta({
+    title: content.seo.title,
+    description: content.seo.description,
+    keywords: [content.seo.primaryKeyword, ...content.seo.secondaryKeywords, ...(content.seo.lsiKeywords ?? [])],
+    canonicalUrl: "/ktu",
+  });
+}
+
+export default async function KtuHubLandingPage() {
+  const content = await fetchKtuHubContent();
+  return <KtuHubPage content={content} />;
+}
+```
+
+### Step 2 — Keep `ktu-hub.ts` as the fallback
+
+Do not delete `ktu-hub.ts` immediately. Use it as the default/fallback value:
+
+```typescript
+async function fetchKtuHubContent(): Promise<KtuHubContent> {
+  try {
+    const res = await fetch(...);
+    if (!res.ok) throw new Error();
+    return res.json();
+  } catch {
+    const { ktuHubContent } = await import("@/lib/content/ktu-hub");
+    return ktuHubContent;
+  }
+}
+```
+
+### Step 3 — Expected API shape
+
+The API response must satisfy `KtuHubContent` exactly. Any fields added to the interface must also be added to the API response schema. Validate with Zod if strict runtime safety is needed.
+
+### Step 4 — Remove static fallback
+
+Once the API is stable and tested in production, remove the `ktuHubContent` static import from the page and delete `ktu-hub.ts` (or keep it as a seed/test fixture).
+
+---
+
+## Icon Usage (lucide-react)
+
+| Location | Icon |
+|---|---|
+| Hero mini cards | `BookOpen`, `Layers`, `Target` |
+| Hero CTAs | `ArrowRight`, `Phone` |
+| Introduction header | `Sparkles` |
+| Offers section | `CheckCircle2` |
+| Schemes header | `Compass` |
+| Scheme card | `GraduationCap` |
+| Branches tiles | `ArrowUpRight` |
+| Why BTechTutor bullets | `CheckCircle2` |
+| Why stat aside | `CheckCircle2`, `Phone` |
+| Related page pills | `ArrowUpRight` |
+| Bottom CTA | `ArrowRight` |
+
+Prefer extending this icon set over introducing new visual language.
+
+---
+
+## Adding New Content (Checklist)
+
+1. Update `ktuHubContent` in `src/lib/content/ktu-hub.ts` — never edit copy directly in JSX.
+2. If adding a new **section type** (e.g. a testimonials block or a comparison table):
+   - Add the new field(s) to `KtuHubContent` interface in `ktu-hub.ts`.
+   - Add a conditional rendering block in `KtuHubPage.tsx` at the correct position in the section order above.
+   - Update this rule's Section Order and Component Conventions.
+3. If adding a new **branch**, append to `content.branches` and extend `branchAccents` in the component by one entry.
+4. If adding a new **scheme**, extend `schemeAccents` in the component before adding a third scheme object.
+5. Verify:
+   - Container is `max-w-7xl`
+   - Section gaps use `mb-10` or `mb-12`
+   - Brand orange is the only accent color
+   - Dark and light sections alternate (dark → light → dark pattern must be preserved)
+6. Run `next lint` on touched files. No warnings expected.
+
+---
+
+## Anti-patterns to Avoid
+
+- Hardcoding strings in JSX — always source from `ktuHubContent` or the API response.
+- Adding new accent colors outside `brand-orange` and the gradient rotation defined in `branchAccents`/`schemeAccents`.
+- Nesting cards more than one level deep.
+- Using `text-3xl` for hero headings — always `text-fluid-3xl`.
+- Introducing `"use client"` in `KtuHubPage.tsx` — it must stay a server component.
+- Constructing `wa.me` URLs manually — always use the `ctaPhone.replace(/\s/g, "").replace("+", "")` pattern for consistency.
+- Breaking the dark → light → dark alternation cadence — it is intentional for visual rhythm.

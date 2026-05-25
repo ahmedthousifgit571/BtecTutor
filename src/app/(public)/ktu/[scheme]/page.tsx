@@ -5,6 +5,9 @@ import { ArrowRight, Code, Wrench, Building2 } from "lucide-react";
 import { generateMeta } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { KTU_SCHEMES, KTU_DEPARTMENTS } from "@/lib/constants";
+import { KtuHubPage } from "@/components/sections/KtuHubPage";
+import { ktu2019SchemeContent } from "@/lib/content/ktu-2019-scheme";
+import { ktu2024SchemeContent } from "@/lib/content/ktu-2024-scheme";
 
 interface Props {
   params: { scheme: string };
@@ -16,6 +19,32 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!KTU_SCHEMES.includes(params.scheme as (typeof KTU_SCHEMES)[number])) return {};
+
+  if (params.scheme === "2019") {
+    return generateMeta({
+      title: ktu2019SchemeContent.seo.title,
+      description: ktu2019SchemeContent.seo.description,
+      keywords: [
+        ktu2019SchemeContent.seo.primaryKeyword,
+        ...ktu2019SchemeContent.seo.secondaryKeywords,
+        ...(ktu2019SchemeContent.seo.lsiKeywords ?? []),
+      ],
+      canonicalUrl: "/ktu/2019",
+    });
+  }
+
+  if (params.scheme === "2024") {
+    return generateMeta({
+      title: ktu2024SchemeContent.seo.title,
+      description: ktu2024SchemeContent.seo.description,
+      keywords: [
+        ktu2024SchemeContent.seo.primaryKeyword,
+        ...ktu2024SchemeContent.seo.secondaryKeywords,
+        ...(ktu2024SchemeContent.seo.lsiKeywords ?? []),
+      ],
+      canonicalUrl: "/ktu/2024",
+    });
+  }
 
   return generateMeta({
     title: `KTU ${params.scheme} Scheme — Study Materials & Notes`,
@@ -33,6 +62,32 @@ const iconMap: Record<string, React.ReactNode> = {
 export default function KtuSchemePage({ params }: Props) {
   if (!KTU_SCHEMES.includes(params.scheme as (typeof KTU_SCHEMES)[number])) {
     notFound();
+  }
+
+  if (params.scheme === "2019") {
+    return (
+      <KtuHubPage
+        content={ktu2019SchemeContent}
+        breadcrumbItems={[
+          { name: "KTU", url: "/ktu" },
+          { name: "2019 Scheme", url: "/ktu/2019" },
+        ]}
+        pageUrl="/ktu/2019"
+      />
+    );
+  }
+
+  if (params.scheme === "2024") {
+    return (
+      <KtuHubPage
+        content={ktu2024SchemeContent}
+        breadcrumbItems={[
+          { name: "KTU", url: "/ktu" },
+          { name: "2024 Scheme", url: "/ktu/2024" },
+        ]}
+        pageUrl="/ktu/2024"
+      />
+    );
   }
 
   return (
