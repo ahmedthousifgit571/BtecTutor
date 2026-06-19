@@ -34,12 +34,17 @@ model Subject {
   course       Course     @relation(fields: [courseId], references: [id], onDelete: Cascade)
   title        String
   slug         String
+  code         String?    // subject code, e.g. "MAT101"
+  keyTopics    String?    @db.Text // comma list from the sheet (for search)
   semester     Int?
   content      Json?
   syllabus     Json?
   pyqs         Json?
   videoLinks   Json?
   faqs         Json?
+  notesUrl         String? // uploaded PDF (Supabase public URL)
+  questionPaperUrl String? // uploaded PDF
+  syllabusFileUrl  String? // uploaded PDF (distinct from structured `syllabus`)
   seoTitle     String?
   seoDesc      String?    @db.Text
   seoKeywords  String[]
@@ -51,6 +56,7 @@ model Subject {
 
   @@unique([courseId, slug])
   @@index([slug])
+  @@index([code])
 }
 
 model BlogPost {

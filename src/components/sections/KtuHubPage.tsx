@@ -15,6 +15,7 @@ import {
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Badge } from "@/components/ui/Badge";
+import { KtuSearchBar } from "@/components/sections/KtuSearchBar";
 import {
   buildBreadcrumbSchema,
   buildCourseSchema,
@@ -80,6 +81,8 @@ export function KtuHubPage({ content, breadcrumbItems, pageUrl }: KtuHubPageProp
               <p className="max-w-3xl text-base leading-relaxed text-white/70 sm:text-lg">
                 {content.heroSubheading}
               </p>
+
+              <KtuSearchBar className="mt-7 max-w-xl" />
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link

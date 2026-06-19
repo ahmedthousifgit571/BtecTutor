@@ -6,7 +6,7 @@ import Image from "next/image";
 import logoImage from "@/assets/logoImage2.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Search } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
 
@@ -119,6 +119,17 @@ export function Navbar() {
                 )}
               </div>
             ))}
+
+            {/* Highlighted search icon (after Support) */}
+            <Link
+              href="/ktu/search"
+              aria-label="Search KTU subjects"
+              title="Search subjects"
+              className="group relative ml-1 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-brand-orange/20 text-brand-orange ring-1 ring-brand-orange/50 transition-all hover:bg-brand-orange hover:text-white"
+            >
+              <span className="pointer-events-none absolute inset-0 rounded-lg ring-2 ring-brand-orange/50 animate-ping opacity-60 group-hover:hidden" />
+              <Search className="relative h-4 w-4" />
+            </Link>
           </div>
 
           <div className="hidden lg:flex items-center gap-3">
@@ -175,6 +186,14 @@ export function Navbar() {
               </div>
             ))}
             <div className="pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] flex flex-col gap-2">
+              <Link
+                href="/ktu/search"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-lg bg-brand-orange/20 px-4 py-2.5 text-sm font-medium text-brand-orange ring-1 ring-brand-orange/50 hover:bg-brand-orange hover:text-white"
+              >
+                <Search className="h-4 w-4" />
+                Search Subjects
+              </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}

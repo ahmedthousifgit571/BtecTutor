@@ -10,6 +10,8 @@
     "postinstall": "prisma generate",
     "db:migrate": "prisma migrate dev",
     "db:seed": "tsx prisma/seed.ts",
+    "db:import-ktu": "tsx prisma/import-ktu.ts",
+    "db:seed-admin": "tsx prisma/seed-admin.ts",
     "db:studio": "prisma studio"
   },
   "prisma": {
@@ -19,6 +21,7 @@
     "@gsap/react": "^2.1.2",
     "@prisma/client": "^6.0.0",
     "@supabase/supabase-js": "^2.45.0",
+    "bcryptjs": "^3.0.3",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "gsap": "^3.12.5",
@@ -31,6 +34,7 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -41,6 +45,7 @@
     "prisma": "^6.0.0",
     "tailwindcss": "^3.4.1",
     "tsx": "^4.19.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "xlsx": "^0.18.5"
   }
 }
