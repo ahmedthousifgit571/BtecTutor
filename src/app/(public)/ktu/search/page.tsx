@@ -4,6 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
 import { KtuSearchBar } from "@/components/sections/KtuSearchBar";
+import { parseNotesFiles } from "@/lib/ktu-types";
 
 export const dynamic = "force-dynamic";
 
@@ -34,8 +35,7 @@ async function searchSubjects(q: string) {
   });
 }
 
-const DOC_BUTTONS = [
-  { key: "notesUrl", label: "KTU Notes", icon: FileText },
+const SINGLE_DOC_BUTTONS = [
   { key: "questionPaperUrl", label: "Question Papers", icon: ClipboardList },
   { key: "syllabusFileUrl", label: "Syllabus", icon: BookOpen },
 ] as const;
@@ -99,7 +99,35 @@ export default async function KtuSearchPage({ searchParams }: Props) {
               )}
 
               <div className="mt-4 flex flex-wrap gap-2.5">
-                {DOC_BUTTONS.map(({ key, label, icon: Icon }) => {
+                {(() => {
+                  const notesFiles = parseNotesFiles(s.notesFiles);
+                  if (notesFiles.length === 0) {
+                    return (
+                      <span
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-gray-50 px-3.5 py-2 text-sm font-medium text-gray-300"
+                        title="Not uploaded yet"
+                      >
+                        <FileText className="h-4 w-4" />
+                        KTU Notes
+                      </span>
+                    );
+                  }
+                  return notesFiles.map((f) => (
+                    <a
+                      key={f.id}
+                      href={f.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-brand-orange/10 px-3.5 py-2 text-sm font-medium text-brand-orange transition-colors hover:bg-brand-orange hover:text-white"
+                    >
+                      <FileText className="h-4 w-4" />
+                      {notesFiles.length > 1 ? f.name : "KTU Notes"}
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
+                  ));
+                })()}
+
+                {SINGLE_DOC_BUTTONS.map(({ key, label, icon: Icon }) => {
                   const url = s[key];
                   return url ? (
                     <a

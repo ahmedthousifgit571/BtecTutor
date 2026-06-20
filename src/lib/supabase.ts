@@ -50,3 +50,15 @@ export async function uploadKtuDoc(
   const { data } = supabase.storage.from(KTU_DOCS_BUCKET).getPublicUrl(filePath);
   return data.publicUrl;
 }
+
+/**
+ * Delete a file from the ktu-docs bucket. Safe to call even if the file
+ * doesn't exist (Supabase returns success either way).
+ */
+export async function deleteKtuDoc(filePath: string): Promise<void> {
+  const supabase = getSupabaseAdmin();
+  const { error } = await supabase.storage.from(KTU_DOCS_BUCKET).remove([filePath]);
+  if (error) {
+    throw new Error(`Supabase delete failed: ${error.message}`);
+  }
+}

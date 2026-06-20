@@ -42,7 +42,7 @@ model Subject {
   pyqs         Json?
   videoLinks   Json?
   faqs         Json?
-  notesUrl         String? // uploaded PDF (Supabase public URL)
+  notesFiles       Json?    @default("[]") // uploaded PDFs: [{ id, name, url, path }]
   questionPaperUrl String? // uploaded PDF
   syllabusFileUrl  String? // uploaded PDF (distinct from structured `syllabus`)
   seoTitle     String?

@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/prisma";
 import { KtuNotesManager } from "@/components/admin/KtuNotesManager";
 import type { KtuSubjectLite } from "@/components/admin/KtuNotesRow";
+import { parseNotesFiles } from "@/lib/ktu-types";
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +19,7 @@ export default async function KtuNotesAdminPage() {
     semester: s.semester,
     branch: s.course.branch,
     scheme: s.course.scheme,
-    notesUrl: s.notesUrl,
+    notesFiles: parseNotesFiles(s.notesFiles),
     questionPaperUrl: s.questionPaperUrl,
     syllabusFileUrl: s.syllabusFileUrl,
   }));
