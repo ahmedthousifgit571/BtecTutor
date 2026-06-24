@@ -4,20 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
-  FolderKanban,
   GraduationCap,
-  Newspaper,
-  Star,
   MessageSquare,
 } from "lucide-react";
 import { LogoutButton } from "./LogoutButton";
 
 const NAV = [
   { label: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
-  { label: "Content CMS", href: "/admin/content", icon: FolderKanban },
   { label: "KTU Notes", href: "/admin/ktu-notes", icon: GraduationCap },
-  { label: "Blog", href: "/admin/blog", icon: Newspaper },
-  { label: "Reviews", href: "/admin/reviews", icon: Star },
   { label: "Enquiries", href: "/admin/enquiries", icon: MessageSquare },
 ];
 

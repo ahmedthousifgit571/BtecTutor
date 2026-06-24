@@ -2,29 +2,19 @@ import Link from "next/link";
 import { prisma } from "@/lib/prisma";
 import {
   GraduationCap,
-  Newspaper,
   MessageSquare,
-  Star,
   Users,
   ArrowUpRight,
 } from "lucide-react";
 
 async function getStats() {
-  const [
-    totalSubjects,
-    totalPosts,
-    newEnquiries,
-    pendingReviews,
-    recentEnquiries,
-  ] = await Promise.all([
+  const [totalSubjects, newEnquiries, recentEnquiries] = await Promise.all([
     prisma.subject.count(),
-    prisma.blogPost.count(),
     prisma.enquiry.count({ where: { status: "NEW" } }),
-    prisma.review.count({ where: { approved: false } }),
     prisma.enquiry.findMany({ orderBy: { createdAt: "desc" }, take: 6 }),
   ]);
 
-  return { totalSubjects, totalPosts, newEnquiries, pendingReviews, recentEnquiries };
+  return { totalSubjects, newEnquiries, recentEnquiries };
 }
 
 const STATUS_STYLES: Record<string, string> = {
@@ -54,25 +44,11 @@ export default async function AdminDashboard() {
       href: "/admin/ktu-notes",
     },
     {
-      label: "Blog Posts",
-      value: stats.totalPosts,
-      Icon: Newspaper,
-      chip: "bg-sky-100 text-sky-600",
-      href: "/admin/blog",
-    },
-    {
       label: "New Enquiries",
       value: stats.newEnquiries,
       Icon: MessageSquare,
       chip: "bg-emerald-100 text-emerald-600",
       href: "/admin/enquiries",
-    },
-    {
-      label: "Pending Reviews",
-      value: stats.pendingReviews,
-      Icon: Star,
-      chip: "bg-amber-100 text-amber-600",
-      href: "/admin/reviews",
     },
   ];
 
@@ -85,7 +61,7 @@ export default async function AdminDashboard() {
         </p>
       </div>
 
-      <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-8 grid gap-4 sm:grid-cols-2">
         {cards.map((card) => (
           <Link
             key={card.label}
