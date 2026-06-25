@@ -23,6 +23,7 @@ import {
   buildOrganizationSchema,
 } from "@/lib/seo";
 import type { KtuHubContent } from "@/lib/content/ktu-hub";
+import { buildWhatsAppLink } from "@/lib/utils";
 
 interface KtuHubPageProps {
   content: KtuHubContent;
@@ -93,7 +94,7 @@ export function KtuHubPage({ content, breadcrumbItems, pageUrl }: KtuHubPageProp
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a
-                  href={`https://wa.me/${content.ctaPhone.replace(/\s/g, "").replace("+", "")}`}
+                  href={buildWhatsAppLink(content.ctaPhone, `Hi BTechTutor! I need more information about "${content.seo.h1}". Could you please provide that?`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/50 hover:text-brand-orange"
@@ -418,7 +419,7 @@ export function KtuHubPage({ content, breadcrumbItems, pageUrl }: KtuHubPageProp
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={`https://wa.me/${content.ctaPhone.replace(/\s/g, "").replace("+", "")}`}
+                href={buildWhatsAppLink(content.ctaPhone, `Hi BTechTutor! I need more information about "${content.seo.h1}". Could you please provide that?`)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/50 hover:text-brand-orange"

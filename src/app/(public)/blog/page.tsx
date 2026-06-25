@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { blogPageContent } from "@/lib/content/blog-page";
+import { buildWhatsAppLink } from "@/lib/utils";
 
 export const metadata: Metadata = generateMeta({
   title: blogPageContent.seo.title,
@@ -51,7 +52,10 @@ export default async function BlogPage() {
             <p className="text-lg text-gray-600 leading-relaxed">
               If you cannot find what you are looking for, just WhatsApp us at{" "}
               <a
-                href="https://wa.me/919895006772"
+                href={buildWhatsAppLink(
+                  "919895006772",
+                  "Hi BTechTutor! I read your blog and would like to know more about your coaching. Could you help me?"
+                )}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium text-brand-orange hover:text-brand-orange-dark transition-colors"

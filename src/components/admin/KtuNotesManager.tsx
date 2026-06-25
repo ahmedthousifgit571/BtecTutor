@@ -63,6 +63,7 @@ export function KtuNotesManager({ subjects }: { subjects: KtuSubjectLite[] }) {
               <th className="px-3 py-2.5">Notes</th>
               <th className="px-3 py-2.5">Question Papers</th>
               <th className="px-3 py-2.5">Syllabus</th>
+              <th className="px-3 py-2.5">Course Link</th>
             </tr>
           </thead>
           <tbody>
@@ -71,7 +72,7 @@ export function KtuNotesManager({ subjects }: { subjects: KtuSubjectLite[] }) {
             ))}
             {filtered.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-3 py-8 text-center text-sm text-gray-400">
+                <td colSpan={7} className="px-3 py-8 text-center text-sm text-gray-400">
                   No subjects match your search.
                 </td>
               </tr>

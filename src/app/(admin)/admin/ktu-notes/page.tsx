@@ -22,6 +22,7 @@ export default async function KtuNotesAdminPage() {
     notesFiles: parseNotesFiles(s.notesFiles),
     questionPaperUrl: s.questionPaperUrl,
     syllabusFileUrl: s.syllabusFileUrl,
+    courseLink: s.courseLink,
   }));
 
   return (
@@ -29,7 +30,7 @@ export default async function KtuNotesAdminPage() {
       <div className="mb-6">
         <h1 className="text-2xl font-bold tracking-tight text-gray-900">KTU Notes</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Upload Notes, Question Papers, and Syllabus (PDF) for each subject.
+          Upload Notes, Question Papers, Syllabus (PDF), and a Course Link for each subject.
         </p>
       </div>
       <KtuNotesManager subjects={data} />

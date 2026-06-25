@@ -1,14 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Mail, Phone, MessageCircle, MapPin, Send } from "lucide-react";
 import logoImage from "@/assets/logoImage2.png";
 import { footerContent, type FooterContent } from "@/lib/content/footer";
+import { getWhatsAppMessageForPath } from "@/lib/whatsapp-messages";
+import { buildWhatsAppLink } from "@/lib/utils";
 
 interface FooterProps {
   content?: FooterContent;
 }
 
 export function Footer({ content = footerContent }: FooterProps) {
+  const pathname = usePathname();
+  const whatsappHref = buildWhatsAppLink(
+    content.contact.whatsapp,
+    getWhatsAppMessageForPath(pathname ?? "/")
+  );
+
   return (
     <footer className="bg-charcoal text-white">
       {/* CTA Banner — White */}
@@ -20,7 +31,7 @@ export function Footer({ content = footerContent }: FooterProps) {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href={content.cta.primaryHref}
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-brand-orange px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-brand-orange/25 transition-all duration-200 hover:bg-brand-orange-dark hover:shadow-brand-orange/40 hover:-translate-y-0.5"
@@ -77,7 +88,7 @@ export function Footer({ content = footerContent }: FooterProps) {
                 {content.contact.email}
               </a>
               <a
-                href={`https://wa.me/${content.contact.whatsapp.replace(/[^0-9]/g, "")}`}
+                href={whatsappHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2.5 text-sm text-white/50 hover:text-brand-orange transition-colors"

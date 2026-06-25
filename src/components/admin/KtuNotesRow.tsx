@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { Check, Upload, ExternalLink, Loader2, Trash2, Plus } from "lucide-react";
+import { Check, Upload, ExternalLink, Loader2, Trash2, Plus, Link2, X } from "lucide-react";
 import type { NotesFile } from "@/lib/ktu-types";
 
 export interface KtuSubjectLite {
@@ -14,6 +14,144 @@ export interface KtuSubjectLite {
   notesFiles: NotesFile[];
   questionPaperUrl: string | null;
   syllabusFileUrl: string | null;
+  courseLink: string | null;
+}
+
+function CourseLinkCell({
+  subjectId,
+  initialUrl,
+}: {
+  subjectId: string;
+  initialUrl: string | null;
+}) {
+  const [url, setUrl] = useState<string | null>(initialUrl);
+  const [editing, setEditing] = useState(false);
+  const [draft, setDraft] = useState(initialUrl || "");
+  const [status, setStatus] = useState<"idle" | "saving">("idle");
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSave() {
+    setStatus("saving");
+    setError(null);
+    try {
+      const res = await fetch(`/api/admin/ktu-notes/${subjectId}/course-link`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: draft }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Save failed");
+      setUrl(data.courseLink);
+      setEditing(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Save failed");
+    } finally {
+      setStatus("idle");
+    }
+  }
+
+  async function handleClear() {
+    setDraft("");
+    setStatus("saving");
+    setError(null);
+    try {
+      const res = await fetch(`/api/admin/ktu-notes/${subjectId}/course-link`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url: "" }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Clear failed");
+      setUrl(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Clear failed");
+    } finally {
+      setStatus("idle");
+    }
+  }
+
+  if (editing) {
+    return (
+      <div className="flex flex-col gap-1">
+        <div className="flex items-center gap-1">
+          <input
+            autoFocus
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            placeholder="https://…"
+            className="w-40 rounded-md border border-gray-200 px-2 py-1 text-xs focus:border-brand-orange focus:outline-none"
+          />
+          <button
+            type="button"
+            onClick={handleSave}
+            disabled={status === "saving"}
+            title="Save"
+            className="inline-flex items-center text-gray-400 hover:text-green-600 disabled:opacity-50"
+          >
+            {status === "saving" ? (
+              <Loader2 className="h-3.5 w-3.5 animate-spin" />
+            ) : (
+              <Check className="h-3.5 w-3.5" />
+            )}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setEditing(false);
+              setDraft(url || "");
+              setError(null);
+            }}
+            title="Cancel"
+            className="inline-flex items-center text-gray-400 hover:text-red-500"
+          >
+            <X className="h-3.5 w-3.5" />
+          </button>
+        </div>
+        {error && <span className="text-[11px] text-red-500">{error}</span>}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-1">
+      <div className="flex items-center gap-2">
+        <button
+          type="button"
+          onClick={() => setEditing(true)}
+          className="inline-flex items-center gap-1 rounded-md border border-gray-200 px-2 py-1 text-xs font-medium text-gray-600 hover:bg-gray-50"
+        >
+          {url ? <Check className="h-3 w-3 text-green-600" /> : <Link2 className="h-3 w-3" />}
+          {url ? "Edit" : "Add link"}
+        </button>
+        {url && (
+          <>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-0.5 text-xs text-brand-orange hover:underline"
+            >
+              View <ExternalLink className="h-3 w-3" />
+            </a>
+            <button
+              type="button"
+              onClick={handleClear}
+              disabled={status === "saving"}
+              title="Remove"
+              className="inline-flex items-center text-gray-400 hover:text-red-500 disabled:opacity-50"
+            >
+              {status === "saving" ? (
+                <Loader2 className="h-3 w-3 animate-spin" />
+              ) : (
+                <Trash2 className="h-3 w-3" />
+              )}
+            </button>
+          </>
+        )}
+      </div>
+      {error && <span className="text-[11px] text-red-500">{error}</span>}
+    </div>
+  );
 }
 
 type SingleDocType = "questionPaper" | "syllabus";
@@ -276,6 +414,9 @@ export function KtuNotesRow({ subject }: { subject: KtuSubjectLite }) {
           docType="syllabus"
           initialUrl={subject.syllabusFileUrl}
         />
+      </td>
+      <td className="px-3 py-2.5">
+        <CourseLinkCell subjectId={subject.id} initialUrl={subject.courseLink} />
       </td>
     </tr>
   );

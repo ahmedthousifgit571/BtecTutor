@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ContactEnquiryForm } from "@/components/sections/ContactEnquiryForm";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { contactPageContent } from "@/lib/content/contact-page";
-import { absoluteUrl, getBaseUrl } from "@/lib/utils";
+import { absoluteUrl, getBaseUrl, buildWhatsAppLink } from "@/lib/utils";
 import contactImage from "@/assets/contactImage.png";
 
 export const metadata: Metadata = generateMeta({
@@ -103,7 +103,10 @@ export default function ContactPage() {
                     Enrol Now
                   </a>
                   <a
-                    href="https://wa.me/919895006772"
+                    href={buildWhatsAppLink(
+                      "919895006772",
+                      "Hi BTechTutor! I'd like to get in touch regarding your coaching. Could you help me?"
+                    )}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-orange/50 hover:text-brand-orange"

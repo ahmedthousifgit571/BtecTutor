@@ -43,3 +43,10 @@ export function normalizePhoneForWa(raw: string | null | undefined): string {
   const digits = raw.replace(/[^\d+]/g, "");
   return digits.replace(/^\+/, "");
 }
+
+// Builds a wa.me URL with a prefilled, page-specific message so the chat
+// opens with context instead of a blank composer.
+export function buildWhatsAppLink(phone: string, message: string): string {
+  const number = normalizePhoneForWa(phone);
+  return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+}

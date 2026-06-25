@@ -9,6 +9,7 @@ import { Plus, X, MessageCircle } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
 import { type FaqContent } from "@/lib/content/faq";
+import { buildWhatsAppLink } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -56,7 +57,10 @@ export function FAQSection({ content }: FAQSectionProps) {
     { scope: sectionRef }
   );
 
-  const whatsappUrl = `https://wa.me/${content.ctaWhatsAppNumber.replace(/[^0-9]/g, "")}`;
+  const whatsappUrl = buildWhatsAppLink(
+    content.ctaWhatsAppNumber,
+    `Hi BTechTutor! I have a question about "${content.heading} ${content.headingHighlight}". Could you help me?`
+  );
 
   return (
     <section ref={sectionRef} className="relative bg-charcoal py-24 overflow-hidden">

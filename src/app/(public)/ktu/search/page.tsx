@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { FileText, ClipboardList, BookOpen, ExternalLink } from "lucide-react";
+import { FileText, ClipboardList, BookOpen, ExternalLink, Link2 } from "lucide-react";
 import { prisma } from "@/lib/prisma";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
 import { Badge } from "@/components/ui/Badge";
@@ -38,6 +38,7 @@ async function searchSubjects(q: string) {
 const SINGLE_DOC_BUTTONS = [
   { key: "questionPaperUrl", label: "Question Papers", icon: ClipboardList },
   { key: "syllabusFileUrl", label: "Syllabus", icon: BookOpen },
+  { key: "courseLink", label: "Course Link", icon: Link2 },
 ] as const;
 
 export default async function KtuSearchPage({ searchParams }: Props) {

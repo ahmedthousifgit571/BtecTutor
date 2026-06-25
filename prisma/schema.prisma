@@ -45,6 +45,7 @@ model Subject {
   notesFiles       Json?    @default("[]") // uploaded PDFs: [{ id, name, url, path }]
   questionPaperUrl String? // uploaded PDF
   syllabusFileUrl  String? // uploaded PDF (distinct from structured `syllabus`)
+  courseLink       String? // external link to the full course (no file upload)
   seoTitle     String?
   seoDesc      String?    @db.Text
   seoKeywords  String[]

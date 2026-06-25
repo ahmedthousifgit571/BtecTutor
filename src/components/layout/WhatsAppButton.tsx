@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { buildWhatsAppLink } from "@/lib/utils";
+import { getWhatsAppMessageForPath } from "@/lib/whatsapp-messages";
 
 const WHATSAPP_NUMBER = "919895006772";
-const DEFAULT_MESSAGE =
-  "Hi BTEC Tutor! I'm interested in your GATE/KTU coaching programs. Could you share more details about the courses, fees, and upcoming batches?";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -20,6 +21,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export function WhatsAppButton() {
+  const pathname = usePathname();
   const [isVisible, setIsVisible] = useState(false);
   const [isPulsing, setIsPulsing] = useState(true);
   const [showTooltip, setShowTooltip] = useState(false);
@@ -39,7 +41,10 @@ export function WhatsAppButton() {
     };
   }, []);
 
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DEFAULT_MESSAGE)}`;
+  const whatsappUrl = buildWhatsAppLink(
+    WHATSAPP_NUMBER,
+    getWhatsAppMessageForPath(pathname ?? "/")
+  );
 
   return (
     /* Wrapper follows the same max-w-7xl + px as the navbar/content */
