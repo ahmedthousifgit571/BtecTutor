@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logoImage from "@/assets/logoImage2.png";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Menu, X, ChevronDown, Search } from "lucide-react";
@@ -59,10 +58,10 @@ export function Navbar() {
 
   return (
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-50" style={{ opacity: 0 }}>
-      <div className="bg-charcoal border-b border-white/10">
+      <div className="bg-black border-b border-white/10">
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <Image src={logoImage} alt="BTEC Tutor" height={150} className="w-auto" priority />
+            <Image src="/logo2.jpg" alt="BTEC Tutor" width={151} height={104} className="h-20 w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Nav */}

@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Mail, Phone, MessageCircle, MapPin, Send } from "lucide-react";
-import logoImage from "@/assets/logoImage2.png";
 import { footerContent, type FooterContent } from "@/lib/content/footer";
 import { getWhatsAppMessageForPath } from "@/lib/whatsapp-messages";
 import { buildWhatsAppLink } from "@/lib/utils";
@@ -58,11 +57,11 @@ export function Footer({ content = footerContent }: FooterProps) {
           <div className="col-span-2 mb-4 lg:mb-0">
             <Link href="/" className="inline-flex items-center gap-2">
               <Image
-                src={logoImage}
+                src="/logo2.jpg"
                 alt="BTechTutor"
-                width={140}
-                height={40}
-                className="h-10 w-auto"
+                width={151}
+                height={104}
+                className="h-12 w-auto object-contain"
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/40 max-w-xs">
