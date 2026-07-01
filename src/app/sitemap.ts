@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { getBaseUrl } from "@/lib/utils";
 import { getBlogPostsByDate } from "@/lib/content/blog-posts";
+import { locationPages as coachingLocationPages } from "@/lib/content/location-pages";
 
 export const revalidate = 3600;
 
@@ -92,11 +93,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // KTU / GATE coaching location landing pages (static content)
+  const coachingLocationHub: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/ktu-coaching`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.8,
+    },
+  ];
+
+  const coachingLocationLanding: MetadataRoute.Sitemap = coachingLocationPages.map((p) => ({
+    url: `${baseUrl}${p.path}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   return [
     ...staticPages,
     ...gateSubjectPages,
     ...ktuSubjectPages,
     ...blogPages,
     ...locationPages,
+    ...coachingLocationHub,
+    ...coachingLocationLanding,
   ];
 }

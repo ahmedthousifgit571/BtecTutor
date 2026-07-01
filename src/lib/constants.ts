@@ -61,6 +61,7 @@ export const NAV_LINKS = [
       { label: "Reviews", href: "/reviews" },
       { label: "Blog", href: "/blog" },
       { label: "Faculty", href: "/faculty" },
+      { label: "Locations", href: "/ktu-coaching" },
     ],
   },
   {
