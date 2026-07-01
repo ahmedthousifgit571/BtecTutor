@@ -124,7 +124,7 @@ export const btechTuitionKeralaContent: KtuSupplyExamContent = {
     {
       question: "Are the notes and question papers on BTechTutor really free?",
       answer:
-        "Yes — module-wise notes and previous year question papers are completely free for all KTU subjects. Video classes are paid, with a free demo class available on YouTube.",
+        "Yes — module-wise notes and previous year question papers are completely free for all KTU subjects. Video classes are paid, with a demo class available on YouTube.",
     },
   ],
 

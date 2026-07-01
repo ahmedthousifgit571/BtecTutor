@@ -114,7 +114,7 @@ export const ktu2019SchemeContent: KtuHubContent = {
     {
       question: "Can I access notes and question papers for free?",
       answer:
-        "Yes. Module-wise notes and previous year question papers are free for all 2019 scheme subjects. Video classes are paid, with a free demo class available on YouTube before you enrol.",
+        "Yes. Module-wise notes and previous year question papers are free for all 2019 scheme subjects. Video classes are paid, with a demo class available on YouTube before you enrol.",
     },
   ],
 

@@ -148,7 +148,7 @@ export const ktuHubContent: KtuHubContent = {
     {
       question: "Are the notes and question papers really free?",
       answer:
-        "Yes. Module-wise notes and previous year question papers are available free of charge on each subject page. Video classes are paid, and a free demo class is available on YouTube before you enrol.",
+        "Yes. Module-wise notes and previous year question papers are available free of charge on each subject page. Video classes are paid, and a demo class is available on YouTube before you enrol.",
     },
     {
       question: "Is coaching available for supply exams?",

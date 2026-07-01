@@ -2,130 +2,62 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Calendar, User, ArrowLeft, Clock } from "lucide-react";
-import { prisma } from "@/lib/prisma";
-import { generateMeta } from "@/lib/seo";
+import { generateMeta, buildFaqSchema, buildBreadcrumbSchema } from "@/lib/seo";
 import { Breadcrumb } from "@/components/seo/Breadcrumb";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { formatDate, readingTime } from "@/lib/utils";
 import { GetInTouchSection } from "@/components/sections/GetInTouchSection";
-
-export const revalidate = 86400;
+import { BlogArticleBody } from "@/components/blog/BlogArticleBody";
+import {
+  getBlogPost,
+  getAllBlogSlugs,
+  getRelatedBlogPosts,
+  blogPlainText,
+  blogFaqItems,
+} from "@/lib/content/blog-posts";
 
 interface Props {
   params: { slug: string };
 }
 
-export async function generateStaticParams() {
-  const posts = await prisma.blogPost.findMany({
-    where: { publishedAt: { not: null } },
-    select: { slug: true },
-  });
-  return posts.map((p) => ({ slug: p.slug }));
+export function generateStaticParams() {
+  return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await prisma.blogPost.findUnique({ where: { slug: params.slug } });
+export function generateMetadata({ params }: Props): Metadata {
+  const post = getBlogPost(params.slug);
   if (!post) return {};
 
   return generateMeta({
-    title: post.seoTitle || post.title,
-    description: post.seoDesc || post.excerpt || "",
-    keywords: post.seoKeywords.length > 0 ? post.seoKeywords : post.tags,
-    ogImage: post.ogImage || undefined,
+    title: post.seo.title,
+    description: post.seo.description,
+    keywords: post.seo.keywords.length > 0 ? post.seo.keywords : post.tags,
     canonicalUrl: `/blog/${post.slug}`,
   });
 }
 
-interface ContentNode {
-  type: string;
-  attrs?: Record<string, unknown>;
-  content?: ContentNode[];
-  text?: string;
-  marks?: { type: string; attrs?: Record<string, unknown> }[];
-}
-
-function renderContent(content: ContentNode[]): React.ReactNode[] {
-  return content.map((node, i) => {
-    if (node.type === "text") {
-      let element: React.ReactNode = node.text;
-      if (node.marks) {
-        for (const mark of node.marks) {
-          if (mark.type === "bold") element = <strong key={i}>{element}</strong>;
-          if (mark.type === "italic") element = <em key={i}>{element}</em>;
-          if (mark.type === "link")
-            element = (
-              <a key={i} href={mark.attrs?.href as string} className="text-brand-orange hover:underline">
-                {element}
-              </a>
-            );
-        }
-      }
-      return element;
-    }
-
-    const children = node.content ? renderContent(node.content) : null;
-
-    switch (node.type) {
-      case "paragraph":
-        return <p key={i} className="mb-4 text-gray-600 leading-relaxed">{children}</p>;
-      case "heading": {
-        const level = (node.attrs?.level as number) || 2;
-        const Tag = `h${level}` as keyof JSX.IntrinsicElements;
-        return (
-          <Tag key={i} className={`font-bold text-gray-900 mb-3 mt-8 ${level === 2 ? "text-2xl" : "text-xl"}`}>
-            {children}
-          </Tag>
-        );
-      }
-      case "bulletList":
-        return <ul key={i} className="list-disc pl-6 mb-4 space-y-1 text-gray-600">{children}</ul>;
-      case "orderedList":
-        return <ol key={i} className="list-decimal pl-6 mb-4 space-y-1 text-gray-600">{children}</ol>;
-      case "listItem":
-        return <li key={i}>{children}</li>;
-      case "blockquote":
-        return (
-          <blockquote key={i} className="border-l-4 border-brand-orange pl-4 italic text-gray-500 mb-4">
-            {children}
-          </blockquote>
-        );
-      case "doc":
-        return <div key={i}>{children}</div>;
-      default:
-        return <div key={i}>{children}</div>;
-    }
-  });
-}
-
-function extractPlainText(content: ContentNode[]): string {
-  return content
-    .map((node) => {
-      if (node.text) return node.text;
-      if (node.content) return extractPlainText(node.content);
-      return "";
-    })
-    .join(" ");
-}
-
-export default async function BlogPostPage({ params }: Props) {
-  const post = await prisma.blogPost.findUnique({ where: { slug: params.slug } });
+export default function BlogPostPage({ params }: Props) {
+  const post = getBlogPost(params.slug);
   if (!post) notFound();
 
-  const contentData = post.content as unknown as { type: string; content: ContentNode[] };
-  const plainText = extractPlainText(contentData.content || []);
-  const readTime = readingTime(plainText);
+  const readTime = readingTime(blogPlainText(post));
+  const faqItems = blogFaqItems(post);
+  const relatedPosts = getRelatedBlogPosts(post.slug);
 
-  const relatedPosts = await prisma.blogPost.findMany({
-    where: {
-      publishedAt: { not: null },
-      slug: { not: post.slug },
-    },
-    take: 3,
-    orderBy: { publishedAt: "desc" },
-    select: { id: true, title: true, slug: true, tags: true },
-  });
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      buildBreadcrumbSchema([
+        { name: "Blog", url: "/blog" },
+        { name: post.title, url: `/blog/${post.slug}` },
+      ]),
+      ...(faqItems.length > 0 ? [buildFaqSchema(faqItems)] : []),
+    ],
+  };
 
   return (
     <div className="pt-24 pb-16">
+      <JsonLd data={structuredData} />
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Breadcrumb
           items={[
@@ -160,18 +92,14 @@ export default async function BlogPostPage({ params }: Props) {
             <h1 className="text-fluid-3xl font-bold text-gray-900 mb-6">{post.title}</h1>
 
             <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
-              {post.author && (
-                <span className="flex items-center gap-1.5">
-                  <User className="h-4 w-4" />
-                  {post.author}
-                </span>
-              )}
-              {post.publishedAt && (
-                <span className="flex items-center gap-1.5">
-                  <Calendar className="h-4 w-4" />
-                  {formatDate(post.publishedAt)}
-                </span>
-              )}
+              <span className="flex items-center gap-1.5">
+                <User className="h-4 w-4" />
+                {post.author}
+              </span>
+              <span className="flex items-center gap-1.5">
+                <Calendar className="h-4 w-4" />
+                {formatDate(post.publishedAt)}
+              </span>
               <span className="flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
                 {readTime}
@@ -180,9 +108,7 @@ export default async function BlogPostPage({ params }: Props) {
           </header>
 
           {/* Content */}
-          <div className="prose-custom">
-            {renderContent(contentData.content || [])}
-          </div>
+          <BlogArticleBody blocks={post.body} />
         </article>
 
         {/* CTA */}
@@ -201,12 +127,12 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="grid sm:grid-cols-3 gap-4">
               {relatedPosts.map((rp) => (
                 <Link
-                  key={rp.id}
+                  key={rp.slug}
                   href={`/blog/${rp.slug}`}
                   className="rounded-xl border border-gray-100 bg-white p-4 hover:shadow-sm hover:-translate-y-0.5 transition-all"
                 >
                   <h3 className="text-sm font-medium text-gray-900 line-clamp-2 hover:text-brand-orange transition-colors">
-                    {rp.title}
+                    {rp.cardTitle}
                   </h3>
                   <div className="flex gap-1.5 mt-2">
                     {rp.tags.slice(0, 2).map((t) => (

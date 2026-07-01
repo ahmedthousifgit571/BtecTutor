@@ -22,7 +22,7 @@ export const howItWorksContent: HowItWorksContent = {
   steps: [
     {
       stepNumber: 1,
-      title: "Book Your Free Demo",
+      title: "Book Your Demo",
       description:
         "Fill a simple form with your department, semester, and the subject you need help with. No payment. No commitment. Just tell us what you're struggling with.",
       icon: "CalendarCheck",

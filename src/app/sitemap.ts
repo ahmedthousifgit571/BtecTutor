@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { prisma } from "@/lib/prisma";
 import { getBaseUrl } from "@/lib/utils";
+import { getBlogPostsByDate } from "@/lib/content/blog-posts";
 
 export const revalidate = 3600;
 
@@ -22,6 +23,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/gate-coaching/ece`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/gate-coaching/eee`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
     { url: `${baseUrl}/gate/instrumentation/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/isro/scientist-engineer`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro/ece`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro/eee`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro/mechanical`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro/cs`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/isro/previous-year-papers`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/isro/mock-test`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/isro/syllabus`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
   ];
 
   // GATE subject pages
@@ -62,17 +72,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
-  // Blog posts
-  const blogPosts = await prisma.blogPost
-    .findMany({
-      where: { publishedAt: { not: null } },
-      select: { slug: true, updatedAt: true },
-    })
-    .catch(() => []);
-
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((p) => ({
+  // Blog posts (static content)
+  const blogPages: MetadataRoute.Sitemap = getBlogPostsByDate().map((p) => ({
     url: `${baseUrl}/blog/${p.slug}`,
-    lastModified: p.updatedAt,
+    lastModified: new Date(p.publishedAt),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

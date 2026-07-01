@@ -1550,7 +1550,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available before enrolling.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available before enrolling.",
       },
       {
         question: "Is there a free class available before enrolling?",
@@ -1717,7 +1717,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube.",
       },
       {
         question: "What are the most repeated topics in PYQs?",
@@ -1880,7 +1880,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and PYQs are free. Video classes are paid, and a free demo class is available on YouTube before enrolment.",
+          "Yes. Notes and PYQs are free. Video classes are paid, and a demo class is available on YouTube before enrolment.",
       },
       {
         question: "How long does it take to prepare Analog Circuits?",
@@ -2219,7 +2219,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube before enrolment.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube before enrolment.",
       },
       {
         question: "Do you offer one-to-one coaching for Control Systems?",
@@ -2388,7 +2388,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube.",
       },
       {
         question: "Do you offer one-to-one coaching for Signals and Systems?",
@@ -2556,7 +2556,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube before enrolment.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube before enrolment.",
       },
       {
         question: "Do you offer coaching for Communication Systems?",
@@ -2725,7 +2725,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Electromagnetics?",
@@ -2892,7 +2892,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is available on YouTube.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Engineering Mathematics?",
@@ -3792,7 +3792,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is also available on YouTube before enrolling.",
       },
       {
         question: "Do you offer one-to-one coaching for Electric Circuits?",
@@ -3962,7 +3962,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is also available on YouTube before enrolling.",
       },
       {
         question: "Do you offer coaching for Electromagnetic Fields?",
@@ -4140,7 +4140,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is also available on YouTube before enrolling.",
       },
       {
         question: "Do you offer one-to-one coaching for Power Systems?",
@@ -4316,7 +4316,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes. Notes and previous year questions are free. Video classes are paid, and a free demo class is also available on YouTube before enrolling.",
+          "Yes. Notes and previous year questions are free. Video classes are paid, and a demo class is also available on YouTube before enrolling.",
       },
       {
         question: "Do you offer one-to-one coaching for Power Electronics?",
@@ -4493,7 +4493,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer one-to-one coaching for Electric Machines?",
@@ -4674,7 +4674,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube.",
       },
       {
         question: "Do you offer coaching for Control Systems?",
@@ -4854,7 +4854,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Signals and Systems for GATE EEE?",
@@ -5029,7 +5029,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Analog Electronics for GATE EEE?",
@@ -5211,7 +5211,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube.",
       },
       {
         question: "Do you offer coaching for Digital Electronics for GATE EEE?",
@@ -5312,7 +5312,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics with solved problems step by step. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -5391,7 +5391,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube before you enrol.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube before you enrol.",
       },
       {
         question: "Do you offer coaching for Engineering Mathematics?",
@@ -5494,7 +5494,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics with solved problems step by step. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -6283,7 +6283,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -6360,7 +6360,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube before you enrol.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube before you enrol.",
       },
       {
         question: "Do you offer one-to-one coaching for Engineering Mathematics for GATE Instrumentation?",
@@ -6464,7 +6464,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -6534,7 +6534,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer one-to-one coaching for Electrical Circuits?",
@@ -6639,7 +6639,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -6710,7 +6710,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Signals and Systems for GATE Instrumentation?",
@@ -6817,7 +6817,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -6888,7 +6888,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube.",
       },
       {
         question: "Do you offer one-to-one coaching for Control Systems for GATE Instrumentation?",
@@ -6993,7 +6993,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -7064,7 +7064,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Analog Electronics for GATE Instrumentation?",
@@ -7174,7 +7174,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -7246,7 +7246,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Digital Electronics for GATE Instrumentation?",
@@ -7354,7 +7354,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -7432,7 +7432,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is also available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is also available on YouTube.",
       },
       {
         question: "Do you offer one-to-one coaching for Measurements?",
@@ -7537,7 +7537,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -7613,7 +7613,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Sensors for GATE Instrumentation?",
@@ -7721,7 +7721,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {
@@ -7797,7 +7797,7 @@ export const gatePagesContent: GatePageContent[] = [
       {
         question: "Are the notes and question papers free?",
         answer:
-          "Yes — notes and previous year questions are free. Video classes are paid. A free demo class is available on YouTube.",
+          "Yes — notes and previous year questions are free. Video classes are paid. A demo class is available on YouTube.",
       },
       {
         question: "Do you offer coaching for Communication for GATE Instrumentation?",
@@ -7900,7 +7900,7 @@ export const gatePagesContent: GatePageContent[] = [
           "Notes (FREE) — Build concepts and revise standard results; notes are available module-wise. Access notes — link to be added.",
           "Previous Year Questions / PYQs (FREE) — Practice real GATE questions topic-wise; patterns repeat consistently. Link to be added.",
           "Video Classes (PAID) — Recorded video lectures covering all topics, explained step by step with solved problems. Purchase link to be added.",
-          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a free demo on YouTube. Watch demo class — YouTube link to be added.",
+          "Demo Class (FREE) — Watch a sample class before enrolling; one module is available as a demo on YouTube. Watch demo class — YouTube link to be added.",
         ],
       },
       {

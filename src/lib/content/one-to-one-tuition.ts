@@ -47,9 +47,9 @@ export const oneToOneTuitionContent: OneToOneTuitionContent = {
         "Engineering Maths, Control Systems, Signals and Systems, Power Systems, Data Structures - whatever subject is giving you trouble, we have the right teacher for it.",
     },
     {
-      title: "Free demo, no payment first",
+      title: "Learn at your own pace",
       description:
-        "Attend one complete session for free. If it does not work for you, you owe us nothing.",
+        "Sessions move at the speed you need — spend extra time on the tough topics and move quickly through what you already know. The whole plan is built around you.",
     },
   ],
   cta: {

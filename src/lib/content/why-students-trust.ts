@@ -28,9 +28,9 @@ export const whyStudentsTrustContent: WhyStudentsTrustContent = {
     },
     {
       number: "02",
-      title: "Free Demo Before You Pay a Rupee",
+      title: "Free Notes and Question Papers",
       description:
-        "We don't ask you to trust us based on a brochure. We give you a completely free class first. No payment, no registration fee, no catch. If the class doesn't impress you, you owe us nothing.",
+        "Module-wise notes and previous year question papers are completely free for every KTU subject. No payment, no registration — download what you need and see the quality of our material before you ever pay for a video class.",
       icon: "Gift",
       accent: "violet",
     },

@@ -34,22 +34,20 @@ export const blogPageContent: BlogPageContent = {
     "We write about KTU exam prep, supply exam strategy, CGPA improvement, GATE preparation, and career options after BTech in Kerala. Nothing here is recycled from other websites. Every article is written from real coaching experience by people who have helped thousands of students through these exact situations.",
   ],
   featuredArticles: [
-    { title: "How to Pass KTU Exams", href: "/blog/how-to-pass-ktu-exams" },
     { title: "How to Clear Your KTU Supply Exam", href: "/blog/ktu-supply-exam-tips" },
     {
       title: "KTU CGPA to Percentage — What Does Your CGPA Mean?",
       href: "/blog/ktu-cgpa-to-percentage",
     },
-    { title: "KTU Passing Marks Explained", href: "/blog/ktu-passing-marks" },
     { title: "KTU 2024 vs 2019 Scheme — Which is Harder?", href: "/blog/ktu-2024-scheme-vs-2019" },
     { title: "How to Crack GATE in the First Attempt", href: "/blog/crack-gate-first-attempt" },
     {
-      title: "GATE vs Kerala PSC — Which Path is Better for Engineers?",
-      href: "/blog/gate-vs-kerala-psc",
+      title: "GATE Preparation During B.Tech — When to Start",
+      href: "/blog/gate-during-btech",
     },
     {
-      title: "Why One-to-One Coaching is Better Than Group Classes for BTech",
-      href: "/blog/one-to-one-vs-group-coaching",
+      title: "GATE vs Kerala PSC — Which Path is Better for Engineers?",
+      href: "/blog/gate-vs-kerala-psc",
     },
   ],
   categories: [
@@ -105,7 +103,7 @@ export const blogPageContent: BlogPageContent = {
       {
         question: "How do I convert my KTU CGPA to a percentage?",
         answer:
-          "The formula is: Percentage = (CGPA − 0.5) × 10. So a 7.5 CGPA equals 70 percent. Some employers and universities accept CGPA directly without conversion. Full breakdown is at btechtutor.com/blog/ktu-cgpa-to-percentage/",
+          "The official KTU formula (Academic Council order, June 2023) is: Percentage = CGPA × 10. So a 7.5 CGPA equals 75 percent. The older formula (10 × CGPA − 2.5) is outdated. Full breakdown is at btechtutor.com/blog/ktu-cgpa-to-percentage/",
       },
       {
         question: "Is the KTU 2024 scheme harder than 2019?",

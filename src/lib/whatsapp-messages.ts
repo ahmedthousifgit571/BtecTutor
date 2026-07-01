@@ -33,7 +33,7 @@ const ROUTE_MESSAGES: Array<{ prefix: string; message: string }> = [
   { prefix: "/reviews", message: "Hi BTechTutor! I saw your reviews and would like to know more about your coaching. Could you help me?" },
   { prefix: "/blog", message: "Hi BTechTutor! I read your blog and would like to know more about your coaching. Could you help me?" },
   { prefix: "/contact", message: "Hi BTechTutor! I'd like to get in touch regarding your coaching. Could you help me?" },
-  { prefix: "/free-demo", message: "Hi BTechTutor! I'd like to book a free demo class. Could you help me?" },
+  { prefix: "/free-demo", message: "Hi BTechTutor! I'd like to book a demo class. Could you help me?" },
   { prefix: "/get-started", message: "Hi BTechTutor! I'd like to get started with your coaching. Could you help me?" },
 ];
 

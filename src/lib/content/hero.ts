@@ -12,7 +12,7 @@ export const heroContent: HeroContent = {
   headlineLine1: "Kerala's Most Trusted Online Coaching",
   headlineLine2: "for KTU BTech and GATE",
   subtitle:
-    "Expert faculty. Free demo class. Flexible schedule. Results you can actually measure. Join over 5,000 engineering students who chose BTechTutor.",
+    "Expert faculty. Flexible schedule. Results you can actually measure. Join over 5,000 engineering students who chose BTechTutor.",
   callout:
     "Looking for personal attention? We offer One-to-One BTech Tuition with a dedicated faculty member for just you.",
   supportingLine:

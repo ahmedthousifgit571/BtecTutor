@@ -47,7 +47,7 @@ export const courseGridContent: CourseGridContent = {
         "Dedicated personal faculty",
         "Flexible timing",
         "Any subject",
-        "Free demo session",
+        "Demo session",
       ],
       ctaText: "Book a One-to-One Session",
       icon: "UserCheck",

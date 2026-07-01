@@ -9,21 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        charcoal: "#0A1628",
+        charcoal: "#0A0A0A",
         "accent-violet": "#FF6B2B",
         "accent-sky": "#38BDF8",
         brand: {
-          navy: "#0A1628",
+          navy: "#0A0A0A",
           orange: "#FF6B2B",
           "orange-dark": "#E55A1F",
           "title-accent": "#FF6B2B",
-          slate: "#1E3A5F",
+          slate: "#262626",
           cream: "#FFF8F0",
           sky: "#38BDF8",
         },
         surface: {
           DEFAULT: "#ffffff",
-          dark: "#0A1628",
+          dark: "#0A0A0A",
           muted: "#FFF8F0",
         },
       },

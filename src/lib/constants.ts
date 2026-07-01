@@ -43,9 +43,10 @@ export const NAV_LINKS = [
     ],
   },
   {
-    label: "Department Hub",
+    label: "KTU Branches",
     href: "#",
     children: [
+      { label: "ISRO", href: "/isro" },
       { label: "2019 ECE", href: "/ktu/2019-scheme/ece" },
       { label: "2019 EEE", href: "/ktu/2019-scheme/eee" },
       { label: "2019 Mechanical", href: "/ktu/2019-scheme/mechanical" },

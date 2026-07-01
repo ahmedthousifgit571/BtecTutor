@@ -152,7 +152,7 @@ export const oneToOneCoachingPageContent: OneToOneCoachingPageContent = {
     ],
   },
   cta: {
-    label: "Book a Free Demo Session",
-    href: "/free-demo",
+    label: "Book a Demo Session",
+    href: "/get-started",
   },
 };

@@ -25,7 +25,7 @@ export default function GetStartedPage() {
               Experience Our <span className="gradient-text-dark">Teaching</span> First
             </>
           }
-          description="Not sure if our coaching is right for you? Attend a free demo class and experience our methodology firsthand. No commitments, no pressure — just great teaching."
+          description="Not sure if our coaching is right for you? Attend a demo class and experience our methodology firsthand. No commitments, no pressure — just great teaching."
           features={[
             "Interactive session with expert faculty",
             "Experience our structured teaching methodology",
@@ -37,7 +37,7 @@ export default function GetStartedPage() {
         >
           <div className="inline-flex items-center gap-2 rounded-full bg-brand-orange/5 px-4 py-2 -mt-2 -order-1">
             <PlayCircle className="h-4 w-4 text-brand-orange" />
-            <span className="text-sm font-medium text-brand-orange">Free Demo Available</span>
+            <span className="text-sm font-medium text-brand-orange">Demo Available</span>
           </div>
 
           <div className="rounded-xl bg-surface-muted p-6">

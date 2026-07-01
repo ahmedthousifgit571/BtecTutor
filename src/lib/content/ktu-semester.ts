@@ -155,7 +155,7 @@ export const ktuEeeS1_2019Content: KtuSemesterContent = {
     {
       question: "Is video class coaching available for KTU EEE S1?",
       answer:
-        "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 1 subjects. A free demo class is available on YouTube before you enrol.",
+        "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 1 subjects. A demo class is available on YouTube before you enrol.",
     },
     {
       question: "Can I get one-to-one coaching for KTU EEE S1 subjects?",
@@ -291,7 +291,7 @@ export const ktuEeeS2_2019Content: KtuSemesterContent = {
     {
       question: "Is video class coaching available for KTU EEE S2?",
       answer:
-        "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 2 subjects. A free demo class is available on YouTube before you enrol.",
+        "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 2 subjects. A demo class is available on YouTube before you enrol.",
     },
     {
       question: "Can I get one-to-one coaching for KTU EEE S2 subjects?",
@@ -387,7 +387,7 @@ export const ktuEeeS3_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 3 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 3 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S3 question papers?", answer: "Previous year question papers for all KTU EEE Semester 3 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S3?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 3 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S3?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 3 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S3 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S3 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -474,7 +474,7 @@ export const ktuEeeS4_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 4 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 4 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S4 question papers?", answer: "Previous year question papers for all KTU EEE Semester 4 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S4?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 4 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S4?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 4 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S4 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S4 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -561,7 +561,7 @@ export const ktuEeeS5_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 5 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 5 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S5 question papers?", answer: "Previous year question papers for all KTU EEE Semester 5 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S5?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 5 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S5?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 5 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S5 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S5 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -648,7 +648,7 @@ export const ktuEeeS6_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 6 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 6 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S6 question papers?", answer: "Previous year question papers for all KTU EEE Semester 6 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S6?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 6 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S6?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 6 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S6 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S6 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -733,7 +733,7 @@ export const ktuEeeS7_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 7 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 7 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S7 question papers?", answer: "Previous year question papers for all KTU EEE Semester 7 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S7?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 7 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S7?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 7 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S7 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S7 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -817,7 +817,7 @@ export const ktuEeeS8_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU EEE Semester 8 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU EEE Semester 8 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU EEE S8 question papers?", answer: "Previous year question papers for all KTU EEE Semester 8 subjects are available free on BTechTutor. Click on any subject link on this page to access them." },
-    { question: "Is video class coaching available for KTU EEE S8?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 8 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU EEE S8?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU EEE Semester 8 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for KTU EEE S8 subjects?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU EEE S8 supply exams?", answer: "Yes — supply exam coaching is available for all EEE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -911,7 +911,7 @@ export const ktuEceS1_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 1 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 1 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S1 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 1 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S1?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 1 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S1?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 1 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S1 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1002,7 +1002,7 @@ export const ktuEceS2_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 2 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 2 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S2 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 2 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S2?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 2 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S2?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 2 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S2 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1094,7 +1094,7 @@ export const ktuEceS3_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 3 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 3 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S3 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 3 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S3?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 3 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S3?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 3 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S3 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1185,7 +1185,7 @@ export const ktuEceS4_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 4 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 4 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S4 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 4 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S4?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 4 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S4?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 4 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S4 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1276,7 +1276,7 @@ export const ktuEceS5_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 5 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 5 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S5 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 5 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S5?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 5 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S5?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 5 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S5 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1367,7 +1367,7 @@ export const ktuEceS6_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 6 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 6 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S6 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 6 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S6?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 6 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S6?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 6 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S6 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1458,7 +1458,7 @@ export const ktuEceS7_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 7 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 7 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S7 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 7 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S7?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 7 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S7?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 7 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S7 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],
@@ -1548,7 +1548,7 @@ export const ktuEceS8_2019Content: KtuSemesterContent = {
   faqs: [
     { question: "Are notes available for all KTU ECE Semester 8 subjects?", answer: "Yes — module-wise notes are available free for all subjects in KTU ECE Semester 8 under the 2019 scheme. Access them from the subject links on this page." },
     { question: "Where can I download KTU ECE S8 previous year question papers?", answer: "Previous year question papers for all KTU ECE Semester 8 subjects are available free on BTechTutor. Access them from each subject link on this page." },
-    { question: "Is video class coaching available for KTU ECE S8?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 8 subjects. A free demo class is available on YouTube before you enrol." },
+    { question: "Is video class coaching available for KTU ECE S8?", answer: "Yes — recorded video classes covering the full syllabus are available for all KTU ECE Semester 8 subjects. A demo class is available on YouTube before you enrol." },
     { question: "Can I get one-to-one coaching for any KTU ECE subject?", answer: "Yes — one-to-one coaching is available for any subject in any semester. Call or WhatsApp +91 98950 09337 to discuss your requirement." },
     { question: "Is coaching available for KTU ECE S8 supply exams?", answer: "Yes — supply exam coaching is available for all ECE subjects. Focused preparation based on PYQ patterns and important modules. Contact us to start immediately." },
   ],

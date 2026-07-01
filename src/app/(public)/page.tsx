@@ -15,6 +15,7 @@ import { SubjectPageExplainer } from "@/components/sections/SubjectPageExplainer
 import { StudentResults } from "@/components/sections/StudentResults";
 import { GetInTouchSection } from "@/components/sections/GetInTouchSection";
 import { ctaSectionContent } from "@/lib/content/cta-section";
+import { getBlogPostsByDate } from "@/lib/content/blog-posts";
 
 export const metadata: Metadata = {
   title: "BTEC Tutor — Kerala's Best GATE & KTU Coaching Institute",
@@ -33,30 +34,24 @@ export const metadata: Metadata = {
 };
 
 async function getHomePageData() {
-  const [reviews, blogPosts] = await Promise.all([
-    prisma.review
-      .findMany({
-        where: { approved: true },
-        orderBy: { createdAt: "desc" },
-        take: 10,
-      })
-      .catch(() => []),
-    prisma.blogPost
-      .findMany({
-        where: { publishedAt: { not: null } },
-        orderBy: { publishedAt: "desc" },
-        take: 3,
-        select: {
-          id: true,
-          title: true,
-          slug: true,
-          excerpt: true,
-          tags: true,
-          publishedAt: true,
-        },
-      })
-      .catch(() => []),
-  ]);
+  const reviews = await prisma.review
+    .findMany({
+      where: { approved: true },
+      orderBy: { createdAt: "desc" },
+      take: 10,
+    })
+    .catch(() => []);
+
+  const blogPosts = getBlogPostsByDate()
+    .slice(0, 3)
+    .map((p) => ({
+      id: p.slug,
+      title: p.cardTitle,
+      slug: p.slug,
+      excerpt: p.excerpt,
+      tags: p.tags,
+      publishedAt: new Date(p.publishedAt),
+    }));
 
   return { reviews, blogPosts };
 }
