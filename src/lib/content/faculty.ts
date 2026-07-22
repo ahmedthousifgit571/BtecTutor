@@ -49,7 +49,7 @@ export const facultyPageContent: FacultyPageContent = {
   meta: {
     title: "BTechTutor Faculty - Expert Engineering Coaching Team",
     description:
-      "Meet the BTechTutor faculty - GATE-qualified engineers and subject specialists with 10+ years of experience teaching KTU, GATE, and ISRO.",
+      "Meet the BTechTutor faculty — GATE-qualified engineers and subject specialists with 10+ years of experience teaching KTU, GATE, and ISRO.",
     canonicalUrl: "/faculty",
   },
   breadcrumbLabel: "Faculty",

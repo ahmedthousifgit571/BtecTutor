@@ -55,9 +55,9 @@ export interface OneToOneCoachingPageContent {
 
 export const oneToOneCoachingPageContent: OneToOneCoachingPageContent = {
   meta: {
-    title: "One-to-One BTech Coaching | BTechTutor",
+    title: "Personal One-to-One BTech Tuition | BTechTutor",
     description:
-      "Get private one-to-one BTech coaching with a dedicated faculty member, flexible timings, and personalised sessions for KTU students in Kerala and abroad.",
+      "Get one-to-one BTech coaching online with a dedicated faculty. Flexible timing, personalized teaching, and all subjects covered. Talk to our team to get started.",
     canonicalUrl: "/one-to-one-coaching",
   },
   breadcrumbLabel: "One-to-One Coaching",

@@ -1151,6 +1151,11 @@ export const isroPagesContent: IsroPageContent[] = [
         answer:
           "Part B has 15 questions covering Numerical Reasoning, Logical Reasoning, Abstract Reasoning, and Diagrammatic Reasoning — 15 marks in total. It is the same aptitude pattern for every discipline (ECE, EEE, ME, CS), regardless of your engineering branch.",
       },
+      {
+        question: "How has the ISRO syllabus changed in 2025-2026?",
+        answer:
+          "The core ISRO syllabus remains largely consistent year to year. Changes in individual notifications are minor topic additions or rewordings. Always verify against the specific recruitment notification for your discipline.",
+      },
     ],
   },
 ];

@@ -11,9 +11,9 @@ import { whyUsPageContent } from "@/lib/content/why-us-page";
 import { STATS } from "@/lib/constants";
 
 export const metadata: Metadata = generateMeta({
-  title: "Why Choose BTEC Tutor — Our Advantages",
+  title: "Why Choose BTechTutor | KTU Coaching & BTech Tuition",
   description:
-    "Discover why 5,000+ students choose BTEC Tutor. Expert faculty, comprehensive materials, proven results, and personalized coaching.",
+    "Discover why BTechTutor is trusted for KTU coaching and one-to-one BTech tuition. Expert faculty, 2024 scheme coverage, and proven student results.",
   canonicalUrl: "/why-us",
 });
 

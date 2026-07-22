@@ -40,7 +40,7 @@ export interface FeesPageContent {
 
 export const feesPageContent: FeesPageContent = {
   seo: {
-    title: "Fees & Pricing -- Affordable KTU Coaching Plans | Kerala",
+    title: "Fees & Pricing — Affordable KTU Coaching Plans | Kerala",
     description:
       "Transparent fee structure for BTechTutor KTU coaching, GATE preparation, and one-to-one sessions. Affordable plans for Kerala engineering students",
     h1: "BTechTutor Fees -- Honest, Transparent Pricing for Every Student",

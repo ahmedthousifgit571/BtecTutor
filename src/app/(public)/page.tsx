@@ -18,9 +18,9 @@ import { ctaSectionContent } from "@/lib/content/cta-section";
 import { getBlogPostsByDate } from "@/lib/content/blog-posts";
 
 export const metadata: Metadata = {
-  title: "BTEC Tutor — Kerala's Best GATE & KTU Coaching Institute",
+  title: "BTechTutor: One-to-One BTech Tuition & KTU Coaching",
   description:
-    "Join Kerala's top-rated GATE and KTU coaching institute. Expert faculty, 5,000+ successful students, 92% success rate. Comprehensive study materials, mock tests, and personalized guidance.",
+    "Personal one-to-one BTech tuition online, KTU coaching, and GATE preparation by expert faculty in Kerala. No payment to start. Join 5,000+ students - Btechtutor",
   keywords: [
     "GATE coaching Kerala",
     "KTU coaching",
