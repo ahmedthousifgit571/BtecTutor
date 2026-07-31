@@ -27,7 +27,7 @@ export default function WhyUsPage() {
           <Breadcrumb items={[{ name: "Why Us", url: "/why-us" }]} className="mb-8" />
 
           <h1 className="text-fluid-3xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="gradient-text-dark">BTEC Tutor</span>
+            Why Choose <span className="gradient-text-dark">BTechTutor</span>
           </h1>
           <p className="text-lg text-gray-500 max-w-2xl">
             We don&apos;t just teach — we build confidence, develop problem-solving skills, and create exam-ready engineers.

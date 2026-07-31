@@ -13,9 +13,9 @@ import { generateMeta } from "@/lib/seo";
 import { courseGridContent } from "@/lib/content/courses";
 
 export const metadata: Metadata = generateMeta({
-  title: "Our Courses — BTEC Tutor",
+  title: "Our Courses — BTechTutor",
   description:
-    "Explore all courses offered by BTEC Tutor — One-to-One BTech Tuition, KTU Coaching, GATE Preparation, Supply Exam Coaching, and ISRO Coaching.",
+    "Explore all courses offered by BTechTutor — One-to-One BTech Tuition, KTU Coaching, GATE Preparation, Supply Exam Coaching, and ISRO Coaching.",
   canonicalUrl: "/courses",
 });
 

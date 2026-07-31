@@ -9,7 +9,7 @@ import { parseNotesFiles } from "@/lib/ktu-types";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Search KTU Notes, Question Papers & Syllabus | BTEC Tutor",
+  title: "Search KTU Notes, Question Papers & Syllabus | BTechTutor",
   description:
     "Search KTU subjects by code or name and download notes, previous year question papers, and syllabus.",
   robots: { index: false, follow: true },

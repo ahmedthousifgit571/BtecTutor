@@ -83,7 +83,7 @@ export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
             <div className="w-full max-w-md mx-auto">
               <Image
                 src={courseImage}
-                alt="Student learning at BTEC Tutor"
+                alt="Student learning at BTechTutor"
                 className="w-full h-auto object-contain"
                 priority={false}
                 placeholder="blur"

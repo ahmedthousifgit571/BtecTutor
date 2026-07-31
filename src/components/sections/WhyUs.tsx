@@ -156,7 +156,7 @@ export function WhyUs({ content = whyUsContent }: WhyUsProps) {
             <div className="gif-glow absolute -inset-6 bg-gradient-to-tr from-brand-orange/25 via-brand-cream to-brand-orange/10 rounded-3xl blur-3xl" />
             <Image
               src={dynamicGif}
-              alt="BTech Tutor dynamic illustration"
+              alt="BTechTutor dynamic illustration"
               className="gif-image absolute inset-0 z-10 w-full h-full object-cover rounded-2xl drop-shadow-2xl"
               unoptimized
               priority

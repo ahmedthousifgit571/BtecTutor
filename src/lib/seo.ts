@@ -101,7 +101,7 @@ export function buildCourseSchema(input: CourseSchemaInput) {
     description: input.description,
     provider: {
       "@type": "Organization",
-      name: input.provider || "BTEC Tutor",
+      name: input.provider || "BTechTutor",
       sameAs: getBaseUrl(),
     },
     url: absoluteUrl(input.url),
@@ -118,7 +118,7 @@ export function buildLocalBusinessSchema(input: LocalBusinessInput) {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": absoluteUrl(`/coaching-in/${input.city.toLowerCase()}`),
-    name: `BTEC Tutor - ${input.city}`,
+    name: `BTechTutor - ${input.city}`,
     description: input.description,
     url: absoluteUrl(`/coaching-in/${input.city.toLowerCase()}`),
     address: {
@@ -145,7 +145,7 @@ export function buildOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    name: "BTEC Tutor",
+    name: "BTechTutor",
     url: getBaseUrl(),
     logo: absoluteUrl("/logo.png"),
     description:

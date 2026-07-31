@@ -7,7 +7,7 @@ import { GetInTouchSection } from "@/components/sections/GetInTouchSection";
 export const metadata: Metadata = generateMeta({
   title: "Get Started — Book Your Demo Class",
   description:
-    "Get started with BTEC Tutor by booking a demo class. Experience our teaching methodology, interact with faculty, and choose the right coaching plan.",
+    "Get started with BTechTutor by booking a demo class. Experience our teaching methodology, interact with faculty, and choose the right coaching plan.",
   canonicalUrl: "/get-started",
 });
 

@@ -21,8 +21,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
   title: {
-    default: "BTEC Tutor — GATE & KTU Coaching in Kerala",
-    template: "%s | BTEC Tutor",
+    default: "BTechTutor — GATE & KTU Coaching in Kerala",
   },
   description:
     "Kerala's premier coaching institute for GATE and KTU exam preparation. Expert faculty, comprehensive study materials, and proven results.",
@@ -36,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "BTEC Tutor",
+    siteName: "BTechTutor",
   },
   twitter: {
     card: "summary_large_image",

@@ -1,4 +1,4 @@
-# BTEC Tutor
+# BTechTutor
 
 Kerala's premier coaching institute platform for **GATE** and **KTU** exam preparation. Built with Next.js 14, featuring a content-rich public site, an admin dashboard, and a PostgreSQL-backed data layer.
 

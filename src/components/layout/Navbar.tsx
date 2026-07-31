@@ -61,7 +61,7 @@ export function Navbar() {
       <div className="bg-black border-b border-white/10">
         <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/logo2.jpg" alt="BTEC Tutor" width={151} height={104} className="h-20 w-auto object-contain" priority />
+            <Image src="/logo2.jpg" alt="BTechTutor" width={151} height={104} className="h-20 w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Nav */}

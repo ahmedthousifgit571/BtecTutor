@@ -115,7 +115,7 @@ export default function BlogPostPage({ params }: Props) {
         <GetInTouchSection
           theme="dark"
           heading="Ready to Start Preparing?"
-          description="Join BTEC Tutor and get access to expert coaching, study materials, and mock tests."
+          description="Join BTechTutor and get access to expert coaching, study materials, and mock tests."
           submitLabel="Start Preparing Now"
           className="mt-16 !rounded-2xl overflow-hidden"
         />

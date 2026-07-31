@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  name: "BTEC Tutor",
+  name: "BTechTutor",
   tagline: "GATE & KTU Coaching in Kerala",
   description:
     "Kerala's premier coaching institute for GATE and KTU exam preparation. Expert faculty, comprehensive study materials, and proven results.",

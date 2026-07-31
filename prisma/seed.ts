@@ -255,21 +255,21 @@ const locations = [
   {
     city: "Kochi",
     slug: "kochi",
-    seoTitle: "Best GATE & KTU Coaching in Kochi | BTEC Tutor",
+    seoTitle: "Best GATE & KTU Coaching in Kochi | BTechTutor",
     seoDesc:
       "Join Kerala's top-rated GATE and KTU coaching center in Kochi. Expert faculty, proven results, and comprehensive study materials.",
   },
   {
     city: "Trivandrum",
     slug: "trivandrum",
-    seoTitle: "Best GATE & KTU Coaching in Trivandrum | BTEC Tutor",
+    seoTitle: "Best GATE & KTU Coaching in Trivandrum | BTechTutor",
     seoDesc:
       "Premier GATE and KTU coaching institute in Trivandrum. Start your preparation with experienced faculty and structured programs.",
   },
   {
     city: "Calicut",
     slug: "calicut",
-    seoTitle: "Best GATE & KTU Coaching in Calicut | BTEC Tutor",
+    seoTitle: "Best GATE & KTU Coaching in Calicut | BTechTutor",
     seoDesc:
       "Top-quality GATE and KTU coaching classes in Calicut. Personalized attention, mock tests, and guaranteed improvement.",
   },
@@ -330,7 +330,7 @@ async function main() {
         slug: `gate-${branch.branch}`,
         branch: branch.branch,
         description: branch.description,
-        seoTitle: `${branch.title} | BTEC Tutor Kerala`,
+        seoTitle: `${branch.title} | BTechTutor Kerala`,
         seoDesc: branch.description,
         seoKeywords: [
           `GATE ${branch.branch.toUpperCase()} coaching`,
@@ -385,7 +385,7 @@ async function main() {
           scheme,
           department: dept.department,
           description: `KTU ${scheme} scheme ${dept.title} study materials, notes, and previous year questions.`,
-          seoTitle: `KTU ${scheme} ${dept.title} | BTEC Tutor`,
+          seoTitle: `KTU ${scheme} ${dept.title} | BTechTutor`,
           seoDesc: `Complete study materials for KTU ${scheme} scheme ${dept.title}. Notes, PYQs, and exam preparation resources.`,
           seoKeywords: [
             `KTU ${scheme} ${dept.department}`,
@@ -461,7 +461,7 @@ async function main() {
         excerpt: post.excerpt,
         tags: post.tags,
         author: post.author,
-        seoTitle: `${post.title} | BTEC Tutor Blog`,
+        seoTitle: `${post.title} | BTechTutor Blog`,
         seoDesc: post.excerpt,
         seoKeywords: post.tags,
         publishedAt: new Date(),
