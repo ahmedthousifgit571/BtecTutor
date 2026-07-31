@@ -20,9 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
   ),
-  title: {
-    default: "BTechTutor — GATE & KTU Coaching in Kerala",
-  },
+  title: "BTechTutor — GATE & KTU Coaching in Kerala",
   description:
     "Kerala's premier coaching institute for GATE and KTU exam preparation. Expert faculty, comprehensive study materials, and proven results.",
   keywords: [
