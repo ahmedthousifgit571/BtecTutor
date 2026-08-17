@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import SplitText from "@/components/ui/SplitText";
-import oneToOneImage from "@/assets/oneToOne.png";
+import oneToOneImage from "@/assets/oneToOne.webp";
 import {
   oneToOneTuitionContent,
   type OneToOneTuitionContent,
@@ -55,7 +55,8 @@ export function OneToOneTuition({ content = oneToOneTuitionContent }: OneToOneTu
                 src={oneToOneImage}
                 alt="One-to-one tuition with dedicated tutor"
                 className="h-auto w-full object-cover"
-                priority={false}
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 380px"
               />
             </div>
           </div>

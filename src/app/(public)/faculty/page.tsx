@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQSection } from "@/components/sections/FAQ";
 import { FacultyProfilesSection } from "@/components/sections/FacultyProfiles";
 import { facultyPageContent, type FacultyPageContent } from "@/lib/content/faculty";
-import facultyImage from "@/assets/faculty.png";
+import facultyImage from "@/assets/faculty.webp";
 
 export const metadata: Metadata = generateMeta({
   title: facultyPageContent.meta.title,
@@ -92,6 +92,7 @@ export default async function FacultyPage() {
                   alt="BTechTutor faculty team"
                   className="relative h-auto w-full rounded-2xl object-cover"
                   priority
+                  sizes="(max-width: 1024px) 100vw, 500px"
                 />
               </div>
             </div>

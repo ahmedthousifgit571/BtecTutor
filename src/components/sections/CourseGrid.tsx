@@ -9,7 +9,7 @@ import { useGSAP } from "@gsap/react";
 import { TrendingUp, Play, Users, Award } from "lucide-react";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
 import { courseGridContent, type CourseGridContent } from "@/lib/content/courses";
-import courseImage from "@/assets/courseImage.png";
+import courseImage from "@/assets/courseImage.webp";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -85,8 +85,9 @@ export function CourseGrid({ content = courseGridContent }: CourseGridProps) {
                 src={courseImage}
                 alt="Student learning at BTechTutor"
                 className="w-full h-auto object-contain"
-                priority={false}
+                loading="lazy"
                 placeholder="blur"
+                sizes="(max-width: 1024px) 100vw, 500px"
               />
             </div>
           </div>

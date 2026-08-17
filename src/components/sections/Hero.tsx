@@ -21,7 +21,7 @@ interface HeroProps {
 export function Hero({ content = heroContent }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useRef<HTMLDivElement>(null);
   const line1Ref = useRef<HTMLSpanElement>(null);
   const line2Ref = useRef<HTMLSpanElement>(null);
 
@@ -186,11 +186,14 @@ export function Hero({ content = heroContent }: HeroProps) {
           className="font-bold tracking-tight text-balance"
           style={{ fontSize: "clamp(2rem, 5vw, 4.2rem)", lineHeight: 1.15, perspective: 500 }}
         >
-          <span ref={line1Ref}>
+          <span
+            ref={line1Ref}
+            className="bg-gradient-to-r from-[#FF6B2B] to-[#FFAB40] bg-clip-text text-transparent inline-block"
+          >
             {content.headlineLine1}
           </span>
           <br />
-          <span ref={line2Ref} className="text-white">
+          <span ref={line2Ref} className="text-white inline-block">
             {content.headlineLine2}
           </span>
         </h1>

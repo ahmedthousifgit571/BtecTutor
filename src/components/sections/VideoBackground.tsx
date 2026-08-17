@@ -1,57 +1,71 @@
 "use client";
 
-import { forwardRef, useEffect, useState } from "react";
-import landingVideo from "@/videos/landingVideo.mp4";
+import { forwardRef, useState } from "react";
+import Image from "next/image";
+import { Play } from "lucide-react";
 
-export const VideoBackground = forwardRef<HTMLVideoElement>(
-  function VideoBackground(_props, ref) {
-    const [loaded, setLoaded] = useState(false);
+interface HeroBackgroundProps {
+  showVideoOption?: boolean;
+}
 
-    useEffect(() => {
-      const video =
-        ref && "current" in ref ? ref.current : null;
-      if (!video) return;
-
-      // If the video already has data (cached), show immediately
-      if (video.readyState >= 2) {
-        setLoaded(true);
-        return;
-      }
-
-      const handleLoaded = () => setLoaded(true);
-      // loadeddata fires as soon as the first frame is available — much faster than canplaythrough
-      video.addEventListener("loadeddata", handleLoaded);
-
-      // Attempt play in case autoplay is blocked
-      video.play().catch(() => {});
-
-      return () => video.removeEventListener("loadeddata", handleLoaded);
-    }, [ref]);
+export const VideoBackground = forwardRef<HTMLDivElement, HeroBackgroundProps>(
+  function VideoBackground({ showVideoOption = true }, ref) {
+    const [isVideoActive, setIsVideoActive] = useState(false);
 
     return (
-      <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 0 }}>
-        <video
-          ref={ref}
-          src={landingVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-300 ${
-            loaded ? "opacity-100" : "opacity-0"
-          }`}
-          aria-hidden="true"
+      <div
+        ref={ref}
+        className="absolute inset-0 overflow-hidden"
+        style={{ zIndex: 0 }}
+      >
+        {/* Prioritized Static Hero WebP Background (Primary LCP Element) */}
+        <Image
+          src="/images/hero-bg.webp"
+          alt="BTechTutor Engineering Coaching"
+          fill
+          priority
+          sizes="100vw"
+          quality={85}
+          className="object-cover object-center"
         />
+
+        {/* Optional Interactive Video on Demand */}
+        {isVideoActive && (
+          <video
+            src="/videos/hero-preview.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="absolute top-0 left-0 w-full h-full object-cover z-[1] transition-opacity duration-700 opacity-100"
+            aria-hidden="true"
+          />
+        )}
+
         {/* Dark gradient overlay */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 z-[2]"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 60%, rgba(4,4,12,1) 100%)",
+              "linear-gradient(to bottom, rgba(0,0,0,0.50) 0%, rgba(0,0,0,0.70) 60%, rgba(4,4,12,1) 100%)",
           }}
         />
+
+        {/* Subtle Video Preview Toggle (Non-blocking interaction) */}
+        {showVideoOption && !isVideoActive && (
+          <button
+            type="button"
+            onClick={() => setIsVideoActive(true)}
+            className="absolute bottom-6 right-6 z-[15] hidden sm:inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-medium text-white/80 backdrop-blur-md hover:bg-white/20 hover:text-white transition-all shadow-md"
+            aria-label="Play background video preview"
+          >
+            <Play className="h-3 w-3 fill-white/80" />
+            <span>Watch Preview</span>
+          </button>
+        )}
       </div>
     );
   }
 );
+

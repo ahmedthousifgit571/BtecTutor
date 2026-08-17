@@ -35,7 +35,7 @@ export const whereWeServeContent: WhereWeServeContent = {
     { number: "08", label: "UAE / Dubai / Abu Dhabi / Qatar — Indian students abroad" },
   ],
   image: {
-    src: "/assets/whatweserveImage.png",
+    src: "/assets/whatweserveImage.webp",
     alt: "BTechTutor serving students across Kerala and beyond",
   },
 };

@@ -8,7 +8,7 @@ import { ContactEnquiryForm } from "@/components/sections/ContactEnquiryForm";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { contactPageContent } from "@/lib/content/contact-page";
 import { absoluteUrl, getBaseUrl, buildWhatsAppLink } from "@/lib/utils";
-import contactImage from "@/assets/contactImage.png";
+import contactImage from "@/assets/contactImage.webp";
 
 export const metadata: Metadata = generateMeta({
   title: contactPageContent.seo.title,
@@ -140,6 +140,7 @@ export default function ContactPage() {
                     alt="Contact BTechTutor support"
                     className="h-auto w-full rounded-xl object-cover"
                     priority
+                    sizes="(max-width: 1024px) 100vw, 500px"
                   />
                 </div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">

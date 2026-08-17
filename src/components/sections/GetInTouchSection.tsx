@@ -3,7 +3,7 @@ import { LeadForm } from "@/components/sections/LeadForm";
 import type { LeadFormContent } from "@/lib/content/lead-form";
 import type { ReactNode } from "react";
 import Image from "next/image";
-import getInTouchImage from "@/assets/getInTouch.png";
+import getInTouchImage from "@/assets/getInTouch.webp";
 
 export interface GetInTouchSectionProps {
   /** "dark" renders on charcoal bg; "light" renders on white/transparent bg */
@@ -163,7 +163,8 @@ export function GetInTouchSection({
                   src={getInTouchImage}
                   alt="Get in touch with BTechTutor"
                   className="mx-auto h-auto max-h-[360px] w-full max-w-[440px] object-contain xl:max-h-[400px]"
-                  priority={false}
+                  loading="lazy"
+                  sizes="(max-width: 1024px) 100vw, 440px"
                 />
               </div>
             )}

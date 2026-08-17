@@ -77,6 +77,8 @@ const TestimonialsColumn = (props: {
                         height={40}
                         src={image}
                         alt={`Avatar of ${name}`}
+                        loading="lazy"
+                        decoding="async"
                         className="h-10 w-10 rounded-full object-cover ring-2 ring-brand-orange/10 group-hover:ring-brand-orange/30 transition-all duration-300 ease-in-out"
                       />
                       <div className="flex flex-col">

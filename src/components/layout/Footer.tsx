@@ -57,11 +57,12 @@ export function Footer({ content = footerContent }: FooterProps) {
           <div className="col-span-2 mb-4 lg:mb-0">
             <Link href="/" className="inline-flex items-center gap-2">
               <Image
-                src="/logo2.jpg"
+                src="/logo2.webp"
                 alt="BTechTutor"
                 width={151}
                 height={104}
                 className="h-12 w-auto object-contain"
+                loading="lazy"
               />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-white/40 max-w-xs">

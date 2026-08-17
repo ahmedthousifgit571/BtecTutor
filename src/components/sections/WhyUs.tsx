@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
@@ -10,7 +9,6 @@ import {
   Target,
   UserCheck,
 } from "lucide-react";
-import dynamicGif from "@/assets/dynamicGif.gif";
 import { Badge } from "@/components/ui/Badge";
 import { GooeyText } from "@/components/ui/gooey-text-morphing";
 import { prefersReducedMotion } from "@/lib/gsap-utils";
@@ -147,19 +145,23 @@ export function WhyUs({ content = whyUsContent }: WhyUsProps) {
             ))}
           </div>
 
-          {/* Right: Animated GIF */}
+          {/* Right: Dynamic Animation */}
           <div
             ref={gifRef}
             className="relative overflow-hidden rounded-3xl min-h-[300px]"
           >
             {/* Glowing background blob */}
             <div className="gif-glow absolute -inset-6 bg-gradient-to-tr from-brand-orange/25 via-brand-cream to-brand-orange/10 rounded-3xl blur-3xl" />
-            <Image
-              src={dynamicGif}
-              alt="BTechTutor dynamic illustration"
+            <video
+              src="/images/dynamic.mp4"
+              poster="/images/dynamic-poster.webp"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
               className="gif-image absolute inset-0 z-10 w-full h-full object-cover rounded-2xl drop-shadow-2xl"
-              unoptimized
-              priority
+              aria-label="BTechTutor dynamic illustration"
             />
           </div>
         </div>

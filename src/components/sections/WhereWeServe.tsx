@@ -13,7 +13,7 @@ import {
   whereWeServeContent,
   type WhereWeServeContent,
 } from "@/lib/content/where-we-serve";
-import whatweserveImage from "@/assets/whatweserveImage.png";
+import whatweserveImage from "@/assets/whatweserveImage.webp";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -100,6 +100,7 @@ export function WhereWeServe({
               src={whatweserveImage}
               alt={content.image.alt}
               fill
+              loading="lazy"
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
