@@ -1,57 +1,14 @@
 "use client";
 
-import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { prefersReducedMotion } from "@/lib/gsap-utils";
-
-gsap.registerPlugin(useGSAP);
-
 export function FloatingObjects() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-
-      const elements = containerRef.current?.querySelectorAll(".float-element");
-      if (!elements) return;
-
-      // Each element gets a different duration so they feel independent
-      const durations = [2.2, 2.7, 3.0, 2.5, 2.4, 2.8, 2.6, 2.3];
-
-      elements.forEach((el, i) => {
-        gsap.to(el, {
-          y: -18,
-          duration: durations[i % durations.length],
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-        });
-
-        gsap.to(el, {
-          rotateY: 5 + i * 2,
-          rotateX: -3 + i,
-          duration: (durations[i % durations.length]) + 1,
-          yoyo: true,
-          repeat: -1,
-          ease: "sine.inOut",
-          delay: 0.3,
-        });
-      });
-    },
-    { scope: containerRef }
-  );
-
   return (
     <div
-      ref={containerRef}
-      className="absolute inset-0 overflow-hidden pointer-events-none"
+      className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block"
       aria-hidden="true"
     >
       {/* Glass Chip */}
       <div
-        className="float-element absolute left-[8%] top-[20%] w-28 h-28 sm:w-36 sm:h-36"
+        className="float-element animate-float-chip absolute left-[8%] top-[20%] w-28 h-28 sm:w-36 sm:h-36"
         style={{ perspective: "800px" }}
       >
         <div className="relative w-full h-full glass rounded-xl" style={{ transformStyle: "preserve-3d" }}>
@@ -72,7 +29,7 @@ export function FloatingObjects() {
       </div>
 
       {/* Glass Orb */}
-      <div className="float-element absolute left-1/2 top-[15%] -translate-x-1/2 w-32 h-32 sm:w-44 sm:h-44">
+      <div className="float-element animate-float-orb absolute left-1/2 top-[15%] -translate-x-1/2 w-32 h-32 sm:w-44 sm:h-44">
         <div className="relative w-full h-full rounded-full glass">
           <div className="absolute inset-3 rounded-full border border-white/10 bg-gradient-radial from-white/10 to-transparent" />
           <div className="absolute top-1/4 left-1/3 w-3 h-3 rounded-full bg-white/20 blur-sm" />
@@ -83,7 +40,7 @@ export function FloatingObjects() {
 
       {/* Glass Gear */}
       <div
-        className="float-element absolute right-[8%] top-[18%] w-24 h-24 sm:w-32 sm:h-32"
+        className="float-element animate-float-gear absolute right-[8%] top-[18%] w-24 h-24 sm:w-32 sm:h-32"
         style={{ perspective: "800px" }}
       >
         <div
@@ -108,25 +65,25 @@ export function FloatingObjects() {
       </div>
 
       {/* Math Symbols */}
-      <div className="float-element absolute left-[15%] bottom-[25%]">
+      <div className="float-element animate-float-subtle-1 absolute left-[15%] bottom-[25%]">
         <span className="text-3xl sm:text-4xl font-light text-white/15 glass rounded-lg px-3 py-1 inline-block">
           E<sup className="text-lg">2</sup>
         </span>
       </div>
 
-      <div className="float-element absolute right-[20%] bottom-[30%]">
+      <div className="float-element animate-float-subtle-2 absolute right-[20%] bottom-[30%]">
         <span className="text-3xl sm:text-4xl font-light text-white/15 glass rounded-lg px-3 py-1 inline-block">
           x-z
         </span>
       </div>
 
-      <div className="float-element absolute left-[35%] bottom-[15%]">
+      <div className="float-element animate-float-subtle-3 absolute left-[35%] bottom-[15%]">
         <span className="text-2xl sm:text-3xl font-serif italic text-white/12 glass rounded-lg px-3 py-1 inline-block">
           a
         </span>
       </div>
 
-      <div className="float-element absolute right-[35%] bottom-[20%]">
+      <div className="float-element animate-float-subtle-1 absolute right-[35%] bottom-[20%]">
         <span className="text-2xl sm:text-3xl font-light text-white/12 glass rounded-lg px-3 py-1 inline-block">
           V<sup className="text-base">2</sup>
         </span>

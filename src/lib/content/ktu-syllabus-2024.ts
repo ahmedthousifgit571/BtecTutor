@@ -4,7 +4,7 @@ export const ktuSyllabus2024Content: KtuSupplyExamContent = {
   heroBadge: "KTU 2024 Scheme Syllabus",
 
   seo: {
-    title: "KTU 2024 Scheme Syllabus — All Branches & Subjects | BTechTutor",
+    title: "KTU 2024 Scheme Syllabus for All Branches | BTechTutor",
     description:
       "Complete KTU 2024 scheme syllabus for all BTech branches. Updated module-wise syllabus for EEE, ECE, Civil, Mechanical, CS specialisations at BTechTutor.",
     h1: "KTU 2024 Scheme Syllabus — Complete Module-wise Guide for All Branches",

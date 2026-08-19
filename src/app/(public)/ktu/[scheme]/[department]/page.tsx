@@ -22,12 +22,22 @@ export async function generateStaticParams() {
   return params;
 }
 
+const customDeptTitles: Record<string, string> = {
+  "2024/computer-science": "KTU 2024 Scheme Computer Science Semester 1 | BTechTutor",
+  "2019/computer-science": "KTU 2019 Computer Science (CS) Subjects | BTechTutor",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dept = KTU_DEPARTMENTS.find((d) => d.slug === params.department);
   if (!dept) return {};
 
+  const pageKey = `${params.scheme}/${params.department}`;
+  const title =
+    customDeptTitles[pageKey] ||
+    `KTU ${params.scheme} — ${dept.title} Subjects | BTechTutor`;
+
   return generateMeta({
-    title: `KTU ${params.scheme} — ${dept.title} Subjects & Study Materials`,
+    title,
     description: `Complete study materials for KTU ${params.scheme} scheme ${dept.title}. Notes, previous year questions, and video lectures for all semesters.`,
     keywords: [`KTU ${params.scheme}`, `KTU ${dept.title}`, `KTU ${dept.shortTitle} notes`],
     canonicalUrl: `/ktu/${params.scheme}/${params.department}`,

@@ -583,12 +583,13 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "score-and-rank",
     navLabel: "Page 6",
     seo: {
-      title: "GATE Score vs Rank | Marks, Score & Rank Explained",
+      title: "GATE Score vs Marks vs Rank - Full Explanation | BTechTutor",
       description:
         "Understand GATE score vs rank, how marks convert to score, and what rank you can expect. Learn what score is needed for IIT, NIT, or PSU.",
       h1: "GATE Score vs Rank — What the Numbers Actually Mean for Your Goals",
       primaryKeyword: "GATE score vs rank",
       secondaryKeywords: [
+        "gate score vs marks",
         "GATE rank predictor",
         "GATE marks to percentile",
         "how to calculate GATE rank from marks",
@@ -1309,7 +1310,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-cutoff",
     navLabel: "Page 13",
     seo: {
-      title: "GATE ECE Cutoff 2027 | Category-wise Marks | BTechTutor",
+      title: "GATE ECE Cutoff 2027 - General,OBC, SC/ST Marks - BTechTutor",
       description:
         "Check GATE ECE cutoff 2027 for general, OBC, SC/ST. Know qualifying marks and competitive scores for IIT, NIT, and PSU admissions | BTechTutor |",
       h1: "GATE ECE Cutoff 2027 — Qualifying Marks vs Competitive Scores Explained",
@@ -1407,7 +1408,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-networks",
     navLabel: "Page 14",
     seo: {
-      title: "GATE ECE Networks — Preparation, Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Networks Notes | BTechTutor",
       description:
         "Prepare Networks for GATE ECE the right way. Exam-focused syllabus, high-weightage topics, preparation tips, and one-to-one coaching at BTechTutor Kerala.",
       h1: "GATE ECE Networks — What to Study, What to Skip, and How to Score",
@@ -1574,9 +1575,9 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-electronic-devices",
     navLabel: "Page 15",
     seo: {
-      title: "GATE ECE Electronic Devices — Preparation, Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Electronic Devices Study Guide | BTechTutor",
       description:
-        "Prepare Electronic Devices for GATE ECE the right way. Exam-focused syllabus, high-weightage topics, preparation tips, and one-to-one coaching at BTechTutor Kerala.",
+        "Master GATE ECE Electronic Devices with syllabus, notes, PYQs, and expert guidance. Strengthen your preparation with BTechTutor.",
       h1: "GATE ECE Electronic Devices — What to Study, What to Skip, and How to Score",
       primaryKeyword: "GATE ECE Electronic Devices",
       secondaryKeywords: [
@@ -1736,9 +1737,9 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-analog-circuits",
     navLabel: "Page 16",
     seo: {
-      title: "GATE ECE Analog Circuits — Preparation, Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Analog Circuits Preparation | BTechTutor",
       description:
-        "Prepare Analog Circuits for GATE ECE the right way. Exam-focused syllabus, high-weightage topics, preparation tips, and one-to-one coaching at BTechTutor Kerala.",
+        "Prepare GATE ECE Analog Circuits using structured notes, syllabus, PYQs, and expert coaching. Learn confidently with BTechTutor.",
       h1: "GATE ECE Analog Circuits — What to Study, What to Skip, and How to Score",
       primaryKeyword: "GATE ECE Analog Circuits",
       secondaryKeywords: [
@@ -1899,9 +1900,9 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-digital-circuits",
     navLabel: "Page 17",
     seo: {
-      title: "GATE ECE Digital Circuits — Preparation, Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Digital Circuits Study Guide | BTechTutor",
       description:
-        "Prepare Digital Circuits for GATE ECE the right way. Exam-focused syllabus, high-weightage topics, preparation tips, and one-to-one coaching at BTechTutor Kerala.",
+        "Learn GATE ECE Digital Circuits with expert notes, syllabus, PYQs, and one-to-one guidance. Prepare smarter with BTechTutor.",
       h1: "GATE ECE Digital Circuits — What to Study, What to Skip, and How to Score",
       primaryKeyword: "GATE ECE Digital Circuits",
       secondaryKeywords: [
@@ -2233,7 +2234,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-signals-and-systems",
     navLabel: "Page 19",
     seo: {
-      title: "GATE ECE Signals and Systems — Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Signals & Systems Study Guide | BTechTutor",
       description:
         "Prepare Signals and Systems for GATE ECE with exam-focused syllabus, high-weightage topics, and preparation tips. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE ECE Signals and Systems — What to Study, What to Skip, and How to Score",
@@ -2402,7 +2403,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-communications",
     navLabel: "Page 20",
     seo: {
-      title: "GATE ECE Communication Systems — Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Communications Preparation | BTechTutor",
       description:
         "Prepare Communication Systems for GATE ECE with the right syllabus, important topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE ECE Communication Systems — What to Study, What to Skip, and How to Score",
@@ -2739,7 +2740,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-engineering-mathematics",
     navLabel: "Page 22",
     seo: {
-      title: "GATE ECE Engineering Mathematics — Syllabus & Coaching | BTechTutor",
+      title: "GATE ECE Engineering Mathematics Notes | BTechTutor",
       description:
         "Prepare Engineering Mathematics for GATE ECE with the right topics and exam strategy. Score full marks with coaching at BTechTutor Kerala.",
       h1: "GATE ECE Engineering Mathematics — What to Study and How to Score Full Marks",
@@ -2906,7 +2907,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "ece-general-aptitude",
     navLabel: "Page 23",
     seo: {
-      title: "GATE ECE General Aptitude — Tips to Score Full Marks | BTechTutor",
+      title: "GATE ECE General Aptitude Notes | BTechTutor",
       description:
         "Score full marks in GATE General Aptitude for ECE. Right topics, exam strategy, and one-to-one coaching at BTechTutor Kerala.",
       h1: "GATE ECE General Aptitude — How to Score Full Marks in 15 Minutes",
@@ -3364,7 +3365,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/mock-test",
     navLabel: "Page 26",
     seo: {
-      title: "GATE EEE Mock Test Online — Practice Full Papers | BTechTutor",
+      title: "GATE EEE Mock Test & Practice Papers | BTechTutor",
       description:
         "Take GATE EEE mock tests online at BTechTutor. Full-length practice papers with solutions to improve speed, accuracy, and exam confidence.",
       h1: "GATE EEE Mock Test — Practice the Full Paper Before the Actual Exam",
@@ -3635,7 +3636,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/electric-circuits",
     navLabel: "Page 28",
     seo: {
-      title: "GATE EEE Electric Circuits — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Electric Circuits Preparation | BTechTutor",
       description:
         "Prepare Electric Circuits for GATE EEE with exam-focused syllabus, key topics, and preparation tips. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Electric Circuits — What to Study, What to Skip, and How to Score",
@@ -4154,7 +4155,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/power-electronics",
     navLabel: "Page 31",
     seo: {
-      title: "GATE EEE Power Electronics — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Power Electronics Study Guide | BTechTutor",
       description:
         "Prepare Power Electronics for GATE EEE with the right syllabus, key topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Power Electronics — What to Study, What to Skip, and How to Score",
@@ -4330,7 +4331,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/electric-machines",
     navLabel: "Page 32",
     seo: {
-      title: "GATE EEE Electric Machines — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Electric Machines Study Guide | BTechTutor",
       description:
         "Prepare Electric Machines for GATE EEE with the right syllabus, high-weightage topics, and exam tips. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Electric Machines — What to Study, What to Skip, and How to Score",
@@ -4688,7 +4689,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/signals-and-systems",
     navLabel: "Page 34",
     seo: {
-      title: "GATE EEE Signals and Systems — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Signals & Systems Preparation | BTechTutor",
       description:
         "Prepare Signals and Systems for GATE EEE with the right syllabus, key topics, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Signals and Systems — What to Study, What to Skip, and How to Score",
@@ -4868,7 +4869,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/analog-electronics",
     navLabel: "Page 35",
     seo: {
-      title: "GATE EEE Analog Electronics — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Analog Electronics Preparation | BTechTutor",
       description:
         "Prepare Analog Electronics for GATE EEE with the right topics, syllabus, and exam tips. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Analog Electronics — What to Study, What to Skip, and How to Score",
@@ -5043,7 +5044,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/digital-electronics",
     navLabel: "Page 36",
     seo: {
-      title: "GATE EEE Digital Electronics — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Digital Electronics Study Guide | BTechTutor",
       description:
         "Prepare Digital Electronics for GATE EEE with the right syllabus, key topics, and exam tips. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Digital Electronics — What to Study, What to Skip, and How to Score",
@@ -5225,7 +5226,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "eee/engineering-mathematics",
     navLabel: "Page 37",
     seo: {
-      title: "GATE EEE Engineering Mathematics — Syllabus & Coaching | BTechTutor",
+      title: "GATE EEE Engineering Mathematics Guide | BTechTutor",
       description:
         "Prepare Engineering Mathematics for GATE EEE with the right topics and exam strategy. Score full marks with one-to-one coaching at BTechTutor Kerala.",
       h1: "GATE EEE Engineering Mathematics — What to Study and How to Score Full Marks",
@@ -6039,7 +6040,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "instrumentation/cutoff",
     navLabel: "Page 42",
     seo: {
-      title: "GATE IN Cutoff 2025 — Category Wise Qualifying Marks | BTechTutor",
+      title: "GATE IN Cutoff 2025: Category Wise Marks | BTechTutor",
       description:
         "Check GATE Instrumentation cutoff marks 2025 for qualifying, IIT, NIT admission and PSU. Category-wise cutoff data and score targets at BTechTutor.",
       h1: "GATE IN Cutoff 2025 — Qualifying Marks, IIT/NIT Score, and PSU Target",
@@ -7260,7 +7261,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "instrumentation/measurements",
     navLabel: "Page 49",
     seo: {
-      title: "GATE Instrumentation Measurements — Syllabus & Coaching | BTechTutor",
+      title: "GATE Instrumentation Measurements Notes | BTechTutor",
       description:
         "Prepare Measurements for GATE Instrumentation with the right syllabus, bridge circuits, and exam strategy. One-to-one coaching at BTechTutor Kerala.",
       h1: "GATE Instrumentation Measurements — What to Study, What to Skip, and How to Score",
@@ -7446,7 +7447,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "instrumentation/sensors",
     navLabel: "Page 50",
     seo: {
-      title: "GATE Instrumentation Sensors — Syllabus & Coaching | BTechTutor",
+      title: "GATE Instrumentation Sensors Notes & Syllabus | BTechTutor",
       description:
         "Prepare Sensors for GATE Instrumentation with the right syllabus, LVDT thermocouple topics, and exam strategy. Coaching at BTechTutor Kerala.",
       h1: "GATE Instrumentation Sensors — What to Study, What to Skip, and How to Score",
@@ -7627,7 +7628,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "instrumentation/communications",
     navLabel: "Page 51",
     seo: {
-      title: "GATE Instrumentation Communication — Syllabus & Coaching | BTechTutor",
+      title: "GATE Instrumentation Communication Notes | BTechTutor",
       description:
         "Prepare Communication for GATE Instrumentation with optical fibre, modulation topics, and exam strategy. Coaching at BTechTutor Kerala.",
       h1: "GATE Instrumentation Communication — What to Study, What to Skip, and How to Score",
@@ -7811,7 +7812,7 @@ export const gatePagesContent: GatePageContent[] = [
     slug: "instrumentation/general-aptitude",
     navLabel: "Page 52",
     seo: {
-      title: "GATE Instrumentation General Aptitude — Score Full Marks | BTechTutor",
+      title: "GATE Instrumentation General Aptitude Notes | BTechTutor",
       description:
         "Score full marks in GATE General Aptitude for Instrumentation. Right topics, exam tips, and coaching at BTechTutor Kerala. 15 marks every paper.",
       h1: "GATE Instrumentation General Aptitude — How to Score Full Marks in 15 Minutes",

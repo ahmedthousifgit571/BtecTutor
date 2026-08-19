@@ -14,12 +14,22 @@ export async function generateStaticParams() {
   return GATE_BRANCHES.map((b) => ({ branch: b.slug }));
 }
 
+const customMockTestTitles: Record<string, string> = {
+  ece: "GATE ECE Mock Tests & Practice Papers | BTechTutor",
+  eee: "GATE EEE Mock Tests & Practice Papers | BTechTutor",
+  instrumentation: "GATE Instrumentation Mock Tests | BTechTutor",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const branch = GATE_BRANCHES.find((b) => b.slug === params.branch);
   if (!branch) return {};
 
+  const title =
+    customMockTestTitles[params.branch] ||
+    `GATE ${branch.shortTitle} Mock Tests & Practice Papers | BTechTutor`;
+
   return generateMeta({
-    title: `GATE ${branch.shortTitle} Mock Tests`,
+    title,
     description: `Practice GATE ${branch.shortTitle} mock tests designed to match the actual exam pattern. Timed tests with instant results.`,
     canonicalUrl: `/gate-coaching/${branch.slug}/mock-test`,
   });

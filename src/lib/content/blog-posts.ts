@@ -537,7 +537,7 @@ export const blogPosts: BlogPost[] = [
     author: "BTechTutor Team",
     publishedAt: "2024-08-16",
     seo: {
-      title: "GATE Preparation During BTech — Complete Guide 2026",
+      title: "How to Prepare for GATE During BTech | BTechTutor",
       description:
         "How to prepare for GATE while still in B.Tech. When to start, how to manage college and GATE prep, semester-wise plan and mistakes to avoid.",
       keywords: [

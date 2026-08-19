@@ -1730,12 +1730,12 @@ export const ktuCs2024Content: KtuDepartmentHubContent = {
   ],
 
   seo: {
-    title: "KTU CS 2024 Scheme Notes & Subjects | BTechTutor",
+    title: "KTU CS 2024 Scheme - Syllabus, Notes, All Sems | BTechTutor",
     description:
       "KTU Computer Science Engineering 2024 scheme — notes, syllabus, PYQs and video classes for all 8 semesters. Expert online coaching by BTechTutor Kerala.",
     h1: "KTU Computer Science Engineering — 2024 Scheme (Branch Code: CS)",
     primaryKeyword: "KTU CS 2024 scheme notes",
-    secondaryKeywords: ["KTU Computer Science 2024 scheme", "KTU CS notes Kerala", "KTU CSE syllabus 2024"],
+    secondaryKeywords: ["ktu cs 2024 scheme syllabus", "KTU Computer Science 2024 scheme", "KTU CS notes Kerala", "KTU CSE syllabus 2024"],
     lsiKeywords: [
       "KTU CS subjects semester wise",
       "KTU CSE Group A 2024",

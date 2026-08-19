@@ -18,10 +18,11 @@ import { ctaSectionContent } from "@/lib/content/cta-section";
 import { getBlogPostsByDate } from "@/lib/content/blog-posts";
 
 export const metadata: Metadata = {
-  title: "BTechTutor: One-to-One BTech Tuition & KTU Coaching",
+  title: "BTechTutor: One-to-One Online BTech Tuition & KTU Coaching",
   description:
     "Personal one-to-one BTech tuition online, KTU coaching, and GATE preparation by expert faculty in Kerala. No payment to start. Join 5,000+ students - Btechtutor",
   keywords: [
+    "btech tuition online",
     "GATE coaching Kerala",
     "KTU coaching",
     "GATE preparation",

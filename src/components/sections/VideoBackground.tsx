@@ -1,7 +1,6 @@
 "use client";
 
 import { forwardRef, useState } from "react";
-import Image from "next/image";
 import { Play } from "lucide-react";
 
 interface HeroBackgroundProps {
@@ -19,15 +18,17 @@ export const VideoBackground = forwardRef<HTMLDivElement, HeroBackgroundProps>(
         style={{ zIndex: 0 }}
       >
         {/* Prioritized Static Hero WebP Background (Primary LCP Element) */}
-        <Image
-          src="/images/hero-bg.webp"
-          alt="BTechTutor Engineering Coaching"
-          fill
-          priority
-          sizes="100vw"
-          quality={85}
-          className="object-cover object-center"
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet="/images/hero-bg-mobile.webp" />
+          <source media="(min-width: 769px)" srcSet="/images/hero-bg.webp" />
+          <img
+            src="/images/hero-bg.webp"
+            alt="BTechTutor Engineering Coaching"
+            fetchPriority="high"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+        </picture>
 
         {/* Optional Interactive Video on Demand */}
         {isVideoActive && (

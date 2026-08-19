@@ -16,13 +16,21 @@ export async function generateStaticParams() {
   return GATE_BRANCHES.map((b) => ({ branch: b.slug }));
 }
 
+const customBranchDescriptions: Record<string, string> = {
+  ece: "Prepare for GATE ECE with expert faculty, study materials, PYQs, mock tests, and video lectures. Join comprehensive online coaching at BTechTutor.",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const branch = GATE_BRANCHES.find((b) => b.slug === params.branch);
   if (!branch) return {};
 
+  const description =
+    customBranchDescriptions[params.branch] ||
+    `Prepare for GATE ${branch.shortTitle} with expert faculty, study materials, PYQs, mock tests, and video lectures. Join online coaching at BTechTutor.`;
+
   return generateMeta({
     title: `GATE ${branch.shortTitle} Coaching — ${branch.title}`,
-    description: `Complete GATE ${branch.shortTitle} coaching with expert faculty. Access study materials, notes, PYQs, mock tests, and video lectures for all ${branch.title} subjects.`,
+    description,
     keywords: [`GATE ${branch.shortTitle}`, `GATE ${branch.slug} coaching`, `GATE ${branch.title}`],
     canonicalUrl: `/gate-coaching/${branch.slug}`,
   });

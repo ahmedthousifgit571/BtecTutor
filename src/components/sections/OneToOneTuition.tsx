@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
-import SplitText from "@/components/ui/SplitText";
 import oneToOneImage from "@/assets/oneToOne.webp";
 import {
   oneToOneTuitionContent,
@@ -23,20 +22,9 @@ export function OneToOneTuition({ content = oneToOneTuitionContent }: OneToOneTu
           <Badge variant="violet" className="mb-4 !bg-brand-orange/10 !text-brand-orange">
             {content.badgeLabel}
           </Badge>
-          <SplitText
-            text={content.heading}
-            tag="h2"
-            className="text-fluid-3xl font-bold text-brand-orange"
-            delay={50}
-            duration={1.25}
-            ease="power3.out"
-            splitType="chars"
-            from={{ opacity: 0, y: 40 }}
-            to={{ opacity: 1, y: 0 }}
-            threshold={0.1}
-            rootMargin="-100px"
-            textAlign="center"
-          />
+          <h2 className="text-fluid-3xl font-bold text-brand-orange text-center">
+            {content.heading}
+          </h2>
           <p
             className="mt-3 font-semibold text-white text-balance"
             style={{ fontSize: "clamp(1rem, 2.6vw, 2rem)" }}

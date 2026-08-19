@@ -56,12 +56,12 @@ export interface KtuHubContent {
 
 export const ktuHubContent: KtuHubContent = {
   seo: {
-    title: "KTU BTech Online Tuition — Notes, PYQs & Coaching | BTechTutor",
+    title: "KTU BTech Notes, PYQs & Online Coaching | BTechTutor",
     description:
       "KTU BTech online tuition for 2019 and 2024 scheme. Subject-wise notes, PYQs, video classes, and one-to-one coaching at BTechTutor Kerala.",
     h1: "KTU BTech Online Tuition — Your Complete Study Hub for 2019 and 2024 Scheme",
     primaryKeyword: "KTU BTech online tuition",
-    secondaryKeywords: ["KTU BTech coaching Kerala", "KTU online classes 2024 scheme"],
+    secondaryKeywords: ["ktu notes and syllabus", "KTU BTech coaching Kerala", "KTU online classes 2024 scheme"],
     lsiKeywords: [
       "KTU BTech tuition online Kerala",
       "best online coaching for KTU BTech",

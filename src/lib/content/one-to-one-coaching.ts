@@ -57,7 +57,7 @@ export const oneToOneCoachingPageContent: OneToOneCoachingPageContent = {
   meta: {
     title: "Personal One-to-One BTech Tuition | BTechTutor",
     description:
-      "Get one-to-one BTech coaching online with a dedicated faculty. Flexible timing, personalized teaching, and all subjects covered. Talk to our team to get started.",
+      "Get personalized one-to-one BTech coaching with expert faculty, flexible timings, and dedicated support across all engineering subjects at BTechTutor.",
     canonicalUrl: "/one-to-one-coaching",
   },
   breadcrumbLabel: "One-to-One Coaching",

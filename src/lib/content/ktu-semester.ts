@@ -7181,7 +7181,7 @@ export const ktuEceS5_2024Content: KtuSemesterContent = {
   ],
 
   seo: {
-    title: "KTU ECE S5 Notes 2024 Scheme — Subjects & PYQs",
+    title: "KTU ECE S5 2024 Scheme - Syllabus & Notes | BTechTutor",
     description:
       "KTU ECE Semester 5 (2024 scheme) — Electromagnetics, Analog & Digital Communication, Control Systems, DSP. Free notes, PYQs and online tuition. BTechTutor.",
     h1: "KTU ECE — Semester 5 | 2024 Scheme",
@@ -10930,7 +10930,7 @@ export const ktuCsS3_2024Content: KtuSemesterContent = {
   ],
 
   seo: {
-    title: "KTU CS S3 Notes 2024 Scheme — Subjects & PYQs",
+    title: "KTU CS S3 2024 Scheme - Syllabus, Notes & PYQs | BTechTutor",
     description:
       "KTU CS Semester 3 (2024 scheme) notes, PYQs. Theory of Computation, Data Structures, OOP, Digital Electronics. BTechTutor Kerala.",
     h1: "KTU Computer Science Engineering — Semester 3 | 2024 Scheme",

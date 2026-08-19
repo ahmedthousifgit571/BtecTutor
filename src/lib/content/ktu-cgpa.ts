@@ -60,7 +60,7 @@ export interface KtuCgpaContent {
 
 export const ktuCgpaContent: KtuCgpaContent = {
   seo: {
-    title: "KTU CGPA Calculator — SGPA, CGPA & Percentage | BTechTutor",
+    title: "KTU CGPA Calculator (2019 & 2024 Scheme) | BTechTutor",
     description:
       "Calculate your KTU CGPA, SGPA, and percentage easily. Official formula for 2019 and 2024 schemes with grade table and step-by-step guide at BTechTutor.",
     h1: "KTU CGPA Calculator — Calculate SGPA, CGPA, and Percentage",
