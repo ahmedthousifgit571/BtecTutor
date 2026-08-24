@@ -52,6 +52,7 @@ async function getHomePageData() {
       excerpt: p.excerpt,
       tags: p.tags,
       publishedAt: new Date(p.publishedAt),
+      coverImage: p.coverImage || null,
     }));
 
   return { reviews, blogPosts };

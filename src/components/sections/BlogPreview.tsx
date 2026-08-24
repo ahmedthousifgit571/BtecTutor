@@ -19,6 +19,7 @@ interface BlogPost {
   excerpt: string | null;
   tags: string[];
   publishedAt: Date | null;
+  coverImage?: string | null;
 }
 
 interface BlogPreviewProps {
@@ -72,11 +73,19 @@ export function BlogPreview({ posts }: BlogPreviewProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.slice(0, 3).map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`} className="blog-card group">
-              <article className="h-full rounded-2xl border border-gray-100 bg-white overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                <div className="h-48 bg-gradient-to-br from-brand-orange/10 to-brand-sky/10 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-brand-orange/20">
-                    {post.title.charAt(0)}
-                  </span>
+              <article className="h-full rounded-2xl border border-gray-100 bg-white overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                <div className="h-48 bg-gradient-to-br from-brand-orange/10 to-brand-sky/10 flex items-center justify-center overflow-hidden">
+                  {post.coverImage ? (
+                    <img
+                      src={post.coverImage}
+                      alt={post.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <span className="text-4xl font-bold text-brand-orange/20">
+                      {post.title.charAt(0)}
+                    </span>
+                  )}
                 </div>
 
                 <div className="p-6">

@@ -20,7 +20,8 @@ export type BlogBlock =
   | { type: "table"; headers: string[]; rows: string[][]; note?: string }
   | { type: "callout"; text: string }
   | { type: "faq"; items: BlogFaqItem[] }
-  | { type: "cta"; text: string };
+  | { type: "cta"; text: string }
+  | { type: "image"; src: string; alt: string; caption?: string };
 
 export interface BlogPost {
   slug: string;
@@ -33,6 +34,8 @@ export interface BlogPost {
   author: string;
   /** ISO date string */
   publishedAt: string;
+  coverImage?: string;
+  coverImageAlt?: string;
   seo: {
     title: string;
     description: string;
@@ -42,6 +45,398 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "when-to-start-gate-preparation-ktu",
+    title: "When to Start GATE Preparation - The Honest Timeline for KTU Students",
+    cardTitle: "When to Start GATE Preparation — The Honest Timeline for KTU Students",
+    excerpt:
+      "Planning to crack GATE from KTU? This guide covers the exact semester-wise timeline, subject priorities, and score targets for GATE 2027 and 2028.",
+    tags: ["GATE", "KTU", "Preparation Strategy"],
+    author: "BTechTutor Team",
+    publishedAt: "2024-09-01",
+    coverImage: "/images/blog/gate-preparation-timeline-ktu.jpg",
+    coverImageAlt: "When to Start GATE Preparation for KTU Students",
+    seo: {
+      title: "When to Start GATE Preparation for KTU Students | BTechTutor",
+      description:
+        "Planning to crack GATE from KTU? This guide covers the exact semester-wise timeline, subject priorities, and score targets for GATE 2027 and 2028.",
+      keywords: [
+        "when to start GATE preparation",
+        "GATE preparation for KTU students",
+        "GATE KTU timeline",
+        "GATE semester wise plan",
+        "how to prepare for GATE KTU",
+        "GATE 2027 KTU",
+        "GATE 2028 KTU",
+      ],
+    },
+    body: [
+      {
+        type: "paragraph",
+        text: "When to Start GATE Preparation is a question almost every KTU student who wants to crack GATE asks at some point. Should you start in the second year? The third year? Or wait until you are closer to the exam?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask around, and you will get completely different answers. Some seniors will tell you to start in your second year. Others will say third year is enough. You will also hear that twelve months of serious preparation is all you need. And then there are people who joke that preparation starts from the moment you open your first engineering textbook.",
+      },
+      {
+        type: "paragraph",
+        text: "None of these answers are necessarily wrong. The problem is that they are too general. A KTU student has to deal with semester exams, CIA submissions, lab records, projects, and everything else that comes with engineering college in Kerala.",
+      },
+      {
+        type: "paragraph",
+        text: "So instead of giving you another generic answer, let's look at the practical timeline for a KTU student — when to build your foundation, when to start serious preparation, and how to use each semester properly.",
+      },
+      {
+        type: "image",
+        src: "/images/blog/gate-preparation-timeline-ktu.jpg",
+        alt: "When to Start GATE Preparation for KTU Students - Timeline and Strategy",
+        caption: "A practical semester-by-semester GATE preparation roadmap designed for KTU students.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "First, Understand What GATE Actually Tests",
+      },
+      {
+        type: "paragraph",
+        text: "Before you decide when to start, you need to understand what you are preparing for — because that significantly changes the answer.",
+      },
+      {
+        type: "paragraph",
+        text: "GATE is not a memory test. It does not reward students who have read every textbook cover to cover. It rewards students who have genuinely understood the core concepts of their branch, can apply them to unfamiliar numerical problems, and can do it accurately under time pressure.",
+      },
+      {
+        type: "paragraph",
+        text: "The GATE syllabus for ECE, EEE, and other branches is almost entirely built on subjects from Semesters 3 to 6. Engineering Mathematics runs through the entire paper. Subjects like Signals and Systems, Control Systems, Network Theory, Electromagnetic Theory, and Analog Circuits for ECE — or Circuits and Networks, Electrical Machines, Power Systems, and Signals for EEE — form the bulk of the technical sections.",
+      },
+      {
+        type: "paragraph",
+        text: "This means the strongest GATE preparation is not something separate from your degree — it grows directly out of how seriously you study your core subjects from S3 onwards. The student who genuinely understood Signals and Systems in S4 will cover that GATE chapter in a fraction of the time compared to someone who memorized their way through the exam and forgot it immediately after.",
+      },
+      {
+        type: "callout",
+        text: "That is the foundation. Everything else is built on it.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Short Answer and Why It Is Not That Simple",
+      },
+      {
+        type: "paragraph",
+        text: "If you want the one-line answer: **start structured GATE preparation at the beginning of S6**, which is roughly 14 to 16 months before the February exam.",
+      },
+      {
+        type: "paragraph",
+        text: "But the full picture is more nuanced than that. What you do in S3, S4, and S5 determines how fast you progress in S6 and S7. And what you do in S7 determines whether your preparation actually converts into a competitive score.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is the semester-by-semester breakdown.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "S1 and S2 — Not GATE Preparation. But Not Irrelevant Either.",
+      },
+      {
+        type: "paragraph",
+        text: "Nobody should be studying GATE material in first year. Your energy in S1 and S2 belongs entirely to building academic habits, protecting your CGPA, and making sure Engineering Mathematics does not become a problem that follows you.",
+      },
+      {
+        type: "paragraph",
+        text: "Why does Mathematics matter for GATE? Because it carries 13 marks directly in the GATE paper and it appears implicitly in almost every technical question. Linear algebra, calculus, differential equations, probability, and numerical methods are not separate from GATE; they run through it. A student who genuinely understood KTU's S1 and S2 Mathematics has already covered a significant portion of the GATE Mathematics syllabus without realizing it.",
+      },
+      {
+        type: "paragraph",
+        text: "If you are in first year right now, the most GATE-relevant thing you can do is understand Mathematics properly. Not memorize formulas; understand the concepts. It will pay back multiple times over in S6 and S7 when you are in formal preparation mode.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "S3 and S4 — The Most Underestimated Phase",
+      },
+      {
+        type: "paragraph",
+        text: "This is where GATE preparation quietly begins, whether you intend it to or not.",
+      },
+      {
+        type: "paragraph",
+        text: "The core technical subjects of your branch arrive in S3 and S4. For KTU ECE students — Network Theory, Logic Circuit Design, Electronic Circuits, Solid State Devices. For EEE — Circuits and Networks, DC Machines, Electromagnetic Theory. For CS — Data Structures, Operating Systems, Object Oriented Programming.",
+      },
+      {
+        type: "paragraph",
+        text: "These are the subjects that carry the most weight in the GATE paper. And these are also the subjects in which KTU students are most likely to take shortcuts, memorizing for the end-of-semester exam and forgetting immediately afterward.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is the practical advice for S3 and S4: study these subjects to understand them, not just to pass them. When you cover Network Theory for your KTU exam, go one level deeper than what the question paper demands. Solve some GATE previous year questions from that chapter after your KTU exam is done — not to prepare for GATE formally, but to test whether you actually understood the concept or just memorized a pattern.",
+      },
+      {
+        type: "paragraph",
+        text: "This approach does not require extra time. It requires a slightly different quality of attention to the subjects you are already studying. The student who does this in S3 and S4 arrives at structured GATE preparation in S6 with most of the foundational work already done. The student who coasted through S3 and S4 has to rebuild everything from scratch in S6 — which is why 14 months of preparation still feels insufficient for some students.",
+      },
+      {
+        type: "callout",
+        text: "Check the [KTU 2024 scheme notes and previous year papers](https://www.btechtutor.com/ktu/2024) for your branch — studying these carefully during S3 and S4 semester preparation directly strengthens the conceptual foundation GATE demands.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "S5 — The Decision Point",
+      },
+      {
+        type: "paragraph",
+        text: "By the time S5 begins, most KTU students have a reasonably clear sense of where they stand academically. They know which subjects they genuinely understand and which ones they got through by luck or memorization. S5 is when you should make a conscious decision about GATE.",
+      },
+      {
+        type: "paragraph",
+        text: "Not the decision of whether to appear for GATE — that can wait. But the decision of how seriously you intend to take it. Because the answer to that question changes how you spend S5.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "If GATE is a strong priority for you:",
+      },
+      {
+        type: "paragraph",
+        text: "Start going through the GATE syllabus for your branch during S5. Not to study it formally yet, but to map it against what you have already covered and what still needs work. Identify the subjects where your KTU preparation was weak. Start filling those gaps systematically alongside your S5 studies. Engineering Mathematics deserves specific attention here; dedicate some consistent time to it every week throughout S5.",
+      },
+      {
+        type: "paragraph",
+        text: "By the end of S5, you should have a clear picture of which GATE subjects you are strong in and which ones need the most work in S6.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "If GATE is a possible option but not yet decided:",
+      },
+      {
+        type: "paragraph",
+        text: "At a minimum, do not let S5 be a semester when you disengage academically. The subjects in S5 for ECE: Linear Integrated Circuits, Control Systems, Digital Communication, Microprocessors; for EEE: Power Electronics, Control Systems, Power System Analysis — are significant contributors to the GATE paper. Studying them properly keeps your options open.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "S6 — This Is When Serious Preparation Begins",
+      },
+      {
+        type: "paragraph",
+        text: "S6 is the answer to \"when to start GATE preparation\" for most KTU students. The February exam is roughly 14 to 16 months away. You have enough time to cover the full syllabus twice — once for concept building and once for revision, if you use S6 well.",
+      },
+      {
+        type: "paragraph",
+        text: "Here is what focused GATE preparation in S6 actually looks like:",
+      },
+      {
+        type: "list",
+        items: [
+          "**Syllabus mapping first.** Download the official GATE syllabus for your branch and cross-reference it against what you have studied in S3, S4, and S5. You will find that most subjects are already familiar — you just need to go deeper and fill the gaps. This exercise alone shows you that GATE is not a completely foreign exam; it is a deeper, more applied version of what you have already studied.",
+          "**Subject-wise preparation, not random coverage.** The mistake most students make is jumping between subjects randomly. Pick one subject at a time, cover it completely — concepts, derivations, and at least 10 years of GATE previous year questions from that subject — before moving to the next. For ECE, starting with Network Theory or Signals and Systems is usually effective because these subjects have good conceptual weight and build confidence early. For EEE, Circuits and Networks or Control Systems are strong starting points.",
+          "**Previous year question papers are not optional.** GATE previous year papers are the most important study material you have. Not for revision — for understanding the exam from day one. Every subject you cover should be immediately followed by solving 5 to 10 years of GATE questions from that subject. This tells you the actual depth of understanding required, which is always more precise than any textbook can tell you.",
+          "**Engineering Mathematics runs parallel.** Do not treat Mathematics as a separate chapter you will finish and move on from. It runs through the entire GATE paper. Spend 30 to 45 minutes on Mathematics topics every week throughout S6, covering it systematically alongside your technical subjects.",
+          "**Decide on coaching.** If certain subjects are genuinely unclear to you — subjects where you struggled in KTU exams or where your understanding has significant gaps — structured one-to-one coaching in S6 makes a meaningful difference. [BTechTutor's GATE coaching for ECE, EEE, and Instrumentation](https://www.btechtutor.com/gate) covers all core subjects through live one-to-one sessions built around your specific weak areas and your timeline. This is not about covering subjects you already know — it is about fixing the ones that would otherwise slow down your entire preparation.",
+        ],
+      },
+      {
+        type: "callout",
+        text: "By the end of S6, your goal should be: every subject in your GATE syllabus covered at least once, with previous year questions solved for each.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "S7 — Revision, Mock Tests, and Final Push",
+      },
+      {
+        type: "paragraph",
+        text: "S7 is not the time to start covering new subjects. If significant portions of your GATE syllabus are untouched at the start of S7, your preparation has a timing problem that good intentions alone cannot fix quickly.",
+      },
+      {
+        type: "paragraph",
+        text: "Used correctly, S7 is the most productive phase of GATE preparation.",
+      },
+      {
+        type: "list",
+        items: [
+          "**Revision cycles.** Go back through every subject you covered in S6. The second pass is always faster and deeper than the first. Things that were confusing in S6 will often click clearly in S7 because you now have the context of the full syllabus behind you.",
+          "**Mock tests — full-length, timed, under exam conditions.** Start taking full GATE mock tests from S7 day one. Not to score well immediately, and that is not the point. To identify which subjects you lose marks in, which question types trip you up, and where your time management breaks down. A student who takes 30 mock tests before the exam and analyzes each one carefully will almost always outperform a student who studied twice as many hours but never practiced under exam conditions.",
+          "**Weak subject identification and targeted fixing.** Mock tests will tell you exactly which subjects are costing you marks. Address these specifically and surgically — do not do another full read of a subject you are already strong in at the cost of ignoring a weak one. [Understanding how your GATE score translates to rank and PSU eligibility](https://www.btechtutor.com/gate/score-and-rank) will also help you set a realistic score target in S7 so you know exactly what you are pushing toward.",
+          "**Manage the KTU semester parallel.** S7 brings its own academic demands — project work, internal exams, seminars. Students preparing for GATE in S7 need to be intentional about this. The students who get strong GATE scores while in final year are not students who completely abandoned their KTU studies — they are students who managed their time well enough to satisfy both without letting either completely consume the other.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What About Starting in S7 or Final Year?",
+      },
+      {
+        type: "paragraph",
+        text: "Every year, a significant number of KTU students begin GATE preparation in S7 or even in S8 after placement season ends. Is this viable?",
+      },
+      {
+        type: "paragraph",
+        text: "Honest answer: it depends entirely on your target score.",
+      },
+      {
+        type: "list",
+        items: [
+          "**Targeting above 750 (Top IITs & Maharatna PSUs):** If you are aiming for a score above 750 — the range needed for top IIT MTech programs and high-cutoff PSUs like BARC and ONGC — starting in S7 from zero is extremely difficult. The preparation depth required for these scores needs more time than a single semester provides, especially when S7 also brings KTU academic demands.",
+          "**Targeting 600 to 700 (NITs & Mid-Tier PSUs):** If you are targeting 600 to 700 — competitive enough for NIT MTech admissions and several mid-tier PSUs — starting in S7 with focused, disciplined preparation is possible. It requires giving up most distractions, studying 6 to 8 hours daily, and being very strategic about which subjects to prioritize.",
+          "**Targeting Qualification Only:** If you are targeting qualification only, clearing the threshold mark starting in S7 is manageable for most students who have a decent foundation from their KTU studies.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The other option many KTU students take is a dedicated gap year after graduation, giving 10 to 12 months of full-time GATE preparation. Students who go this route with genuine discipline and no half-measures often achieve their best scores. But it requires financial planning and the psychological ability to stay focused without the structure of college.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How Many Hours of Preparation Does GATE Actually Need?",
+      },
+      {
+        type: "paragraph",
+        text: "There is no universal answer, but here is a realistic picture.",
+      },
+      {
+        type: "paragraph",
+        text: "Most GATE toppers and coaching institute analyses suggest a total of **800 to 1,200 hours of effective preparation time** for a competitive score (700 and above) in a technical branch like ECE or EEE. Effective means focused study, not time spent with a book open while your phone is also in your hand.",
+      },
+      {
+        type: "list",
+        items: [
+          "**If you start in S6 with 14 to 16 months to go:** Studying 2 to 3 hours daily on weekdays and 4 to 5 hours on weekends gives you approximately 900 to 1,100 hours across 14 months — which is well within the range for a competitive score while keeping up with your KTU semester demands.",
+          "**If you start in S7 with 6 to 8 months to go:** Achieving the same 900 hours requires 5 to 6 hours daily with no significant breaks — difficult but not impossible if you are genuinely committed and your KTU academic load is manageable.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "A Simple GATE Preparation Timeline for KTU Students",
+      },
+      {
+        type: "table",
+        headers: ["Semester", "What to Do"],
+        rows: [
+          ["S1 – S2", "Study Mathematics properly. Build exam habits. Protect your CGPA."],
+          [
+            "S3 – S4",
+            "Study core subjects to understand them, not just pass them. Solve a few GATE PYQs after each chapter to test your depth.",
+          ],
+          [
+            "S5",
+            "Map the GATE syllabus. Identify weak subjects. Start consistent Mathematics practice. Make the decision about how seriously you want to pursue GATE.",
+          ],
+          [
+            "S6",
+            "Begin structured preparation. Cover the full syllabus subject by subject with GATE PYQs. Get coaching for genuinely weak subjects.",
+          ],
+          [
+            "S7",
+            "Full revision cycles. Start mock tests from day one of S7. Fix weak subjects surgically. Manage KTU academic demands alongside.",
+          ],
+          ["February", "GATE exam."],
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Subjects That Need the Most Time — Branch-Wise",
+      },
+      {
+        type: "paragraph",
+        text: "Not all GATE subjects are equal. Some carry more marks, some are conceptually harder, and some require more time to build genuine understanding.",
+      },
+      {
+        type: "list",
+        items: [
+          "**For KTU ECE students targeting GATE:** Signals and Systems, Control Systems, Network Theory, Electromagnetic Theory, and Engineering Mathematics together contribute a very large share of the ECE paper marks. These subjects also take the most time to build genuine understanding in. They should get priority in S6 preparation. [BTechTutor covers all of these subjects](https://www.btechtutor.com/gate/ece) through structured GATE coaching.",
+          "**For KTU EEE students targeting GATE:** Circuits and Networks, Electrical Machines, Power Systems, Control Systems, and Engineering Mathematics are the heaviest contributors. Power Electronics and Analog Electronics also carry significant weight. [EEE-specific GATE coaching at BTechTutor](https://www.btechtutor.com/gate/eee) is built around exactly this subject prioritization.",
+          "**For KTU Instrumentation students targeting GATE:** The syllabus overlaps significantly with both ECE and EEE, with the addition of Transducers, Measurement Systems, and Process Control. Start with the overlapping subjects — Mathematics, Signals, and Networks — before moving into Instrumentation-specific topics.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Common Mistakes KTU Students Make in GATE Preparation",
+      },
+      {
+        type: "list",
+        items: [
+          "**Studying for GATE and KTU separately as if they are completely different things.** The overlap is enormous. Every hour you spend genuinely understanding a core subject for your KTU exam is an hour that contributes to GATE. Students who treat them as two entirely separate preparation tracks waste enormous amounts of time.",
+          "**Starting mock tests too late.** Most students start taking GATE mock tests in December or January, one to two months before the February exam. By then, there is almost no time to act on what the mock tests reveal. Start in S7, even if your scores are low initially. The diagnostic value of early mock tests far outweighs the discomfort of poor early scores.",
+          "**Following a topper's schedule without matching their starting point.** GATE toppers who scored 800 and above and shared their preparation journey online often had a strong conceptual foundation built over years. Copying their final-year schedule without that foundation produces different results. Be honest about where you are starting from and build a plan from there.",
+          "**Ignoring Engineering Mathematics because it feels like revision.** Mathematics is the highest-scoring consistent section of the GATE paper for students who prepare it properly. Many students underweight it because it feels familiar from college. Familiar is not the same as prepared for GATE-level application. Treat Mathematics as a technical subject that needs structured preparation, not casual revision.",
+          "**Waiting until after placement season to start GATE.** If you are serious about GATE, treating it as the backup plan you will focus on after campus placements end seldom produces a competitive score. The students who do well in GATE while in final year are those who decided early and committed before placement season began.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "When is the best time to start GATE preparation for a KTU student?",
+            answer:
+              "The beginning of S6 is the practical answer for a competitive score — roughly 14 to 16 months before the February exam. Students who build a strong foundation in KTU core subjects in S3 and S4 arrive at S6 with a significant head start.",
+          },
+          {
+            question: "Can I crack GATE while also preparing for campus placements?",
+            answer:
+              "It is genuinely difficult to do both well simultaneously in S7. Students who attempt both often end up with a mediocre placement outcome and a below-target GATE score. If GATE is your primary goal, commit to it as your priority. If placement is primary, prepare for GATE in your next attempt with a full year of focused preparation.",
+          },
+          {
+            question: "How many hours per day should I study for GATE?",
+            answer:
+              "2 to 3 focused hours daily in S6 alongside your KTU studies is sustainable and sufficient for good progress. In S7, this needs to increase to 4 to 6 hours daily. The quality of focus matters far more than the total hours on paper.",
+          },
+          {
+            question: "Is coaching necessary for GATE?",
+            answer:
+              "Not for every subject. But for subjects where your conceptual foundation has genuine gaps, where you memorized your way through the KTU exam rather than understanding the material, structured coaching with a subject expert makes a measurable difference to both the speed and depth of your preparation. BTechTutor's one-to-one GATE coaching is specifically built for this — targeted at your weak subjects, your timeline, and your score target.",
+          },
+          {
+            question: "What GATE score should I target?",
+            answer:
+              "It depends on your goal. 600 to 650 — NIT MTech options and basic PSU shortlisting. 650 to 750 — competitive NIT options and mid-tier PSU recruitment. 750 and above — IIT MTech admissions and high-cutoff PSU recruitment like BARC, ONGC, and NTPC. Understanding how GATE score maps to rank and college options is worth reading before you set your target.",
+          },
+          {
+            question: "Does a KTU backlog affect GATE eligibility?",
+            answer:
+              "No, active backlogs do not affect GATE eligibility. You can appear for GATE while having pending supply exams. However, uncleared backlogs reduce your CGPA, which can affect M.Tech admission eligibility at institutes that have CGPA cutoffs. Clearing backlogs early protects both your CGPA and your options. BTechTutor's supply exam coaching is specifically for students in this situation.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "The question is not really \"when to start GATE preparation.\" The question is \"when to start preparing well enough that the effort actually converts into the score you need.\"",
+      },
+      {
+        type: "paragraph",
+        text: "The answer to that is S6 — with a foundation built in S3, S4, and S5 that makes S6 productive rather than remedial.",
+      },
+      {
+        type: "paragraph",
+        text: "Students who wait until S7 can still succeed, but they need to be realistic about what is achievable in the time available and how much they are willing to sacrifice to achieve it.",
+      },
+      {
+        type: "paragraph",
+        text: "Students who begin with the right mindset in S3, studying core subjects to genuinely understand them, not just pass them, arrive at structured GATE preparation with the strongest possible foundation and the most time to build on it.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're looking for KTU-focused study resources and structured GATE preparation, [BTechTutor](https://www.btechtutor.com/) is here to support you at every stage of your journey. That is the honest timeline. Now you decide when you start.",
+      },
+      {
+        type: "cta",
+        text: "Looking for KTU-focused study resources and structured GATE preparation? BTechTutor offers 1-to-1 live online coaching for ECE, EEE, and Instrumentation.",
+      },
+    ],
+  },
   {
     slug: "ktu-cgpa-to-percentage",
     title: "KTU CGPA to Percentage Conversion — Official Formula Explained",
@@ -802,6 +1197,10 @@ export function blogPlainText(post: BlogPost): string {
         break;
       case "faq":
         parts.push(block.items.map((i) => `${i.question} ${i.answer}`).join(" "));
+        break;
+      case "image":
+        if (block.caption) parts.push(block.caption);
+        if (block.alt) parts.push(block.alt);
         break;
     }
   }

@@ -34,6 +34,10 @@ export const blogPageContent: BlogPageContent = {
     "We write about KTU exam prep, supply exam strategy, CGPA improvement, GATE preparation, and career options after BTech in Kerala. Nothing here is recycled from other websites. Every article is written from real coaching experience by people who have helped thousands of students through these exact situations.",
   ],
   featuredArticles: [
+    {
+      title: "When to Start GATE Preparation — The Honest Timeline for KTU Students",
+      href: "/blog/when-to-start-gate-preparation-ktu",
+    },
     { title: "How to Clear Your KTU Supply Exam", href: "/blog/ktu-supply-exam-tips" },
     {
       title: "KTU CGPA to Percentage — What Does Your CGPA Mean?",

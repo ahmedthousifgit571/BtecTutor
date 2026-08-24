@@ -1,19 +1,85 @@
 import { Fragment } from "react";
+import Link from "next/link";
 import { buildWhatsAppLink } from "@/lib/utils";
 import { BLOG_CONTACT, type BlogBlock } from "@/lib/content/blog-posts";
 
-// Renders inline **bold** markers within a text string.
-function renderInline(text: string): React.ReactNode[] {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={i} className="font-semibold text-gray-900">
-          {part.slice(2, -2)}
+function normalizeUrl(url: string): { href: string; isInternal: boolean } {
+  let href = url.trim();
+  if (href.startsWith("https://www.btechtutor.com")) {
+    href = href.replace("https://www.btechtutor.com", "") || "/";
+  } else if (href.startsWith("https://btechtutor.com")) {
+    href = href.replace("https://btechtutor.com", "") || "/";
+  }
+  const isInternal = href.startsWith("/");
+  return { href, isInternal };
+}
+
+// Renders inline **bold** and [link text](url) markdown markers within a text string.
+export function renderInline(text: string): React.ReactNode[] {
+  // Regex to match either [text](url) or **bold**
+  const regex = /\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*/g;
+  const nodes: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(
+        <Fragment key={`text-${lastIndex}`}>
+          {text.substring(lastIndex, match.index)}
+        </Fragment>
+      );
+    }
+
+    if (match[1] !== undefined && match[2] !== undefined) {
+      const linkText = match[1];
+      const rawUrl = match[2];
+      const { href, isInternal } = normalizeUrl(rawUrl);
+
+      if (isInternal) {
+        nodes.push(
+          <Link
+            key={`link-${match.index}`}
+            href={href}
+            className="font-medium text-brand-orange hover:text-brand-orange-dark underline decoration-brand-orange/40 hover:decoration-brand-orange underline-offset-2 transition-colors"
+          >
+            {renderInline(linkText)}
+          </Link>
+        );
+      } else {
+        nodes.push(
+          <a
+            key={`link-${match.index}`}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-orange hover:text-brand-orange-dark underline decoration-brand-orange/40 hover:decoration-brand-orange underline-offset-2 transition-colors"
+          >
+            {renderInline(linkText)}
+          </a>
+        );
+      }
+    } else if (match[3] !== undefined) {
+      const boldText = match[3];
+      nodes.push(
+        <strong key={`bold-${match.index}`} className="font-semibold text-gray-900">
+          {renderInline(boldText)}
         </strong>
       );
     }
-    return <Fragment key={i}>{part}</Fragment>;
-  });
+
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    nodes.push(
+      <Fragment key={`text-${lastIndex}`}>
+        {text.substring(lastIndex)}
+      </Fragment>
+    );
+  }
+
+  return nodes;
 }
 
 function CtaBlock({ text }: { text: string }) {
@@ -74,12 +140,14 @@ export function BlogArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             return (
               <ListTag
                 key={i}
-                className={`mb-4 space-y-1.5 pl-6 text-gray-600 ${
+                className={`mb-4 space-y-2 pl-6 text-gray-600 ${
                   block.ordered ? "list-decimal" : "list-disc"
                 }`}
               >
                 {block.items.map((item, j) => (
-                  <li key={j}>{renderInline(item)}</li>
+                  <li key={j} className="leading-relaxed">
+                    {renderInline(item)}
+                  </li>
                 ))}
               </ListTag>
             );
@@ -130,10 +198,28 @@ export function BlogArticleBody({ blocks }: { blocks: BlogBlock[] }) {
             return (
               <div
                 key={i}
-                className="not-prose my-6 rounded-xl border-l-4 border-brand-orange bg-brand-orange/5 px-5 py-4 text-gray-700"
+                className="not-prose my-6 rounded-xl border-l-4 border-brand-orange bg-brand-orange/5 px-5 py-4 text-gray-700 font-medium leading-relaxed"
               >
                 {renderInline(block.text)}
               </div>
+            );
+          case "image":
+            return (
+              <figure key={i} className="not-prose my-8">
+                <div className="overflow-hidden rounded-2xl border border-gray-100 bg-charcoal shadow-md">
+                  <img
+                    src={block.src}
+                    alt={block.alt}
+                    className="w-full h-auto object-cover max-h-[520px]"
+                    loading="lazy"
+                  />
+                </div>
+                {block.caption && (
+                  <figcaption className="mt-2.5 text-center text-xs sm:text-sm text-gray-500 font-medium">
+                    {renderInline(block.caption)}
+                  </figcaption>
+                )}
+              </figure>
             );
           case "faq":
             return (
@@ -145,7 +231,7 @@ export function BlogArticleBody({ blocks }: { blocks: BlogBlock[] }) {
                   {block.items.map((item, j) => (
                     <div key={j} className="rounded-xl border border-gray-100 bg-white p-5">
                       <h3 className="mb-2 font-semibold text-gray-900">{item.question}</h3>
-                      <p className="leading-relaxed text-gray-600">{item.answer}</p>
+                      <p className="leading-relaxed text-gray-600">{renderInline(item.answer)}</p>
                     </div>
                   ))}
                 </div>

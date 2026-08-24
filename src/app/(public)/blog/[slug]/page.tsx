@@ -32,6 +32,7 @@ export function generateMetadata({ params }: Props): Metadata {
     title: post.seo.title,
     description: post.seo.description,
     keywords: post.seo.keywords.length > 0 ? post.seo.keywords : post.tags,
+    ogImage: post.coverImage,
     canonicalUrl: `/blog/${post.slug}`,
   });
 }
