@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
       "Planning to crack GATE from KTU? This guide covers the exact semester-wise timeline, subject priorities, and score targets for GATE 2027 and 2028.",
     tags: ["GATE", "KTU", "Preparation Strategy"],
     author: "BTechTutor Team",
-    publishedAt: "2024-09-01",
+    publishedAt: "2026-08-24",
     coverImage: "/images/blog/gate-preparation-timeline-ktu.jpg",
     coverImageAlt: "When to Start GATE Preparation for KTU Students",
     seo: {
