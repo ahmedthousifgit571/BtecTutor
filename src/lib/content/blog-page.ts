@@ -35,6 +35,14 @@ export const blogPageContent: BlogPageContent = {
   ],
   featuredArticles: [
     {
+      title: "GATE 2027 Notification: Registration Date & New Changes",
+      href: "/blog/gate-2027-notification",
+    },
+    {
+      title: "GATE Coaching in Kerala: Online vs Offline | BTechTutor",
+      href: "/blog/gate-coaching-in-kerala-online-vs-offline",
+    },
+    {
       title: "When to Start GATE Preparation — The Honest Timeline for KTU Students",
       href: "/blog/when-to-start-gate-preparation-ktu",
     },
