@@ -35,6 +35,10 @@ export const blogPageContent: BlogPageContent = {
   ],
   featuredArticles: [
     {
+      title: "GATE 2027 vs Placements: Guide for KTU Students",
+      href: "/blog/gate-2027-vs-placements-ktu",
+    },
+    {
       title: "GATE 2027 Notification: Registration Date & New Changes",
       href: "/blog/gate-2027-notification",
     },
