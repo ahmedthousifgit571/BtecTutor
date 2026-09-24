@@ -46,6 +46,253 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "gate-score-validity",
+    title: "GATE Score Validity: How Long Is Your GATE Score Actually Valid?",
+    cardTitle: "GATE Score Validity: How Long Is It Valid?",
+    excerpt:
+      "GATE score validity explained - learn how long your score is valid for M.Tech, PhD admissions, and PSU recruitment, including multiple valid scores.",
+    tags: ["GATE", "GATE Score", "M.Tech", "PSU Recruitment", "Career"],
+    author: "BTechTutor Team",
+    publishedAt: "2026-09-24",
+    coverImage: "/images/blog/gatescore.png",
+    coverImageAlt:
+      "GATE score validity infographic showing a scorecard and calendar marked valid for 3 years, with M.Tech, PhD and PSU recruitment options.",
+    seo: {
+      title: "GATE Score Validity: How Long Is It Valid? | BTechTutor",
+      description:
+        "GATE score validity explained - learn how long your score is valid for M.Tech, PhD admissions, and PSU recruitment, including multiple valid scores.",
+      keywords: [
+        "GATE score validity",
+        "how long is GATE score valid",
+        "GATE score validity for M.Tech",
+        "GATE score validity for PSU",
+        "GATE score validity for PhD",
+        "multiple GATE scores",
+        "GATE scorecard validity",
+      ],
+    },
+    body: [
+      {
+        type: "paragraph",
+        text: "GATE Score Validity comes down to one core rule: your GATE scorecard is valid for three years from the date the results are announced. However, scorecard validity and application eligibility are not the same thing. A particular institute, programme, or PSU may have additional requirements about which GATE scores it accepts.",
+      },
+      {
+        type: "image",
+        src: "/images/blog/gatescore.png",
+        alt: "GATE score validity infographic showing a scorecard and calendar marked valid for 3 years, with M.Tech, PhD and PSU recruitment options.",
+        caption:
+          "GATE score validity infographic showing a scorecard and calendar marked valid for 3 years, with M.Tech, PhD and PSU recruitment options.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "GATE Scorecard Validity vs. Whether an Organisation Accepts It",
+      },
+      {
+        type: "paragraph",
+        text: "These are two different things, and mixing them up is where most of the confusion starts.",
+      },
+      {
+        type: "table",
+        headers: ["Use of GATE score", "General position"],
+        rows: [
+          [
+            "M.Tech admissions",
+            "GATE scorecard is valid for 3 years from result declaration, subject to institute/programme requirements",
+          ],
+          [
+            "PhD admissions",
+            "GATE scorecard is valid for 3 years, subject to the specific institute/programme's eligibility requirements",
+          ],
+          [
+            "PSU recruitment",
+            "Depends on the PSU's recruitment notification for that year",
+          ],
+          [
+            "Multiple GATE attempts",
+            "Each scorecard has its own independent validity period",
+          ],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The three-year scorecard validity is part of the official GATE rules. Whether a specific M.Tech programme, PhD supervisor, or PSU actually accepts a score of a given age is a separate decision made by that institute or organisation.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Does Validity Start From the Exam Date or the Result Date?",
+      },
+      {
+        type: "paragraph",
+        text: "Worth settling upfront, since it trips people up: GATE score validity is counted from the date the result is announced, not the date you sat the exam.",
+      },
+      {
+        type: "paragraph",
+        text: "For example, [GATE 2027's result is currently scheduled for March 19, 2027](https://www.btechtutor.com/blog/gate-2027-notification). If that date remains unchanged, the three-year validity period would run from the result date through March 19, 2030.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "GATE Score Validity for M.Tech Admissions",
+      },
+      {
+        type: "paragraph",
+        text: "For M.Tech admissions, a GATE scorecard remains valid for three years from the date of result declaration. That holds whether you're applying to an IIT, an NIT, an IIIT, or any other participating institute - GATE score validity for IIT and NIT admissions follows the same three-year rule, though individual institutes and programmes may have their own eligibility requirements for accepting a GATE score.",
+      },
+      {
+        type: "paragraph",
+        text: "A couple of things worth knowing on top of that:",
+      },
+      {
+        type: "list",
+        items: [
+          "Cut-offs move every year. A score that got you shortlisted at one NIT this year might fall short at a more competitive IIT the next, since cut-offs depend on that year's applicant pool, not a fixed number.",
+          "A valid scorecard gets you eligibility to apply, not a seat. Depending on the institute, you may need to go through processes such as COAP for IIT/IISc offers, or CCMT for participating NITs, IIITs, and other CFTIs — and these run on their own yearly cycle, separate from your scorecard's validity.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "GATE Score Validity for PhD Admissions",
+      },
+      {
+        type: "paragraph",
+        text: "The same three-year rule applies here: a GATE scorecard is valid for three years from result declaration. What changes is the eligibility layer on top — PhD admission depends on the specific institute or programme's own requirements, and a valid GATE score is generally considered as part of that, alongside other criteria the programme may set.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "Can I use a 2-year-old GATE score?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes, if the scorecard is still within its three-year validity window and the institute or organisation you're applying to accepts a score of that age. This is generally straightforward for M.Tech and PhD admissions, since the three-year rule is standard. PSU recruitment is where this gets less predictable, because the employer may specify a particular GATE examination year in its own notification, rather than accepting anything within the general three-year window.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "GATE Score Validity for PSU Recruitment",
+      },
+      {
+        type: "paragraph",
+        text: "This is where things stop being a single clean rule, and it's genuinely the source of most of the confusion. PSU recruitment is essentially GATE score validity for government jobs - PSUs are public sector, government-owned organisations - so this is the section that matters most if that's your goal.",
+      },
+      {
+        type: "paragraph",
+        text: "PSUs determine which GATE examination year (or years) they'll accept in their own recruitment notification. A notification might specifically state it's accepting \"GATE 2027 scores\" rather than any score that happens to still be valid under the general three-year rule. So the deciding factor isn't a universal PSU policy — it's whatever that specific organisation states in that specific hiring cycle.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're hoping to use an older GATE score for a PSU opening, don't assume the M.Tech-style three-year rule carries over automatically. The only reliable way to know is to check that PSU's actual recruitment notification for the year(s) of GATE score it's accepting.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What If You Have More Than One Valid GATE Score?",
+      },
+      {
+        type: "paragraph",
+        text: "If you've taken GATE more than once and both scorecards are still within their three-year windows, you're not locked into using whichever one is more recent.",
+      },
+      {
+        type: "paragraph",
+        text: "If an institute or organisation accepts multiple valid GATE scores, you can generally use whichever valid score meets its stated requirements. It's still worth checking the specific institute's admission guidelines before submitting an older score, since GATE scorecard validity and an institute's own admission eligibility aren't always exactly the same thing.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What Happens If I Retake GATE?",
+      },
+      {
+        type: "paragraph",
+        text: "Each GATE scorecard has its own three-year validity period from its relevant result date. Taking GATE again does not itself cancel an earlier scorecard.",
+      },
+      {
+        type: "paragraph",
+        text: "Reattempting isn't free, though. There's the exam fee, the preparation time, and the opportunity cost of another study cycle - real trade-offs worth weighing before deciding to sit for GATE again just to chase a marginally better score.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Can I Use My GATE Score After Three Years?",
+      },
+      {
+        type: "paragraph",
+        text: "No, the GATE scorecard itself is not valid once its three-year period has passed. After that, it can no longer be used for admissions or recruitment, regardless of which institute or organisation you're applying to. If your goals depend on a score older than three years, the only option is reattempting the exam.",
+      },
+      {
+        type: "paragraph",
+        text: "It's also worth knowing that scorecard download has its own separate deadline: after results are declared, the scorecard is free to download for a limited period, then available for ₹500 per paper until December 31 of that result year, after which it's no longer issued at all. That's a different cutoff from the three-year usage validity, so don't confuse the two.",
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "How long is a GATE score valid?",
+            answer:
+              "Three years, counted from the date your result is declared — not from when you sat the exam.",
+          },
+          {
+            question:
+              "Does GATE score validity start from the exam date or the result date?",
+            answer:
+              "From the result date. If a GATE result is announced on a given date, the three-year validity period is counted from that announcement date, not from the earlier exam dates.",
+          },
+          {
+            question: "Is GATE score validity the same for every PSU?",
+            answer:
+              "No. GATE scorecards carry a general three-year validity period, but PSU recruitment works differently — a PSU may specify a particular GATE examination year, or a particular set of eligible GATE scores, in its own recruitment notification. Always check that specific notification before relying on an older score.",
+          },
+          {
+            question: "If I retake GATE, does my old score become invalid?",
+            answer:
+              "No. Each attempt carries its own independent three-year validity period from its own result date. Retaking the exam doesn't cancel or shorten an earlier scorecard's validity.",
+          },
+          {
+            question:
+              "Can I choose which GATE score to submit if I have more than one valid score?",
+            answer:
+              "Generally, yes — if the institute or organisation accepts multiple valid scores, you can use whichever one best fits its stated requirements. It's still worth confirming this against that institute's own admission guidelines rather than assuming.",
+          },
+          {
+            question:
+              "Can I use a previous year's GATE score instead of my most recent attempt?",
+            answer:
+              "Yes, as long as that scorecard is still within its three-year validity window and is accepted by the institute or organisation you're applying to. For PSU recruitment specifically, check whether the notification restricts eligibility to a particular GATE year.",
+          },
+          {
+            question: "Can I use my GATE score after three years?",
+            answer:
+              "No. The GATE scorecard is not valid after its three-year period ends, and it can't be used for any further admissions or recruitment after that.",
+          },
+          {
+            question: "Is there a limit on how many times I can attempt GATE?",
+            answer:
+              "There is no age limit or restriction on the number of GATE attempts.",
+          },
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Related GATE 2027 Resources",
+      },
+      {
+        type: "paragraph",
+        text: "If you're still deciding whether GATE 2027 is worth preparing for in the first place, our breakdown of [GATE 2027 vs. placements for KTU students](https://www.btechtutor.com/blog/gate-2027-vs-placements-ktu) walks through how to think about that decision.",
+      },
+      {
+        type: "paragraph",
+        text: "And if you've already decided to prepare and want structured, branch-specific coaching, our [GATE 2027 coaching programme](https://www.btechtutor.com/gate/gate-2027) covers [ECE](https://www.btechtutor.com/gate/ece), [EEE](https://www.btechtutor.com/gate/eee), and [Instrumentation](https://www.btechtutor.com/gate/instrumentation) with subject-wise faculty and regular mock tests.",
+      },
+      {
+        type: "cta",
+        text: "Have questions about GATE score validity, M.Tech admissions, or PSU recruitment? Talk to our mentors at BTechTutor for personalised guidance tailored to your engineering branch and career goals.",
+      },
+    ],
+  },
+  {
     slug: "gate-2027-vs-placements-ktu",
     title: "GATE 2027 vs Placements After BTech: A Career Guide for KTU Students",
     cardTitle: "GATE 2027 vs Placements: Guide for KTU Students",

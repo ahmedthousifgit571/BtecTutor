@@ -35,6 +35,10 @@ export const blogPageContent: BlogPageContent = {
   ],
   featuredArticles: [
     {
+      title: "GATE Score Validity: How Long Is It Valid?",
+      href: "/blog/gate-score-validity",
+    },
+    {
       title: "GATE 2027 vs Placements: Guide for KTU Students",
       href: "/blog/gate-2027-vs-placements-ktu",
     },
