@@ -35,6 +35,10 @@ export const blogPageContent: BlogPageContent = {
   ],
   featuredArticles: [
     {
+      title: "KTU Minor Syllabus 2024 Scheme: Credits, Rules and How to Choose?",
+      href: "/blog/ktu-minor-syllabus-2024-scheme",
+    },
+    {
       title: "GATE Score Validity: How Long Is It Valid?",
       href: "/blog/gate-score-validity",
     },

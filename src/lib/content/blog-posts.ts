@@ -46,6 +46,358 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "ktu-minor-syllabus-2024-scheme",
+    title: "KTU Minor Syllabus 2024 Scheme: Credits, Rules and How to Choose?",
+    cardTitle: "KTU Minor Syllabus 2024 Scheme: Credits, Rules and How to Choose?",
+    excerpt:
+      "Looking for the KTU Minor syllabus 2024 scheme? This guide covers what the Minor is, required credits (15 across S3-S6), MOOC guidelines, exam rules, and syllabus links.",
+    tags: ["KTU", "KTU Minor", "2024 Scheme", "KTU Syllabus", "BTech Regulations"],
+    author: "BTechTutor Team",
+    publishedAt: "2026-10-12",
+    coverImage: "/images/blog/minor.png",
+    coverImageAlt:
+      "KTU Minor Syllabus 2024 Scheme infographic showing credit requirements, semester distribution, and regulations.",
+    seo: {
+      title: "KTU Minor Syllabus 2024 Scheme: Credits, Rules and How to Choose? | BTechTutor",
+      description:
+        "Looking for the KTU Minor syllabus 2024 scheme? Complete guide covering credits (15 across S3-S6), MOOC guidelines, exam rules, Minor vs Honours, and official syllabus links.",
+      keywords: [
+        "KTU Minor syllabus 2024 scheme",
+        "KTU Minor syllabus 2024",
+        "KTU Minor credits",
+        "KTU BTech Minor regulations",
+        "KTU Minor MOOCs",
+        "KTU Minor vs Honours",
+        "KTU BTech 2024 scheme minor courses",
+      ],
+    },
+    body: [
+      {
+        type: "paragraph",
+        text: "Looking for the KTU Minor syllabus 2024 scheme? If you joined a KTU-affiliated engineering college in 2024-25 or later, you can add a Minor: a second area of expertise alongside your main branch, shown on your degree. This guide covers what the Minor is, how many credits it needs, when to register, how MOOCs fit in, the exam rules that catch students out, and where to find the syllabus.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Quick Answer",
+      },
+      {
+        type: "callout",
+        text: "A KTU Minor needs **15 extra credits** across S3 to S6 (4 + 4 + 4 + 3). You register at the start of S3, choose only one Minor, and can't pick one from your own branch. At least two theory courses are required, and the rest can come from approved MOOCs. Minor credits don't count towards your SGPA or CGPA, and there are no supplementary exams for Minor theory courses.",
+      },
+      {
+        type: "image",
+        src: "/images/blog/minor.png",
+        alt: "KTU Minor Syllabus 2024 Scheme credits and regulations overview",
+        caption:
+          "Overview of KTU Minor 2024 scheme credits, semester structure, and academic rules.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "What is a Minor in the KTU 2024 scheme?",
+      },
+      {
+        type: "paragraph",
+        text: "A Minor is an optional set of extra courses from a discipline outside your main branch. A Mechanical Engineering student might choose a computing-related Minor, for example, while a Civil Engineering student might pick something from another engineering area. What you can choose depends on what your college has approved.",
+      },
+      {
+        type: "paragraph",
+        text: "Under the APJ Abdul Kalam Technological University (KTU) B.Tech Academic Regulations 2024, you need 15 additional credits to earn a B.Tech with Minor. You can skip it entirely and still complete your regular B.Tech.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Does the 2024 scheme apply to you?",
+      },
+      {
+        type: "paragraph",
+        text: "The 2024 regulations came into force from the 2024-25 academic year for KTU-affiliated colleges.",
+      },
+      {
+        type: "list",
+        items: [
+          "**Admitted in 2024-25 or later:** the 2024 scheme most likely applies to you. Confirm with your college.",
+          "**Admitted earlier:** you are probably on the 2019 scheme. See our [KTU 2019 scheme syllabus page](https://www.btechtutor.com/ktu/syllabus-2019) instead.",
+          "**Autonomous college:** your college has its own regulations and curriculum, so check with them.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How many credits do you need?",
+      },
+      {
+        type: "paragraph",
+        text: "The 2024 regulations set these totals:",
+      },
+      {
+        type: "table",
+        headers: ["Degree", "Total credits"],
+        rows: [
+          ["B.Tech", "170"],
+          ["B.Tech with Minor", "185"],
+          ["B.Tech with Honours", "185"],
+          ["B.Tech with Honours and Minor", "200"],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The Minor's 15 credits are on top of your regular B.Tech credits.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: 'Why do you also see "160 credits"?',
+      },
+      {
+        type: "paragraph",
+        text: "Your regular B.Tech is 170 credits: 167 academic credits plus 3 activity credits. Under the credit relaxation policy (R 3.3), a student who has earned at least 160 credits (157 academic plus 3 activity) after eight semesters can still graduate. That allows a shortfall of up to 10 credits, but not in the seminar, mini project or project/internship. Minor credits can't be used to reach that 160.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Semester-wise credit distribution",
+      },
+      {
+        type: "paragraph",
+        text: "Regulation R 15.8 spreads the Minor over four semesters:",
+      },
+      {
+        type: "table",
+        headers: ["Semester", "Minor credits"],
+        rows: [
+          ["S3", "4"],
+          ["S4", "4"],
+          ["S5", "4"],
+          ["S6", "3"],
+          ["Total", "15"],
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Do Minor credits affect your regular degree or CGPA?",
+      },
+      {
+        type: "paragraph",
+        text: "No, Minor credits can't be transferred to your regular B.Tech, and regular credits can't be moved to the Minor. They are also left out of your SGPA and CGPA. For the exact wording, see the [KTU B.Tech Academic Regulations 2024](https://ktu.edu.in/academics/scheme).",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Theory courses and MOOCs",
+      },
+      {
+        type: "paragraph",
+        text: "The 15 credits don't all have to come from classroom courses. Under Regulation R 15.9:",
+      },
+      {
+        type: "list",
+        items: [
+          "**7 to 8 credits** must come from at least two theory courses in the Minor curriculum.",
+          "**The remaining credits** can come from two approved MOOCs, more theory courses from the Minor curriculum, or a mix of both.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 3,
+        text: "What counts as a valid MOOC?",
+      },
+      {
+        type: "paragraph",
+        text: "Regulation R 17 sets the conditions:",
+      },
+      {
+        type: "list",
+        items: [
+          "It must be run by AICTE, NPTEL, SWAYAM, NITTTR or another agency approved by the university's Academic Council.",
+          "It must last at least eight weeks.",
+          "It must be taught online and include a proctored or offline end-semester exam.",
+          "At least 70% of its content must match the Minor area.",
+          "It can't overlap more than 30% with your Major, Honours or other courses.",
+          "Your college must get it approved at least one month before the semester starts. Approval after you've enrolled is not considered.",
+          "You must submit the provider's certificate, and finish the MOOC, within your normal four-year programme. Anything completed after that doesn't count.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Not every online course qualifies, so check the approved list with your college before you enrol.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Eligibility and registration rules",
+      },
+      {
+        type: "list",
+        items: [
+          "**When to register:** at the start of the third semester (S3).",
+          "**How many Minors:** only one. Once you register, you can't change it.",
+          "**Your own branch:** you generally can't take a Minor offered by your parent branch. The same applies where more than 30% of the syllabus overlaps with your major. Exceptions exist under Regulations R 15.4 and R 15.5, which cover course names and syllabus differences.",
+          "**Minimum enrolment:** a Minor is only offered if at least 15 students sign up.",
+          "**Eligible branches:** the Board of Studies publishes which branches can choose which Minor.",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Exam rules students often miss",
+      },
+      {
+        type: "paragraph",
+        text: "These come from Regulations R 15.12 to R 15.14 and are easy to overlook:",
+      },
+      {
+        type: "list",
+        items: [
+          "Registration is compulsory for the Minor theory courses in S3 and S4. If you don't plan to use MOOCs, you must also register for the theory courses in the higher semesters.",
+          "There are no supplementary exams for Minor theory courses. Revaluation is allowed.",
+          "If you fail a theory course, you can register for the alternate MOOC listed in the Minor curriculum. You must still pass at least two theory courses to get the Minor.",
+          "Skipping the end-semester exam gives an F, whatever the reason. Falling short on attendance also gives an F rather than an FE.",
+          "No grace marks are given for Minor courses.",
+          "If you don't finish all 15 credits within four years, you won't get the Minor. The courses you completed still appear on your grade card, but they don't count towards SGPA or CGPA.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: 'If you do complete it, your degree reads "Bachelor of Technology in [Major] with Minor in [Minor]", and your grade card lists the Minor courses.',
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Where to find the KTU Minor syllabus?",
+      },
+      {
+        type: "paragraph",
+        text: "The Board of Studies and the Academic Council approve the Minor curriculum and syllabus, and each college offers only some options. Use these in order:",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "**The regulations.** The [KTU B.Tech Academic Regulations 2024](https://ktu.edu.in/academics/branchcurriculum/hardcoded-btech) explain eligibility, credits and completion rules. Check ktu.edu.in for the latest version.",
+          "**Our syllabus pages.** Browse the full [KTU 2024 scheme syllabus](https://www.btechtutor.com/ktu/syllabus-2024), or go straight to a branch page such as the [KTU CS 2024 scheme syllabus](https://www.btechtutor.com/ktu/2024-scheme/cs).",
+          "**Your college's department pages and notices.** These tell you which Minors are offered, registration dates and approved MOOCs. For an example of how a department publishes this, see the [College of Engineering Trivandrum Mechanical Engineering downloads page](https://www.cet.ac.in/category/downloads/).",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "When you open a syllabus, check that it matches your scheme and academic year, and look for:",
+      },
+      {
+        type: "list",
+        items: [
+          "The Minor's name, course titles and course codes",
+          "The semester-wise credits",
+          "The compulsory theory courses",
+          "Approved MOOC options and certificate requirements",
+          "Eligibility limits and deadlines",
+        ],
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "Minor vs Honours",
+      },
+      {
+        type: "paragraph",
+        text: "Both add 15 credits, but they have different goals.",
+      },
+      {
+        type: "table",
+        headers: ["Feature", "Minor", "Honours"],
+        rows: [
+          ["Focus", "Breadth: a different discipline", "Depth: your own major"],
+          ["Register", "Start of S3", "With S4 registration"],
+          ["Credit split", "4 / 4 / 4 / 3 over S3 to S6", "4 / 4 / 4 / 3 over S4 to S7"],
+          ["CGPA condition", "None stated", "8.0 or above at the end of S8"],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: 'You can do both. The "B.Tech with Honours and Minor" route totals 200 credits: 170 regular, 15 for Honours and 15 for Minor. That\'s a heavy workload, so think about it carefully.',
+      },
+      {
+        type: "image",
+        src: "/images/blog/minorHours.png",
+        alt: "KTU Minor vs Honours comparison infographic",
+        caption: "Comparison between Minor and Honours tracks under the KTU 2024 scheme regulations.",
+      },
+      {
+        type: "heading",
+        level: 2,
+        text: "How to choose the right Minor?",
+      },
+      {
+        type: "list",
+        ordered: true,
+        items: [
+          "**Start with your goal.** Higher studies, placements, or a specific field all point to different choices.",
+          "**Read the actual courses,** not just the specialization name.",
+          "**Check what your college offers.** Eligibility, minimum enrolment, and registration all vary.",
+          "**Understand the MOOC rules** before you sign up for anything, especially the approval deadline.",
+          "**Plan your workload.** Four semesters of extra courses add up alongside your main subjects, and there are no supplementary exams if something goes wrong.",
+          "**Keep your main degree first.** The Minor should add to your degree, not put your regular results at risk.",
+        ],
+      },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "Is a Minor compulsory?",
+            answer: "No. It's optional.",
+          },
+          {
+            question: "How many credits does a Minor need?",
+            answer: "15 additional credits.",
+          },
+          {
+            question: "Which semesters does the Minor cover?",
+            answer: "S3 (4 credits), S4 (4), S5 (4) and S6 (3).",
+          },
+          {
+            question: "Can I earn Minor credits through MOOCs?",
+            answer:
+              "Yes, but only through approved courses, and you still need at least two theory courses.",
+          },
+          {
+            question: "Are there supplementary exams for Minor courses?",
+            answer:
+              "No. If you fail a theory course, you can take the alternate MOOC in the Minor curriculum, but you must still pass at least two theory courses.",
+          },
+          {
+            question: "Can I take more than one Minor?",
+            answer:
+              "No. Only one Minor is allowed, and it can't be changed after registration.",
+          },
+          {
+            question: "Can I take a Minor in my own branch?",
+            answer:
+              "Generally no, apart from specific exceptions in the regulations.",
+          },
+          {
+            question: "Can I do Honours and Minor together?",
+            answer: "Yes, through the 200-credit route.",
+          },
+          {
+            question: "Will Minor credits improve my CGPA?",
+            answer: "No. They aren't included in SGPA or CGPA.",
+          },
+          {
+            question: "Where do I find the official Minor syllabus?",
+            answer:
+              "Start with your college's approved Minor curriculum and notices, then check our [KTU 2024 scheme syllabus](https://www.btechtutor.com/ktu/syllabus-2024) page and the regulations above.",
+          },
+        ],
+      },
+      {
+        type: "cta",
+        text: "Planning your KTU semester or need guidance choosing the right Minor courses? Connect with BTechTutor's expert tutors for personalized academic support.",
+      },
+    ],
+  },
+  {
     slug: "gate-score-validity",
     title: "GATE Score Validity: How Long Is Your GATE Score Actually Valid?",
     cardTitle: "GATE Score Validity: How Long Is It Valid?",
